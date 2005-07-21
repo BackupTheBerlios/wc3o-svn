@@ -51,7 +51,6 @@ namespace Wc3o.Pages.Game {
 			}
 		}
 
-
 		protected void btnAttackSettings_Click(object sender, EventArgs e) {
 			bool hasUnits = false;
 			foreach (Unit u in sector.Units)
@@ -123,7 +122,7 @@ namespace Wc3o.Pages.Game {
 				hplLog.NavigateUrl = "~/Game/Logs/BattleLogs/" + result.Log;
 
 				if (enemy != null)
-					new Message(defender.Owner, null, "You've been attacked by " + attacker.Owner.FullName + " at " + sector.FullName + " angegriffen.", message);
+					new Message(defender.Owner, null, "You've been attacked by " + attacker.Owner.FullName + " at " + sector.FullName + ".", message);
 
 			} catch(Exception ex) {
 				Response.Write(ex.StackTrace);

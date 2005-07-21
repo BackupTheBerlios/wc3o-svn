@@ -37,11 +37,7 @@
                     <li>
                         <asp:HyperLink ID="hplChangelog" runat="server" NavigateUrl="~/Portal/Misc/Changelog.aspx">Changelog</asp:HyperLink>
                     </li>
-                    </li>
-                    <li>
-                        <asp:HyperLink ID="hplJoinTheTeam" runat="server" NavigateUrl="~/Portal/Misc/JoinTheTeam.aspx">Join the Team</asp:HyperLink>
-                    </li>
-                </ul>
+                    <li><a href="http://wc3o.berlios.de">Open Source</a></li></ul>
             </div>
         </div>
         <div id="Center">

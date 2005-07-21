@@ -363,7 +363,7 @@ namespace Wc3o.Pages.Game {
 				else if (Request.QueryString["Action"] == "MorphUnits") {
 					Unit u = player.GetUnitByHashcode(int.Parse(Request.QueryString["Unit"]));
 
-					double factor = u.Info.Hitpoints / u.Hitpoints;
+					double factor = u.Hitpoints / u.Info.Hitpoints;
 					int c = 0;
 					switch (u.Type) {
 						case UnitType.DruidOfTheClawBearForm:
@@ -700,7 +700,7 @@ namespace Wc3o.Pages.Game {
 			}
 			else {
 				Unit u = player.GetUnitByHashcode(int.Parse(Request.QueryString["Unit"]));
-				u.Date = DateTime.Now.AddMinutes(GetMoveTime(u.UnitInfo.Speed, sector, s));
+				u.Date = DateTime.Now.AddMinutes(GetMoveTime(u.UnitInfo.Speed, u.Sector, s));
 				u.SourceSector = u.Sector;
 				u.SourceDate = DateTime.Now;
 				u.Sector = s;

@@ -287,8 +287,12 @@ function WriteUnits(result) {
         }
         s+="</table><br ><br />";
     }
-    else
-        s+="<i>You can't spot any units.</i>";
+    else {
+        if (isOverview=="1")
+            s+="<i>You have no units on this sector.</i>";        
+        else
+            s+="<i>You can't spot any units.</i>";
+    }
     
     div.innerHTML=s;
 }
@@ -365,8 +369,12 @@ function WriteBuildings(result) {
         }
         s+="</table><br /><br />";
     }
-    else
-        s+="<i>You can't spot any buildings.</i>";
+    else {
+        if (isOverview=="1")
+            s+="<i>You have no buildings on this sector.</i>";        
+        else
+            s+="<i>You can't spot any buildings.</i>";
+    }
     
     div.innerHTML=s;
 }

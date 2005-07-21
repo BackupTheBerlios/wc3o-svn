@@ -124,32 +124,35 @@ namespace Wc3o.Pages.Game {
 
 		protected void btnCapture_Click(object sender, EventArgs e) {
 			if (player.Sectors.Count >= Configuration.Max_Sectors_Per_Player) {
-				Wc3o.Game.Message(Master, "You cannot annect another sector.", MessageType.Error);
+				Wc3o.Game.Message(Master, "You cannot capture another sector.", MessageType.Error);
 				return;
 			}
 
 			if (sector.Owner != null && sector.Owner.Sectors.Count <= Configuration.Min_Sectors_Per_Player) {
-				Wc3o.Game.Message(Master, "You cannot take this sector away from its owner.", MessageType.Error);
+				Wc3o.Game.Message(Master, "You cannot capture this sector because the owner cannot loose more.", MessageType.Error);
 				return;
 			}
 
 			bool hostileUnitsOnSector = false;
 			foreach (Unit u in sector.Units)
-				if (!player.IsAlly(u.Owner))
+				if ((u.IsAvailable || u.IsWorking) && player.CanAttack(u.Owner)) {
 					hostileUnitsOnSector = true;
+					break;
+				}
+
 			if (hostileUnitsOnSector) {
-				Wc3o.Game.Message(Master, "There are still hostile units on this sector.", MessageType.Error);
+				Wc3o.Game.Message(Master, "You cannot capture this sector because there are still hostile units on it.", MessageType.Error);
 				return;
 			}
 
 			bool hostileBuilingsOnSector = false;
 			foreach (Building b in sector.Buildings)
-				if (b.CanFight) {
+				if (b.IsAvailable && b.CanFight) {
 					hostileBuilingsOnSector = true;
 					break;
 				}
 			if (hostileBuilingsOnSector) {
-				Wc3o.Game.Message(Master, "There are still hostile buildings on this sector.", MessageType.Error);
+				Wc3o.Game.Message(Master, "You cannot capture this sector because there are still hostile buildings on it.", MessageType.Error);
 				return;
 			}
 
@@ -158,7 +161,7 @@ namespace Wc3o.Pages.Game {
 				if (u.Owner == player && u.IsAvailable)
 					upkeep += u.UnitInfo.Food * u.Number;
 			if (upkeep < player.Sectors.Count * Configuration.Unit_Factor_For_Annect) {
-				Wc3o.Game.Message(Master, "You need more units on this sector to annect it.", MessageType.Error);
+				Wc3o.Game.Message(Master, "You need more units on this sector to capture it.", MessageType.Error);
 				return;
 			}
 
