@@ -59,10 +59,7 @@ namespace Wc3o.Pages.Portal.Help {
 				lblBonusCooldown.Text = Game.Format(Convert.ToInt32((i.BonusAuraCooldown - 1) * 100));
 				lblBonusHitpoints.Text = Game.Format(Convert.ToInt32((i.BonusAuraHitpoints - 1) * 100));
 				lblMalusArmor.Text = Game.Format(Convert.ToInt32((1 - i.MalusAuraArmor) * 100));
-				lblMalusRange.Text = Game.Format(Convert.ToInt32((1 - i.MalusAuraRange) * 100));
-
-				Response.Write(i.MalusAuraAttackAir);
-				
+				lblMalusRange.Text = Game.Format(Convert.ToInt32((1 - i.MalusAuraRange) * 100));				
 				lblMalusAttackAir.Text = Game.Format(Convert.ToInt32((1 - i.MalusAuraAttackAir) * 100));
 				lblMalusAttackGround.Text = Game.Format(Convert.ToInt32((1 - i.MalusAuraAttackGround) * 100));
 				lblMalusCooldown.Text = Game.Format(Convert.ToInt32((1 - i.MalusAuraCooldown) * 100));

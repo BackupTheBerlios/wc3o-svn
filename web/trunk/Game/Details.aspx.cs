@@ -31,7 +31,9 @@ namespace Wc3o.Pages.Game {
 				if (!player.IsAlly(p))
 					isUnitOwnerAlly = "";
 				if (player.CanAttack(p))
-					canAttack = "1";
+					foreach (Unit u in sector.Units)
+						if (u.Owner == p && (u.IsAvailable || u.IsWorking))
+							canAttack = "1";
 			}
 
 			string sectorOwner = "";
@@ -50,7 +52,7 @@ namespace Wc3o.Pages.Game {
 
 			foreach (Unit u in sector.Units)
 				//You see the units when a) it is a unit of the selected player and b) it is a allied unit or you have view on the sector
-				if (u.Owner == p && ((player.IsAlly(u.Owner)) || (hasView && (u.IsAvailable || u.IsInTraining || u.IsWorking || (u.IsReturning && u.IsVisible) || (u.IsMoving && u.IsVisible && ((TimeSpan)(u.Date - DateTime.Now)).TotalMinutes <= Configuration.Minutes_To_See_Arriving_Units))))) {
+				if (u.Owner == p && ((player.IsAlly(u.Owner)) || (hasView && (u.IsAvailable || u.IsInTraining || u.IsWorking || (u.IsReturning && u.IsVisible) || (u.IsMoving && u.IsVisible && ((TimeSpan)(u.Date - DateTime.Now)).TotalMinutes <= Configuration.Minutes_To_See_Arriving_Units))))) {				
 					string action = "";
 					if (u.IsInTraining)
 						action = "1";

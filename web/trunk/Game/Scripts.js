@@ -288,7 +288,7 @@ function WriteUnits(result) {
         s+="</table><br ><br />";
     }
     else {
-        if (isOverview=="1")
+        if (unitOwner=="" || isOverview=="1")
             s+="<i>You have no units on this sector.</i>";        
         else
             s+="<i>You can't spot any units.</i>";
@@ -370,7 +370,7 @@ function WriteBuildings(result) {
         s+="</table><br /><br />";
     }
     else {
-        if (isOverview=="1")
+        if (sectorOwner=="" || isOverview=="1")
             s+="<i>You have no buildings on this sector.</i>";        
         else
             s+="<i>You can't spot any buildings.</i>";
