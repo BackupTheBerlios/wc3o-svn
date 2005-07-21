@@ -123,6 +123,14 @@ namespace Wc3o {
 			result.HostileLosses = Wc3o.Game.Merge(result.HostileLosses, true);
 			attacker.Entities = Wc3o.Game.Merge(attacker.Entities);
 			defender.Entities = Wc3o.Game.Merge(defender.Entities);
+
+			foreach (Entity e in attacker.Entities) //fixed the Hitpoints, so an entity cannot have more than before the battle
+				if (e.Hitpoints > e.HitpointsBeforeAura)
+					e.Hitpoints = e.HitpointsBeforeAura;
+
+			foreach (Entity e in defender.Entities) //fixed the Hitpoints, so an entity cannot have more than before the battle
+				if (e.Hitpoints > e.HitpointsBeforeAura)
+					e.Hitpoints = e.HitpointsBeforeAura;
 			#endregion
 
 			#region " Ressources "

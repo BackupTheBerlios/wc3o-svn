@@ -26,6 +26,7 @@ namespace Wc3o {
 
 		public void CalculateArmy(Army a) {
 			foreach (Entity e in entities) {
+				e.HitpointsBeforeAura = e.Hitpoints;
 				e.Hitpoints = Convert.ToInt32(e.Hitpoints * bonusAuraHitpoints * a.MalusAuraHitpoints);
 				e.AttackAir = Convert.ToInt32(e.Info.AttackAir * bonusAuraAttackAir * a.MalusAuraAttackAir);
 				e.AttackGround = Convert.ToInt32(e.Info.AttackGround * bonusAuraAttackGround * a.MalusAuraAttackGround);

@@ -69,7 +69,7 @@ namespace Wc3o {
 					i.gold = 315;
 					i.lumber = 190;
 					i.hitpoints = 1600;
-					i.minutes = 420;
+					i.minutes = 610;
 					i.armor = 5;
 					i.armorType = ArmorType.Fort;
 					i.attackTypeAir = AttackType.None;
@@ -96,7 +96,7 @@ namespace Wc3o {
 					i.gold = 325;
 					i.lumber = 190;
 					i.hitpoints = 1800;
-					i.minutes = 420;
+					i.minutes = 610;
 					i.armor = 5;
 					i.armorType = ArmorType.Fort;
 					i.attackTypeAir = AttackType.None;
@@ -147,7 +147,7 @@ namespace Wc3o {
 					i.gold = 180;
 					i.lumber = 50;
 					i.hitpoints = 900;
-					i.minutes = 180;
+					i.minutes = 270;
 					i.armor = 5;
 					i.armorType = ArmorType.Fort;
 					i.attackTypeAir = AttackType.None;
@@ -171,7 +171,7 @@ namespace Wc3o {
 					i.gold = 205;
 					i.lumber = 0;
 					i.hitpoints = 1000;
-					i.minutes = 210;
+					i.minutes = 315;
 					i.armor = 5;
 					i.armorType = ArmorType.Fort;
 					i.attackTypeAir = AttackType.None;
@@ -195,7 +195,7 @@ namespace Wc3o {
 					i.gold = 145;
 					i.lumber = 140;
 					i.hitpoints = 1100;
-					i.minutes = 180;
+					i.minutes = 270;
 					i.armor = 5;
 					i.armorType = ArmorType.Fort;
 					i.attackTypeAir = AttackType.None;
@@ -220,7 +220,7 @@ namespace Wc3o {
 					i.gold = 150;
 					i.lumber = 150;
 					i.hitpoints = 800;
-					i.minutes = 210;
+					i.minutes = 315;
 					i.armor = 5;
 					i.armorType = ArmorType.Fort;
 					i.attackTypeAir = AttackType.None;
@@ -245,7 +245,7 @@ namespace Wc3o {
 					i.gold = 135;
 					i.lumber = 155;
 					i.hitpoints = 1200;
-					i.minutes = 210;
+					i.minutes = 315;
 					i.armor = 5;
 					i.armorType = ArmorType.Fort;
 					i.attackTypeAir = AttackType.None;
@@ -271,7 +271,7 @@ namespace Wc3o {
 					i.gold = 130;
 					i.lumber = 30;
 					i.hitpoints = 500;
-					i.minutes = 180;
+					i.minutes = 270;
 					i.armor = 5;
 					i.armorType = ArmorType.Fort;
 					i.attackTypeAir = AttackType.None;
@@ -396,7 +396,7 @@ namespace Wc3o {
 					i.gold = 180;
 					i.lumber = 50;
 					i.hitpoints = 900;
-					i.minutes = 180;
+					i.minutes = 270;
 					i.armor = 5;
 					i.armorType = ArmorType.Fort;
 					i.attackTypeAir = AttackType.None;
@@ -420,7 +420,7 @@ namespace Wc3o {
 					i.gold = 215;
 					i.lumber = 0;
 					i.hitpoints = 900;
-					i.minutes = 240;
+					i.minutes = 360;
 					i.armor = 5;
 					i.armorType = ArmorType.Fort;
 					i.attackTypeAir = AttackType.None;
@@ -444,7 +444,7 @@ namespace Wc3o {
 					i.gold = 140;
 					i.lumber = 135;
 					i.hitpoints = 1200;
-					i.minutes = 180;
+					i.minutes = 270;
 					i.armor = 5;
 					i.armorType = ArmorType.Fort;
 					i.attackTypeAir = AttackType.None;
@@ -470,7 +470,7 @@ namespace Wc3o {
 					i.gold = 155;
 					i.lumber = 140;
 					i.hitpoints = 1100;
-					i.minutes = 180;
+					i.minutes = 270;
 					i.armor = 5;
 					i.armorType = ArmorType.Fort;
 					i.attackTypeAir = AttackType.None;
@@ -496,7 +496,7 @@ namespace Wc3o {
 					i.gold = 75;
 					i.lumber = 150;
 					i.hitpoints = 900;
-					i.minutes = 135;
+					i.minutes = 205;
 					i.armor = 5;
 					i.armorType = ArmorType.Fort;
 					i.attackTypeAir = AttackType.None;
@@ -521,7 +521,7 @@ namespace Wc3o {
 					i.gold = 175;
 					i.lumber = 200;
 					i.hitpoints = 1500;
-					i.minutes = 210;
+					i.minutes = 315;
 					i.armor = 5;
 					i.armorType = ArmorType.Fort;
 					i.attackTypeAir = AttackType.None;
@@ -547,7 +547,7 @@ namespace Wc3o {
 					i.gold = 130;
 					i.lumber = 30;
 					i.hitpoints = 475;
-					i.minutes = 180;
+					i.minutes = 270;
 					i.armor = 5;
 					i.armorType = ArmorType.Fort;
 					i.attackTypeAir = AttackType.None;
@@ -597,7 +597,7 @@ namespace Wc3o {
 					i.gold = 320;
 					i.lumber = 210;
 					i.hitpoints = 2000;
-					i.minutes = 420;
+					i.minutes = 630;
 					i.armor = 5;
 					i.armorType = ArmorType.Fort;
 					i.attackTypeAir = AttackType.None;
@@ -624,7 +624,7 @@ namespace Wc3o {
 					i.gold = 360;
 					i.lumber = 210;
 					i.hitpoints = 2500;
-					i.minutes = 420;
+					i.minutes = 630;
 					i.armor = 5;
 					i.armorType = ArmorType.Fort;
 					i.attackTypeAir = AttackType.None;
@@ -700,7 +700,7 @@ namespace Wc3o {
 					i.gold = 180;
 					i.lumber = 50;
 					i.hitpoints = 900;
-					i.minutes = 180;
+					i.minutes = 270;
 					i.armor = 5;
 					i.armorType = ArmorType.Fort;
 					i.attackTypeAir = AttackType.None;
@@ -724,7 +724,7 @@ namespace Wc3o {
 					i.gold = 120;
 					i.lumber = 0;
 					i.hitpoints = 900;
-					i.minutes = 180;
+					i.minutes = 270;
 					i.armor = 5;
 					i.armorType = ArmorType.Fort;
 					i.attackTypeAir = AttackType.None;
@@ -748,7 +748,7 @@ namespace Wc3o {
 					i.gold = 30;
 					i.lumber = 20;
 					i.hitpoints = 300;
-					i.minutes = 75;
+					i.minutes = 105;
 					i.armor = 0;
 					i.armorType = ArmorType.Light;
 					i.attackTypeAir = AttackType.None;
@@ -775,7 +775,7 @@ namespace Wc3o {
 					i.gold = 140;
 					i.lumber = 60;
 					i.hitpoints = 1200;
-					i.minutes = 210;
+					i.minutes = 315;
 					i.armor = 5;
 					i.armorType = ArmorType.Fort;
 					i.attackTypeAir = AttackType.None;
@@ -800,7 +800,7 @@ namespace Wc3o {
 					i.gold = 140;
 					i.lumber = 140;
 					i.hitpoints = 1200;
-					i.minutes = 180;
+					i.minutes = 270;
 					i.armor = 5;
 					i.armorType = ArmorType.Fort;
 					i.attackTypeAir = AttackType.None;
@@ -826,7 +826,7 @@ namespace Wc3o {
 					i.gold = 150;
 					i.lumber = 140;
 					i.hitpoints = 1050;
-					i.minutes = 210;
+					i.minutes = 315;
 					i.armor = 5;
 					i.armorType = ArmorType.Fort;
 					i.attackTypeAir = AttackType.None;
@@ -851,7 +851,7 @@ namespace Wc3o {
 					i.gold = 140;
 					i.lumber = 150;
 					i.hitpoints = 1200;
-					i.minutes = 225;
+					i.minutes = 335;
 					i.armor = 5;
 					i.armorType = ArmorType.Fort;
 					i.attackTypeAir = AttackType.None;
@@ -878,7 +878,7 @@ namespace Wc3o {
 					i.gold = 130;
 					i.lumber = 30;
 					i.hitpoints = 485;
-					i.minutes = 180;
+					i.minutes = 270;
 					i.armor = 5;
 					i.armorType = ArmorType.Fort;
 					i.attackTypeAir = AttackType.None;
@@ -927,7 +927,7 @@ namespace Wc3o {
 					i.gold = 110;
 					i.lumber = 80;
 					i.hitpoints = 500;
-					i.minutes = 165;
+					i.minutes = 250;
 					i.armor = 3;
 					i.armorType = ArmorType.Heavy;
 					i.attackTypeAir = AttackType.Pierce;
@@ -952,8 +952,8 @@ namespace Wc3o {
 					i.gold = 70;
 					i.lumber = 50;
 					i.hitpoints = 500;
-					i.minutes = 150;
-					i.armor = 5 / 11;
+					i.minutes = 225;
+					i.armor = 5;
 					i.armorType = ArmorType.Heavy;
 					i.attackTypeAir = AttackType.Pierce;
 					i.attackTypeGround = AttackType.Pierce;
@@ -978,8 +978,8 @@ namespace Wc3o {
 					i.gold = 170;
 					i.lumber = 100;
 					i.hitpoints = 600;
-					i.minutes = 225;
-					i.armor = 5 / 11;
+					i.minutes = 335;
+					i.armor = 5;
 					i.armorType = ArmorType.Fort;
 					i.attackTypeAir = AttackType.None;
 					i.attackTypeGround = AttackType.Siege;
@@ -1004,8 +1004,8 @@ namespace Wc3o {
 					i.gold = 70;
 					i.lumber = 50;
 					i.hitpoints = 500;
-					i.minutes = 150;
-					i.armor = 5 / 11;
+					i.minutes = 225;
+					i.armor = 5;
 					i.armorType = ArmorType.Heavy;
 					i.attackTypeAir = AttackType.Pierce;
 					i.attackTypeGround = AttackType.Pierce;
@@ -1032,7 +1032,7 @@ namespace Wc3o {
 					i.gold = 100;
 					i.lumber = 20;
 					i.hitpoints = 550;
-					i.minutes = 90;
+					i.minutes = 135;
 					i.armor = 5;
 					i.armorType = ArmorType.Fort;
 					i.attackTypeAir = AttackType.Normal;
@@ -1060,7 +1060,7 @@ namespace Wc3o {
 					i.gold = 145;
 					i.lumber = 40;
 					i.hitpoints = 550;
-					i.minutes = 105;
+					i.minutes = 160;
 					i.armor = 5;
 					i.armorType = ArmorType.Fort;
 					i.attackTypeAir = AttackType.Pierce;
@@ -1087,7 +1087,7 @@ namespace Wc3o {
 					i.gold = 320;
 					i.lumber = 210;
 					i.hitpoints = 1750;
-					i.minutes = 420;
+					i.minutes = 630;
 					i.armor = 5;
 					i.armorType = ArmorType.Fort;
 					i.attackTypeAir = AttackType.Pierce;
@@ -1114,7 +1114,7 @@ namespace Wc3o {
 					i.gold = 325;
 					i.lumber = 230;
 					i.hitpoints = 2000;
-					i.minutes = 420;
+					i.minutes = 630;
 					i.armor = 5;
 					i.armorType = ArmorType.Fort;
 					i.attackTypeAir = AttackType.Pierce;
@@ -1142,7 +1142,7 @@ namespace Wc3o {
 					i.lumber = 185;
 					i.hitpoints = 1300;
 					i.minutes = 330;
-					i.armor = 2 / 7;
+					i.armor = 2;
 					i.armorType = ArmorType.Fort;
 					i.attackTypeAir = AttackType.None;
 					i.attackTypeGround = AttackType.Normal;
@@ -1167,8 +1167,8 @@ namespace Wc3o {
 					i.gold = 320;
 					i.lumber = 180;
 					i.hitpoints = 1700;
-					i.minutes = 420;
-					i.armor = 2 / 7;
+					i.minutes = 630;
+					i.armor = 2;
 					i.armorType = ArmorType.Fort;
 					i.attackTypeAir = AttackType.None;
 					i.attackTypeGround = AttackType.Normal;
@@ -1194,8 +1194,8 @@ namespace Wc3o {
 					i.gold = 330;
 					i.lumber = 200;
 					i.hitpoints = 2000;
-					i.minutes = 420;
-					i.armor = 2 / 7;
+					i.minutes = 630;
+					i.armor = 2;
 					i.armorType = ArmorType.Fort;
 					i.attackTypeAir = AttackType.None;
 					i.attackTypeGround = AttackType.Normal;
@@ -1221,8 +1221,8 @@ namespace Wc3o {
 					i.gold = 150;
 					i.lumber = 60;
 					i.hitpoints = 1000;
-					i.minutes = 180;
-					i.armor = 2 / 7;
+					i.minutes = 270;
+					i.armor = 2;
 					i.armorType = ArmorType.Fort;
 					i.attackTypeAir = AttackType.None;
 					i.attackTypeGround = AttackType.Normal;
@@ -1245,8 +1245,8 @@ namespace Wc3o {
 					i.gold = 155;
 					i.lumber = 145;
 					i.hitpoints = 900;
-					i.minutes = 210;
-					i.armor = 2 / 7;
+					i.minutes = 315;
+					i.armor = 2;
 					i.armorType = ArmorType.Fort;
 					i.attackTypeAir = AttackType.None;
 					i.attackTypeGround = AttackType.Normal;
@@ -1271,8 +1271,8 @@ namespace Wc3o {
 					i.gold = 150;
 					i.lumber = 140;
 					i.hitpoints = 900;
-					i.minutes = 180;
-					i.armor = 2 / 7;
+					i.minutes = 270;
+					i.armor = 2;
 					i.armorType = ArmorType.Fort;
 					i.attackTypeAir = AttackType.None;
 					i.attackTypeGround = AttackType.Normal;
@@ -1296,8 +1296,8 @@ namespace Wc3o {
 					i.gold = 135;
 					i.lumber = 80;
 					i.hitpoints = 600;
-					i.minutes = 180;
-					i.armor = 1 / 3;
+					i.minutes = 270;
+					i.armor = 1;
 					i.armorType = ArmorType.Fort;
 					i.attackTypeAir = AttackType.Pierce;
 					i.attackTypeGround = AttackType.Pierce;
@@ -1321,7 +1321,7 @@ namespace Wc3o {
 					i.gold = 90;
 					i.lumber = 30;
 					i.hitpoints = 450;
-					i.minutes = 180;
+					i.minutes = 270;
 					i.armor = 5;
 					i.armorType = ArmorType.Fort;
 					i.attackTypeAir = AttackType.None;
@@ -1370,7 +1370,7 @@ namespace Wc3o {
 					i.gold = 180;
 					i.lumber = 50;
 					i.hitpoints = 900;
-					i.minutes = 180;
+					i.minutes = 270;
 					i.armor = 5;
 					i.armorType = ArmorType.Fort;
 					i.attackTypeAir = AttackType.None;
@@ -1394,7 +1394,7 @@ namespace Wc3o {
 					i.gold = 210;
 					i.lumber = 100;
 					i.hitpoints = 1100;
-					i.minutes = 180;
+					i.minutes = 270;
 					i.armor = 5;
 					i.armorType = ArmorType.Fort;
 					i.attackTypeAir = AttackType.None;
@@ -1419,7 +1419,7 @@ namespace Wc3o {
 					i.gold = 140;
 					i.lumber = 190;
 					i.hitpoints = 1200;
-					i.minutes = 240;
+					i.minutes = 360;
 					i.armor = 5;
 					i.armorType = ArmorType.Fort;
 					i.attackTypeAir = AttackType.None;
