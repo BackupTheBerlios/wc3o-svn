@@ -1,0 +1,150 @@
+<%@ Master Language="C#" CodeFile="Portal.master.cs" Inherits="Wc3o.Pages.Portal.Portal_master" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Warcraft 3 online : Portal</title>
+</head>
+<body>
+    <form id="Form" runat="server">
+        <div id="Header">
+            <asp:HyperLink ID="hplLogo" runat="server"></asp:HyperLink></div>
+        <div id="Left">
+            <div class="Box-Left">
+                <div class="Box-Header">
+                    Help
+                </div>
+                <ul>
+                    <li>
+                        <asp:HyperLink ID="hplUnits" runat="server" NavigateUrl="~/Portal/Help/Units.aspx"
+                            EnableViewState="False">Units</asp:HyperLink></li>
+                    <li>
+                        <asp:HyperLink ID="hplBuildings" runat="server" NavigateUrl="~/Portal/Help/Buildings.aspx"
+                            EnableViewState="False">Buildings</asp:HyperLink></li>
+                    <li>
+                        <asp:HyperLink ID="hplSettings" runat="server" NavigateUrl="~/Portal/Help/Settings.aspx"
+                            EnableViewState="False">Settings</asp:HyperLink></li>
+                    <li>
+                        <asp:HyperLink ID="hplWiki" runat="server" NavigateUrl="http://www.sachsenhofer.com/wc3o_help"
+                            EnableViewState="False">Help / FAQ / More</asp:HyperLink></li>
+                </ul>
+            </div>
+            <div class="Box-Left">
+                <div class="Box-Header">
+                    More
+                </div>
+                <ul>
+                    <li><a href="http://1.myfreebulletinboard.com/?mforum=wc3o">Forum</a></li>
+                    <li>
+                        <asp:HyperLink ID="hplChangelog" runat="server" NavigateUrl="~/Portal/Misc/Changelog.aspx">Changelog</asp:HyperLink>
+                    </li>
+                    <li><a href="http://wc3o.berlios.de">Open Source</a></li></ul>
+            </div>
+        </div>
+        <div id="Center">
+            <asp:Literal ID="lblMessage" runat="server" Mode="PassThrough" EnableViewState="False"></asp:Literal>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <div id="Right">
+            <asp:Panel ID="pnlLogon" runat="server">
+                <div class="Box-Center">
+                    <table cellpadding="2" style="width: 100%">
+                        <tr>
+                            <th>
+                                Name:</th>
+                            <td>
+                                <asp:TextBox ID="txtName" runat="server" Width="95%" MaxLength="20" /></td>
+                        </tr>
+                        <tr>
+                            <th>
+                                Password:
+                            </th>
+                            <td>
+                                <asp:TextBox ID="txtPassword" runat="server" Width="95%" TextMode="Password" MaxLength="20" /></td>
+                        </tr>
+                    </table>
+                    <asp:Button ID="btnLogon" runat="server" Text="Logon ..." OnClick="btnLogon_Click" /><br />
+                    <br />
+                    <br />
+                    <asp:HyperLink ID="hplSignUp" runat="server" NavigateUrl="~/Portal/Players/SignUp.aspx">Sign up</asp:HyperLink>
+                    |
+                    <asp:HyperLink ID="hplLostPassword" runat="server" NavigateUrl="~/Portal/Players/PasswordLost.aspx">Lost Password</asp:HyperLink>
+                </div>
+            </asp:Panel>
+            <asp:Panel ID="pnlPlayer" runat="server">
+                <div class="Box-Center">
+                    You are logged on as
+                    <asp:Label ID="lblUsername" runat="server" Font-Bold="True"></asp:Label>.<br />
+                    <br />
+                    <asp:HyperLink ID="hplPlayer" runat="server" NavigateUrl="~/Game">Proceed to the game ...</asp:HyperLink><a
+                        href="/Wc3o/Game"></a></div>
+            </asp:Panel>
+            <div class="Box-Center">
+                <div class="Box-Header">
+                    Statistics</div>
+                <br />
+                <table style="width: 45%" cellspacing="2">
+                    <tr>
+                        <th>
+                            Player:</th>
+                        <td style="text-align: right;">
+                            <asp:Literal ID="lblPlayer" runat="server" Mode="PassThrough"></asp:Literal></td>
+                    </tr>
+                    <tr>
+                        <th>
+                            Available:<br />
+                            <br />
+                        </th>
+                        <td style="text-align: right;">
+                            <asp:Literal ID="lblPlayerAvailable" runat="server" Mode="PassThrough"></asp:Literal><br />
+                            <br />
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            Sectors:</th>
+                        <td style="text-align: right;">
+                            <asp:Literal ID="lblSectors" runat="server" Mode="PassThrough"></asp:Literal></td>
+                    </tr>
+                    <tr>
+                        <th>
+                            Available:<br />
+                            <br />
+                        </th>
+                        <td style="text-align: right;">
+                            <asp:Literal ID="lblAvailableSectors" runat="server" Mode="PassThrough"></asp:Literal><br />
+                            <br />
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            Units:</th>
+                        <td style="text-align: right;">
+                            <asp:Literal ID="lblUnits" runat="server" Mode="PassThrough"></asp:Literal></td>
+                    </tr>
+                    <tr>
+                        <th>
+                            Creeps:</th>
+                        <td style="text-align: right;">
+                            <asp:Literal ID="lblCreeps" runat="server" Mode="PassThrough"></asp:Literal></td>
+                    </tr>
+                    <tr>
+                        <th>
+                            Buildings:</th>
+                        <td style="text-align: right;">
+                            <asp:Literal ID="lblBuildings" runat="server" Mode="PassThrough"></asp:Literal></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div id="Footer">
+            Warcraft 3 online v2.0 - Wallenstein - : Concept, Design &amp; Code © <a href="mailto:hannes@sachsenhofer.com">
+                Hannes Sachsenhofer</a><br />
+            Warcraft 3 online is free to play, and comes with absolutely no warranty.<br />
+            <br />
+            Warcraft I, II, III &amp; World of Warcraft are registered trademarks and all related
+            marks and properties are trademarks of <a href="http://www.blizzard.com">Blizzard Entertainment</a>.<br />
+            Copyrighted material has been used for non-commercial purposes only.</div>
+    </form>
+</body>
+</html>

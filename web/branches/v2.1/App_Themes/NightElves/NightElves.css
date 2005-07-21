@@ -1,0 +1,109 @@
+body {
+    font-family: Arial;
+    color: #b8a26e;
+    font-size: 11px;
+    background-color: black;
+    margin: 0px;
+}
+
+a:link, a:visited, a:active {
+    color: #60a600;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+td {
+	font-size: 11px;
+}
+
+.Map td {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    vertical-align: bottom;
+    font-size: 10px;
+}
+
+img {
+    border-style: none;
+}
+
+
+
+Input, TextArea, Select {
+    font-family: Arial;
+    font-size: 11px;
+}
+
+
+.Message_Error {
+    color: red;
+    margin: 15px;
+    padding: 10px;
+    font-size: 15px;  
+    border: #909090 1px solid;      
+}
+
+
+.Message_Acknowledgement {
+    color: green;
+    margin: 15px;
+    padding: 10px;
+    font-size: 15px;   
+    border: #909090 1px solid;         
+}
+
+.Message_Normal {
+    margin: 15px;
+    padding: 10px;
+    font-size: 15px; 
+    border: #909090 1px solid;              
+}
+
+h1 {
+    font-family: Garamond;
+    font-size: 20px;
+    color: #dddddd;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+
+.Player {
+	width: 98%;
+    text-align: center;
+    padding: 5px;
+	border: #6699cc 1px solid;
+}
+
+.Ally {
+	width: 98%;
+    text-align: center;
+    padding: 5px;
+	border: #66ff99 1px solid;
+}
+
+.Neutral {
+	width: 98%;
+    text-align: center;
+    padding: 5px;
+	border: #ffffff 1px solid;
+}
+
+.League {
+	width: 98%;
+    text-align: center;
+    padding: 5px;
+	border: #ffff66 1px solid;
+}
+
+.Enemy {
+	width: 98%;
+    text-align: center;
+    padding: 5px;
+	border: #ff6600 1px solid;
+}
