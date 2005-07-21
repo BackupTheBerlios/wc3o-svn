@@ -1,0 +1,20 @@
+<%@ Master Language="C#" CodeFile="Game.master.cs" Inherits="Wc3o.Pages.Game.Game_master" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Warcraft 3 online</title>
+    <script src="Scripts.js" type="text/javascript"></script>
+</head>
+<body>
+    <form id="Form" runat="server">
+        <asp:Literal ID="lblNavigation" Runat="server" EnableViewState="false"></asp:Literal><asp:Literal
+            ID="lblMessage" Runat="server" EnableViewState="False" Mode="PassThrough"></asp:Literal>
+        <div style="padding-left: 10px; padding-right: 10px;">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder" Runat="server"></asp:ContentPlaceHolder></div>
+            <script language="javascript">LoadNavigation();</script>
+    </form>
+    <script language="javascript">
+        setTimeout("RefreshNavigationTimer()",60000);
+    </script>
+</body>
+</html>
