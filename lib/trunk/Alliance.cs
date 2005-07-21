@@ -120,7 +120,7 @@ namespace Wc3o {
 
 		public int AverageScore {
 			get {
-				return (Score / Members.Length);
+				return (Score / Members.Count);
 			}
 		}
 		#endregion

@@ -1097,7 +1097,8 @@ namespace Wc3o {
 					i.cooldown = 1;
 					i.range = 80;
 					i.visibility = Visibility.Always;
-					i.upgradesTo = new BuildingType[0];
+					i.upgradesTo = new BuildingType[1];
+					i.upgradesTo[0] = BuildingType.BlackCitadel;
 					i.requirements = new BuildingType[0];
 					i.score = 7;
 					i.number = 2;

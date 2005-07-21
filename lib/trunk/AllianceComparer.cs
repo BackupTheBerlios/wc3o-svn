@@ -9,7 +9,7 @@ using System.Text;
 namespace Wc3o {
 	public class AllianceScoreComparer : System.Collections.IComparer {
 		public int Compare(Object a, Object b) {
-			return ((Alliance)b).AverageScore - ((Alliance)a).AverageScore;
+			return ((Alliance)b).Score - ((Alliance)a).Score;
 		}
 	}
 

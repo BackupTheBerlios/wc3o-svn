@@ -1019,7 +1019,7 @@ namespace Wc3o {
 					i.minutes = 195;
 					i.range = 45 / 85;
 					i.score = 8;
-					i.speed = 250;
+					i.speed = 16;
 					i.trainedAt = BuildingType.ChimaeraRoost;
 					i.requirements = new BuildingType[0];
 					i.flies = true;

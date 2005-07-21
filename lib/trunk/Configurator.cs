@@ -6,7 +6,7 @@ namespace Wc3o {
 		#region " Configuration Settings "
 
 		public const string Physical_Application_Path = "c:\\hosting\\webhost4life\\member\\sachsenhofer\\wc3o\\";
-		//public const string Physical_Application_Path = "E:\\My Documents\\My Webs\\Wc3o";
+		//public const string Physical_Application_Path = "E:\\My Webs\\Wc3o";
 
 		public const double Return_Factor_After_Attack = 1.7;
 		public const double Return_Factor_After_Defend = 0.5;
@@ -40,8 +40,8 @@ namespace Wc3o {
 		public const int Gold_Per_Ressource_Tick = 8;
 		public const int Lumber_Per_Ressource_Tick = 3;
 		public const int Max_Gold_Worker_Per_Sector = 5;
-		public const int Max_Sectors_Per_Player = 5;
-		public const int Min_Sectors_Per_Player = 5;
+		public const int Max_Sectors_Per_Player = 6;
+		public const int Min_Sectors_Per_Player = 2;
 		public const int Min_Gold_Income = 20;
 		public const int Min_Lumber_Income = 5;
 		public const int Upkeep_Level1 = 70;

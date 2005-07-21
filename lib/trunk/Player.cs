@@ -99,19 +99,14 @@ namespace Wc3o {
 			}
 
 			int upkeep = Upkeep;
-			if (upkeep >= Configuration.Upkeep_Level2) {
+			if (upkeep >= Configuration.Upkeep_Level2)
 				gold = (int)(gold * Configuration.Upkeep_Level2_Factor);
-				lumber = (int)(lumber * Configuration.Upkeep_Level2_Factor);
-			}
-			else if (upkeep >= Configuration.Upkeep_Level1) {
+			else if (upkeep >= Configuration.Upkeep_Level1)
 				gold = (int)(gold * Configuration.Upkeep_Level1_Factor);
-				lumber = (int)(lumber * Configuration.Upkeep_Level1_Factor);
-			}
 
 			gold = Game.Max(gold, Configuration.Min_Gold_Income);
 			lumber = Game.Max(lumber, Configuration.Min_Lumber_Income);
 		}
-
 
 		public int GoldPerTick {
 			get {
@@ -120,7 +115,6 @@ namespace Wc3o {
 				return gold;
 			}
 		}
-
 
 		public int LumberPerTick {
 			get {
