@@ -20,7 +20,7 @@ namespace Wc3o.Pages.Game {
 			imgGold.ImageUrl = player.Gfx + "/Game/Gold.gif";
 			lblLumber.Text = Wc3o.Game.Format(player.LumberPerTick);
 			imgLumber.ImageUrl = player.Gfx + "/Game/Lumber.gif";
-			lblRegistration.Text = Wc3o.Game.Format(Wc3o.Game.GetCorrectedDate(player.Registration), false);
+			lblRegistration.Text = Wc3o.Game.Format(player.Registration, false);
 			if (player.IsProtected)
 				lblProtection.Text = "You are new on the battlefield, therefore you are protected for another " + Wc3o.Game.TimeSpan(player.Registration.AddHours(Configuration.Hours_To_Be_Protected)) + ". You cannot be attacked by other players, and you cannot attack them.";
 

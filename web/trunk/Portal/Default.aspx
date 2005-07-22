@@ -40,7 +40,7 @@
                     <div class="Footer">
                         <%# DataBinder.Eval(Container.DataItem, "Name") %>
                         -
-                        <%# Wc3o.Game.Format(Wc3o.Game.GetCorrectedDate((DateTime)DataBinder.Eval(Container.DataItem, "Date")),false) %>
+                        <%# Wc3o.Game.Format((DateTime)DataBinder.Eval(Container.DataItem, "Date"),false) %>
                     </div>
                 </div>
             </ItemTemplate>

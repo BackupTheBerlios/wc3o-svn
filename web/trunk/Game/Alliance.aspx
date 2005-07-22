@@ -183,10 +183,9 @@
                                 <td style="width: 50%" align="right">
                                 </td>
                                 <td align="left">
-                                    <asp:Button ID="btnReject" Runat="server" CausesValidation="False" Text="Reject ..."
-                                        OnClick="btnReject_Click" />&nbsp;<asp:Button ID="btnAccept" Runat="server" CausesValidation="False"
-                                            Text="Accept ..." OnClick="btnAccept_Click" />
-                                </td>
+                                    <asp:Button ID="btnAccept" Runat="server" CausesValidation="False"
+                                            Text="Accept >>" OnClick="btnAccept_Click" /><asp:Button ID="btnReject" Runat="server" CausesValidation="False" Text="<< Reject"
+                                        OnClick="btnReject_Click" /></td>
                             </tr>
                         </table>
                         <br />
@@ -204,7 +203,7 @@
                                 <td style="width: 50%" align="right">
                                 </td>
                                 <td align="left">
-                                    <asp:Button ID="btnKick" Runat="server" CausesValidation="False" Text="Kick ..."
+                                    <asp:Button ID="btnKick" Runat="server" CausesValidation="False" Text="Kick >>"
                                         OnClick="btnKick_Click" /></td>
                             </tr>
                         </table>
