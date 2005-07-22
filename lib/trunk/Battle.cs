@@ -55,9 +55,34 @@ namespace Wc3o {
 			BattleLog("\r\n\r\nThe attacker has:");
 			foreach (Entity e in attacker.Entities)
 				BattleLog("\t" + Game.Format(e.Number) + " " + e.Info.Name + " (" + e.Hitpoints + " hitpoints each)");
-			BattleLog("\r\nThe defender has:");
+			BattleLog("\r\n\t Bonus aura on hitpoints: +" + (attacker.BonusAuraHitpoints-1) * 100 + " %");
+			BattleLog("\t Bonus aura on range: +" + (attacker.BonusAuraRange - 1) * 100 + " %");
+			BattleLog("\t Bonus aura on cooldown: -" + (1-attacker.BonusAuraCooldown ) * 100 + " %");
+			BattleLog("\t Bonus aura on attack ground: +" + (attacker.BonusAuraAttackGround - 1) * 100 + " %");
+			BattleLog("\t Bonus aura on attack air: +" + (attacker.BonusAuraAttackAir - 1) * 100 + " %");
+			BattleLog("\t Bonus aura on armor: +" + (attacker.BonusAuraArmor - 1) * 100 + " %");
+			BattleLog("\t Malus aura on hitpoints: -" + (1-attacker.MalusAuraHitpoints ) * 100 + " %");
+			BattleLog("\t Malus aura on range: -" + (1-attacker.MalusAuraRange) * 100 + " %");
+			BattleLog("\t Malus aura on cooldown: +" + (attacker.MalusAuraCooldown-1) * 100 + " %");
+			BattleLog("\t Malus aura on attack ground: -" + (1-attacker.MalusAuraAttackGround ) * 100 + " %");
+			BattleLog("\t Malus aura on attack air: -" + (1-attacker.MalusAuraAttackAir) * 100 + " %");
+			BattleLog("\t Malus aura on armor: -" + (1-attacker.MalusAuraArmor ) * 100 + " %");
+
+			BattleLog("\r\n\r\nThe defender has:");
 			foreach (Entity e in defender.Entities)
 				BattleLog("\t" + Game.Format(e.Number) + " " + e.Info.Name + " (" + e.Hitpoints + " hitpoints each)");
+			BattleLog("\r\n\t Bonus aura on hitpoints: +" + (defender.BonusAuraHitpoints - 1) * 100 + " %");
+			BattleLog("\t Bonus aura on range: +" + (defender.BonusAuraRange - 1) * 100 + " %");
+			BattleLog("\t Bonus aura on cooldown: -" + (1 - defender.BonusAuraCooldown) * 100 + " %");
+			BattleLog("\t Bonus aura on attack ground: +" + (defender.BonusAuraAttackGround - 1) * 100 + " %");
+			BattleLog("\t Bonus aura on attack air: +" + (defender.BonusAuraAttackAir - 1) * 100 + " %");
+			BattleLog("\t Bonus aura on armor: +" + (defender.BonusAuraArmor - 1) * 100 + " %");
+			BattleLog("\t Malus aura on hitpoints: -" + (1 - defender.MalusAuraHitpoints) * 100 + " %");
+			BattleLog("\t Malus aura on range: -" + (1 - defender.MalusAuraRange) * 100 + " %");
+			BattleLog("\t Malus aura on cooldown: +" + (defender.MalusAuraCooldown - 1) * 100 + " %");
+			BattleLog("\t Malus aura on attack ground: -" + (1 - defender.MalusAuraAttackGround) * 100 + " %");
+			BattleLog("\t Malus aura on attack air: -" + (1 - defender.MalusAuraAttackAir) * 100 + " %");
+			BattleLog("\t Malus aura on armor: -" + (1 - defender.MalusAuraArmor) * 100 + " %");
 
 			attacker.Entities = Game.Split(attacker.Entities);
 			defender.Entities = Game.Split(defender.Entities);
@@ -74,7 +99,7 @@ namespace Wc3o {
 			for (int round = 1; round <= rounds; round++) {
 				if (attacker.Entities.Count <= 0 || defender.Entities.Count <= 0)
 					break;
-				BattleLog("\r\nRound " + Wc3o.Game.Format(round) + " - Attacker: " + Wc3o.Game.Format(attacker.Entities.Count) + " vs. Defender: " + Wc3o.Game.Format(defender.Entities.Count) + ".");
+				BattleLog("\r\n\r\nRound " + Wc3o.Game.Format(round) + " - Attacker: " + Wc3o.Game.Format(attacker.Entities.Count) + " vs. Defender: " + Wc3o.Game.Format(defender.Entities.Count) + ".");
 
 				if (attackBuildingsRound == round)
 					attackBuildings = true;

@@ -1242,6 +1242,7 @@ namespace Wc3o {
 					i.trainedAt = BuildingType.Boneyard;
 					i.requirements = new BuildingType[0];
 					i.flies = true;
+					i.malusAuraCooldown = 0.98;
 					break;
 				case UnitType.Shade:
 					i.fraction = Fraction.Undead;
