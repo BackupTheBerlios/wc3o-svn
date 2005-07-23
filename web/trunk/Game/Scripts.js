@@ -1,10 +1,8 @@
 function Refresh(i,sector) {
     if (i==1) {
-        document.getElementById("u_").innerHTML="";
-        document.getElementById("b_").innerHTML="";  
-        LoadSector(sector,"");  
+        //currenty unused        
     }
-    else if (i==2) {
+    if (i==2) {
         document.getElementById("constructing").innerHTML="";
         LoadConstructing(sector);
     }
@@ -20,33 +18,51 @@ function Refresh(i,sector) {
     else if (i==5) {
         LoadNavigation();
     }
+    else if (i==6) {
+        document.getElementById("u_").innerHTML="";
+        LoadUnits(sector,""); 
+    }
+    else if (i==7) {
+        document.getElementById("b_").innerHTML="";
+        LoadBuildings(sector,""); 
+    }
 }
 
 function RefreshParent(i,sector) {
     if (i==1) {
-        if (!window.opener.document.getElementById("u_"))
-            RefreshParent(4,sector);  
-        else {
-            window.opener.document.getElementById("u_").innerHTML="";
-            window.opener.document.getElementById("b_").innerHTML="";  
-            window.opener.LoadSector(sector,"");
-        }  
+        //currenty unused
     }
-    else if (i==2) {
+    else if (i==2) { //open the constructing
         window.opener.document.getElementById("constructing").innerHTML="";
         window.opener.LoadConstructing(sector);
     }
-    else if (i==3) {
+    else if (i==3) { //open the training
         window.opener.document.getElementById("training").innerHTML="";
         window.opener.LoadTraining(sector);
     }
-    else if (i==4) {
+    else if (i==4) { //open the overview
         window.opener.document.getElementById("u_"+sector).innerHTML="";
         window.opener.document.getElementById("b_"+sector).innerHTML="";        
         window.opener.LoadOverview(sector);
     }
-    else if (i==5) {
+    else if (i==5) { //open the navigation
         window.opener.LoadNavigation();
+    }
+    else if (i==6) { //open the player units
+        if (!window.opener.document.getElementById("u_"))
+            RefreshParent(4,sector);  
+        else {
+            window.opener.document.getElementById("u_").innerHTML="";
+            window.opener.LoadUnits(sector,"");
+        }
+    }
+    else if (i==7) { //open the player buildings
+        if (!window.opener.document.getElementById("b_"))
+            RefreshParent(4,sector);  
+        else {
+            window.opener.document.getElementById("b_").innerHTML="";
+            window.opener.LoadBuildings(sector,""); 
+       }
     }
 }
 
@@ -90,12 +106,34 @@ function LoadSector(sector,player) {
         divUnits.innerHTML="loading ...";
         divBuildings.innerHTML="loading ...";
         RS.Execute("Details.aspx", "GetUnits", divUnits.id, sector, player, "0", WriteUnits);
-        RS.Execute("Details.aspx", "GetBuildings", divBuildings.id, sector, player,"", WriteBuildings);        
+        RS.Execute("Details.aspx", "GetBuildings", divBuildings.id, sector, player,"0", WriteBuildings);        
     }
     else {
         divUnits.innerHTML="";
         divBuildings.innerHTML="";
     }
+}
+
+
+function LoadUnits(sector,player) {
+    divUnits=document.getElementById("u_"+player);
+    if (divUnits.innerHTML.length==0) {
+        divUnits.innerHTML="loading ...";
+        RS.Execute("Details.aspx", "GetUnits", divUnits.id, sector, player, "0", WriteUnits);   
+    }
+    else
+        divUnits.innerHTML="";
+}
+
+
+function LoadBuildings(sector,player) {
+    divBuildings=document.getElementById("b_"+player);
+    if (divBuildings.innerHTML.length==0) {
+        divBuildings.innerHTML="loading ...";
+        RS.Execute("Details.aspx", "GetBuildings", divBuildings.id, sector, player, "0", WriteBuildings);        
+    }
+    else
+        divBuildings.innerHTML="";
 }
 
 
@@ -211,7 +249,7 @@ function WriteUnits(result) {
         if (unitOwner.length<=0) {
             s="<a href=\"javascript:Popup('Command.aspx?Action=DestroyUnit&Unit=-1&Sector="+sector+"')\"><img src='"+gfx+"/Game/DestroyAll.gif' title='Destroy All units' /></a><a href=\"javascript:Popup('Command.aspx?Action=DestroyUnit&Unit=-2&Sector="+sector+"')\"><img src='"+gfx+"/Game/StopAll.gif' title='Stop All Trainings' /></a><a href=\"javascript:Popup('Command.aspx?Action=Move&Unit=-1&Sector="+sector+"')\"><img src='"+gfx+"/Game/MoveAll.gif' title='Move All' /></a><a href=\"javascript:Popup('Command.aspx?Action=Return&Unit=-1&Sector="+sector+"')\"><img src='"+gfx+"/Game/ReturnAll.gif' title='Return All' /></a><a href=\"javascript:Popup('Command.aspx?Action=MergeUnits&Unit=-1&Sector="+sector+"')\"><img src='"+gfx+"/Game/MergeAll.gif' title='Merge All Units' /></a>";
             if (isOverview=="1")
-                s+="<a href='Sector.aspx?Sector="+sector+"&Refresh=Player'><img src='"+gfx+"/Game/ManageSector.gif' title='Manage Sector' /></a><a href='Sector.aspx?Sector="+sector+"&Refresh=Training'><img src='"+gfx+"/Game/TrainNewUnits.gif' title='Train New Units' /></a>";
+                s+="<a href='Sector.aspx?Sector="+sector+"&Refresh=Units'><img src='"+gfx+"/Game/ManageSector.gif' title='Manage Sector' /></a><a href='Sector.aspx?Sector="+sector+"&Refresh=Training'><img src='"+gfx+"/Game/TrainNewUnits.gif' title='Train New Units' /></a>";
         }
         else if (canAttack=="1")
             s="<a href=\"Battle.aspx?Enemy="+unitOwner+"&Sector="+sector+"\"><img src='"+gfx+"/Game/Attack.gif' title='Attack' /></a>";
@@ -314,7 +352,7 @@ function WriteBuildings(result) {
         if (sectorOwner.length<=0) {
             s="<a href=\"javascript:Popup('Command.aspx?Action=DestroyBuilding&Building=-1&Sector="+sector+"')\"><img src='"+gfx+"/Game/DestroyAll.gif' title='Destroy All Buildings' /></a><a href=\"javascript:Popup('Command.aspx?Action=DestroyBuilding&Building=-2&Sector="+sector+"')\"><img src='"+gfx+"/Game/StopAll.gif' title='Stop All Constructions' /></a><a href=\"javascript:Popup('Command.aspx?Action=MergeBuildings&Building=-1&Sector="+sector+"')\"><img src='"+gfx+"/Game/MergeAll.gif' title='Merge All Buildings' /></a>";
             if (isOverview=="1")
-                s+="<a href='Sector.aspx?Sector="+sector+"&Refresh=Player'><img src='"+gfx+"/Game/ManageSector.gif' title='Manage Sector' /></a><a href='Sector.aspx?Sector="+sector+"&Refresh=Constructing'><img src='"+gfx+"/Game/ConstructNewBuildings.gif' title='Construct New Buildings' /></a>";
+                s+="<a href='Sector.aspx?Sector="+sector+"&Refresh=Buildings'><img src='"+gfx+"/Game/ManageSector.gif' title='Manage Sector' /></a><a href='Sector.aspx?Sector="+sector+"&Refresh=Constructing'><img src='"+gfx+"/Game/ConstructNewBuildings.gif' title='Construct New Buildings' /></a>";
         }
         else if (canAttack=="1")
             s="<a href=\"Battle.aspx?Enemy="+sectorOwner+"&Sector="+sector+"\"><img src='"+gfx+"/Game/Attack.gif' title='Attack' /></a>";
