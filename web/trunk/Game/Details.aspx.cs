@@ -52,7 +52,7 @@ namespace Wc3o.Pages.Game {
 
 			foreach (Unit u in sector.Units)
 				//You see the units when a) it is a unit of the selected player and b) it is a allied unit or you have view on the sector
-				if (u.Owner == p && ((player.IsAlly(u.Owner)) || (hasView && (u.IsAvailable || u.IsInTraining || u.IsWorking || (u.IsReturning && u.IsVisible) || (u.IsMoving && u.IsVisible && ((TimeSpan)(u.Date - DateTime.Now)).TotalMinutes <= Configuration.Minutes_To_See_Arriving_Units))))) {				
+				if (u.Owner == p && ((player.IsAlly(u.Owner)) || (hasView && (u.IsAvailable || u.IsInTraining || u.IsWorking || (u.IsReturning && u.IsVisible) || (u.IsMoving && u.IsVisible && ((TimeSpan)(u.Date - DateTime.Now)).TotalMinutes <= Configuration.Minutes_To_See_Arriving_Units))))) {
 					string action = "";
 					if (u.IsInTraining)
 						action = "1";
@@ -73,7 +73,10 @@ namespace Wc3o.Pages.Game {
 					if (u.SourceSector != null)
 						source = u.SourceSector.FullName;
 
-					int damage = 100 - (int)(100 / ((double)u.UnitInfo.Hitpoints) * ((double)u.Hitpoints));
+
+					int damage = 0;
+					if (u.Hitpoints != u.Info.Hitpoints)
+						damage = 100 - (int)(100 / ((double)u.Info.Hitpoints) * ((double)u.Hitpoints));
 
 					string gold = "";
 					if (u.UnitInfo.ForGold)
