@@ -41,9 +41,15 @@ namespace Wc3o {
 			List<Sector> sectors = new List<Sector>();
 			foreach (Sector s in Sectors)
 				sectors.Add(s);
-			foreach (Sector s in sectors)
+			foreach (Sector s in sectors) {
 				s.Owner = null;
+				if (s.Gold > 0 && s.Lumber > 0) {
+					s.Gold = 100;
+					s.Lumber = 100;
+				}
+			}
 
+			
 			foreach (Player p in Game.GameData.Players.Values)
 				if (p.Vote == this)
 					p.Vote = p;
@@ -479,41 +485,48 @@ namespace Wc3o {
 			return false;
 		}
 
+		public bool HasBuilding(BuildingType t) {
+			foreach (Building b in Buildings)
+				if (b.Type == t)
+					return true;
+			return false;
+		}
+
 		public bool HasBuildingForRequirement(BuildingType t) {
 			if (t == BuildingType.None)
 				return true;
 			else if (HasAvailableBuilding(t))
 				return true;
 			else if (t == BuildingType.TownHall) {
-				if (HasAvailableBuilding(BuildingType.Keep) || HasAvailableBuilding(BuildingType.Castle))
+				if (HasBuilding(BuildingType.Keep) || HasBuilding(BuildingType.Castle))
 					return true;
 			}
 			else if (t == BuildingType.Keep) {
-				if (HasAvailableBuilding(BuildingType.Castle))
+				if (HasBuilding(BuildingType.Castle))
 					return true;
 			}
 			else if (t == BuildingType.GreatHall) {
-				if (HasAvailableBuilding(BuildingType.Stronghold) || HasAvailableBuilding(BuildingType.Fortress))
+				if (HasBuilding(BuildingType.Stronghold) || HasBuilding(BuildingType.Fortress))
 					return true;
 			}
 			else if (t == BuildingType.Stronghold) {
-				if (HasAvailableBuilding(BuildingType.Fortress))
+				if (HasBuilding(BuildingType.Fortress))
 					return true;
 			}
 			else if (t == BuildingType.TreeOfLife) {
-				if (HasAvailableBuilding(BuildingType.TreeOfAges) || HasAvailableBuilding(BuildingType.TreeOfEternity))
+				if (HasBuilding(BuildingType.TreeOfAges) || HasBuilding(BuildingType.TreeOfEternity))
 					return true;
 			}
 			else if (t == BuildingType.TreeOfAges) {
-				if (HasAvailableBuilding(BuildingType.TreeOfEternity))
+				if (HasBuilding(BuildingType.TreeOfEternity))
 					return true;
 			}
 			else if (t == BuildingType.Necropolis) {
-				if (HasAvailableBuilding(BuildingType.HallsOfTheDead) || HasAvailableBuilding(BuildingType.BlackCitadel))
+				if (HasBuilding(BuildingType.HallsOfTheDead) || HasBuilding(BuildingType.BlackCitadel))
 					return true;
 			}
 			else if (t == BuildingType.HallsOfTheDead) {
-				if (HasAvailableBuilding(BuildingType.BlackCitadel))
+				if (HasBuilding(BuildingType.BlackCitadel))
 					return true;
 			}
 

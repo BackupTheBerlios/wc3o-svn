@@ -24,7 +24,7 @@ namespace Wc3o {
 
 		public const int Seconds_For_Ressource_Tick = 1800;
 		public const int Seconds_For_Ranking_Tick = 3600;
-		public const int Seconds_For_Save_Tick = 3600;
+		public const int Seconds_For_Save_Tick = 36000;
 
 		public const int Number_Of_News = 5;
 		public const int Number_Of_Changelogs = 5;
