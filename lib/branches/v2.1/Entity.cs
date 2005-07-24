@@ -60,6 +60,17 @@ namespace Wc3o {
             }
         }
 
+		[NonSerialized]
+		protected int hitpointsBeforeAura; //this is necessary to not have more HP after a battle than befor it
+		public int HitpointsBeforeAura {
+			get {
+				return hitpointsBeforeAura;
+			}
+			set {
+				hitpointsBeforeAura = value;
+			}
+		}
+
 		protected double cooldown;
 		public double Cooldown {
 			get {

@@ -158,6 +158,7 @@ namespace Wc3o {
 		public override Entity Clone() {
 			Unit u = new Unit(Type, Sector, Owner, Date);
 			u.Hitpoints = Hitpoints;
+			u.HitpointsBeforeAura = HitpointsBeforeAura;
 			u.Action = Action;
 			u.SourceSector = SourceSector;
 			u.SourceDate = SourceDate;

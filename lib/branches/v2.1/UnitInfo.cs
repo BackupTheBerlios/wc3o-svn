@@ -57,7 +57,7 @@ namespace Wc3o {
 					i.minutes = 45;
 					i.range = 0;
 					i.score = 1;
-					i.speed = 30;
+					i.speed = 45;
 					i.trainedAt = BuildingType.TownHall;
 					i.requirements = new BuildingType[0];
 					i.forGold = true;
@@ -82,7 +82,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 0;
 					i.score = 1;
-					i.speed = 15;
+					i.speed = 22;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
 					i.buildable = false;
@@ -106,7 +106,7 @@ namespace Wc3o {
 					i.minutes = 60;
 					i.range = 0;
 					i.score = 2;
-					i.speed = 15;
+					i.speed = 22;
 					i.trainedAt = BuildingType.HumanBarracks;
 					i.requirements = new BuildingType[0];
 					break;
@@ -129,7 +129,7 @@ namespace Wc3o {
 					i.minutes = 78;
 					i.range = 40;
 					i.score = 3;
-					i.speed = 15;
+					i.speed = 22;
 					i.trainedAt = BuildingType.HumanBarracks;
 					i.requirements = new BuildingType[1];
 					i.requirements[0] = BuildingType.Blacksmith;
@@ -153,7 +153,7 @@ namespace Wc3o {
 					i.minutes = 135;
 					i.range = 0;
 					i.score = 5;
-					i.speed = 7;
+					i.speed = 15;
 					i.trainedAt = BuildingType.HumanBarracks;
 					i.requirements = new BuildingType[3];
 					i.requirements[0] = BuildingType.Blacksmith;
@@ -179,7 +179,7 @@ namespace Wc3o {
 					i.minutes = 84;
 					i.range = 60;
 					i.score = 3;
-					i.speed = 15;
+					i.speed = 22;
 					i.trainedAt = BuildingType.ArcaneSanctum;
 					i.requirements = new BuildingType[0];
 					i.bonusAuraHitpoints = 1.1;
@@ -204,10 +204,10 @@ namespace Wc3o {
 					i.minutes = 90;
 					i.range = 60;
 					i.score = 3;
-					i.speed = 15;
+					i.speed = 22;
 					i.trainedAt = BuildingType.ArcaneSanctum;
 					i.requirements = new BuildingType[0];
-					i.malusAuraAttackAir = 0.8;
+					i.malusAuraAttackAir = 0.9;
 					i.malusAuraAttackGround = 0.9;
 					break;
 				case UnitType.SpellBreaker:
@@ -229,7 +229,7 @@ namespace Wc3o {
 					i.minutes = 84;
 					i.range = 25;
 					i.score = 4;
-					i.speed = 12;
+					i.speed = 18;
 					i.trainedAt = BuildingType.ArcaneSanctum;
 					i.requirements = new BuildingType[2];
 					i.requirements[0] = BuildingType.ArcaneVault;
@@ -256,7 +256,7 @@ namespace Wc3o {
 					i.minutes = 39;
 					i.range = 0;
 					i.score = 1;
-					i.speed = 12;
+					i.speed = 18;
 					i.trainedAt = BuildingType.Workshop;
 					i.requirements = new BuildingType[0];
 					i.flies = true;
@@ -280,7 +280,7 @@ namespace Wc3o {
 					i.minutes = 120;
 					i.range = 115;
 					i.score = 3;
-					i.speed = 15;
+					i.speed = 22;
 					i.trainedAt = BuildingType.Workshop;
 					i.requirements = new BuildingType[0];
 					break;
@@ -303,7 +303,7 @@ namespace Wc3o {
 					i.minutes = 165;
 					i.range = 19;
 					i.score = 4;
-					i.speed = 20;
+					i.speed = 30;
 					i.trainedAt = BuildingType.Workshop;
 					i.requirements = new BuildingType[1];
 					i.requirements[0] = BuildingType.Castle;
@@ -327,7 +327,7 @@ namespace Wc3o {
 					i.minutes = 135;
 					i.range = 45;
 					i.score = 7;
-					i.speed = 15;
+					i.speed = 22;
 					i.trainedAt = BuildingType.GryphonAviary;
 					i.requirements = new BuildingType[1];
 					i.requirements[0] = BuildingType.Castle;
@@ -352,7 +352,7 @@ namespace Wc3o {
 					i.minutes = 84;
 					i.range = 30;
 					i.score = 4;
-					i.speed = 7;
+					i.speed = 15;
 					i.trainedAt = BuildingType.GryphonAviary;
 					i.requirements = new BuildingType[1];
 					i.requirements[0] = BuildingType.ArcaneVault;
@@ -378,7 +378,7 @@ namespace Wc3o {
 					i.minutes = 45;
 					i.range = 0;
 					i.score = 1;
-					i.speed = 30;
+					i.speed = 45;
 					i.trainedAt = BuildingType.GreatHall;
 					i.requirements = new BuildingType[0];
 					i.forGold = true;
@@ -403,7 +403,7 @@ namespace Wc3o {
 					i.minutes = 90;
 					i.range = 0;
 					i.score = 3;
-					i.speed = 15;
+					i.speed = 22;
 					i.trainedAt = BuildingType.OrcBarracks;
 					i.requirements = new BuildingType[0];
 					break;
@@ -426,7 +426,7 @@ namespace Wc3o {
 					i.minutes = 60;
 					i.range = 45;
 					i.score = 2;
-					i.speed = 15;
+					i.speed = 22;
 					i.trainedAt = BuildingType.OrcBarracks;
 					i.requirements = new BuildingType[1];
 					i.requirements[0] = BuildingType.WarMill;
@@ -450,7 +450,7 @@ namespace Wc3o {
 					i.minutes = 66;
 					i.range = 45;
 					i.score = 2;
-					i.speed = 15;
+					i.speed = 22;
 					i.trainedAt = BuildingType.OrcBarracks;
 					i.requirements = new BuildingType[1];
 					i.requirements[0] = BuildingType.WarMill;
@@ -473,9 +473,9 @@ namespace Wc3o {
 					i.attackTypeGround = AttackType.Siege;
 					i.cooldown = 4.5;
 					i.minutes = 120;
-					i.range = 25 / 115;
+					i.range = 115;
 					i.score = 3;
-					i.speed = 20;
+					i.speed = 30;
 					i.trainedAt = BuildingType.OrcBarracks;
 					i.requirements = new BuildingType[2];
 					i.requirements[0] = BuildingType.WarMill;
@@ -500,7 +500,7 @@ namespace Wc3o {
 					i.minutes = 84;
 					i.range = 0;
 					i.score = 3;
-					i.speed = 7;
+					i.speed = 15;
 					i.trainedAt = BuildingType.Beastiary;
 					i.requirements = new BuildingType[0];
 					break;
@@ -523,7 +523,7 @@ namespace Wc3o {
 					i.minutes = 132;
 					i.range = 0;
 					i.score = 7;
-					i.speed = 15;
+					i.speed = 22;
 					i.trainedAt = BuildingType.TaurenTotem;
 					i.requirements = new BuildingType[0];
 					break;
@@ -546,7 +546,7 @@ namespace Wc3o {
 					i.minutes = 90;
 					i.range = 60;
 					i.score = 3;
-					i.speed = 15;
+					i.speed = 22;
 					i.trainedAt = BuildingType.SpiritLodge;
 					i.requirements = new BuildingType[0];
 					i.bonusAuraHitpoints = 1.1;
@@ -571,7 +571,7 @@ namespace Wc3o {
 					i.minutes = 90;
 					i.range = 60;
 					i.score = 3;
-					i.speed = 15;
+					i.speed = 22;
 					i.trainedAt = BuildingType.SpiritLodge;
 					i.requirements = new BuildingType[0];
 					i.malusAuraHitpoints = 0.9;
@@ -596,7 +596,7 @@ namespace Wc3o {
 					i.minutes = 114;
 					i.range = 40;
 					i.score = 4;
-					i.speed = 15;
+					i.speed = 22;
 					i.trainedAt = BuildingType.SpiritLodge;
 					i.requirements = new BuildingType[0];
 					i.bonusAuraHitpoints = 1.05;
@@ -620,7 +620,7 @@ namespace Wc3o {
 					i.minutes = 90;
 					i.range = 50;
 					i.score = 4;
-					i.speed = 20;
+					i.speed = 30;
 					i.trainedAt = BuildingType.Beastiary;
 					i.requirements = new BuildingType[0];
 					i.bonusAuraAttackGround = 1.05;
@@ -646,7 +646,7 @@ namespace Wc3o {
 					i.minutes = 105;
 					i.range = 45;
 					i.score = 5;
-					i.speed = 15;
+					i.speed = 22;
 					i.trainedAt = BuildingType.Beastiary;
 					i.requirements = new BuildingType[1];
 					i.requirements[0] = BuildingType.Stronghold;
@@ -671,7 +671,7 @@ namespace Wc3o {
 					i.minutes = 84;
 					i.range = 30;
 					i.score = 4;
-					i.speed = 15;
+					i.speed = 22;
 					i.trainedAt = BuildingType.Beastiary;
 					i.requirements = new BuildingType[2];
 					i.requirements[0] = BuildingType.Stronghold;
@@ -700,7 +700,7 @@ namespace Wc3o {
 					i.minutes = 42;
 					i.range = 0;
 					i.score = 1;
-					i.speed = 15;
+					i.speed = 22;
 					i.trainedAt = BuildingType.TreeOfLife;
 					i.requirements = new BuildingType[0];
 					i.forGold = true;
@@ -723,9 +723,9 @@ namespace Wc3o {
 					i.attackTypeGround = AttackType.Pierce;
 					i.cooldown = 1.5;
 					i.minutes = 60;
-					i.range = 50 / 70;
+					i.range = 50;
 					i.score = 2;
-					i.speed = 15;
+					i.speed = 22;
 					i.visibility = Visibility.AtDay;
 					i.trainedAt = BuildingType.AncientOfWar;
 					i.requirements = new BuildingType[0];
@@ -749,7 +749,7 @@ namespace Wc3o {
 					i.minutes = 90;
 					i.range = 22;
 					i.score = 3;
-					i.speed = 7;
+					i.speed = 15;
 					i.visibility = Visibility.AtDay;
 					i.trainedAt = BuildingType.AncientOfWar;
 					i.requirements = new BuildingType[1];
@@ -774,7 +774,7 @@ namespace Wc3o {
 					i.minutes = 135;
 					i.range = 0;
 					i.score = 8;
-					i.speed = 15;
+					i.speed = 22;
 					i.trainedAt = BuildingType.AncientOfLore;
 					i.requirements = new BuildingType[2];
 					i.requirements[0] = BuildingType.AncientOfWonders;
@@ -799,7 +799,7 @@ namespace Wc3o {
 					i.minutes = 144;
 					i.range = 25115;
 					i.score = 3;
-					i.speed = 20;
+					i.speed = 30;
 					i.trainedAt = BuildingType.AncientOfWar;
 					i.requirements = new BuildingType[1];
 					i.requirements[0] = BuildingType.HuntersHall;
@@ -823,7 +823,7 @@ namespace Wc3o {
 					i.minutes = 90;
 					i.range = 50;
 					i.score = 3;
-					i.speed = 7;
+					i.speed = 15;
 					i.trainedAt = BuildingType.AncientOfLore;
 					i.requirements = new BuildingType[0];
 					i.malusAuraHitpoints = 0.9;
@@ -848,7 +848,7 @@ namespace Wc3o {
 					i.minutes = 90;
 					i.range = 0;
 					i.score = 5;
-					i.speed = 15;
+					i.speed = 22;
 					i.trainedAt = BuildingType.AncientOfLore;
 					i.requirements = new BuildingType[1];
 					i.requirements[0] = BuildingType.TreeOfAges;
@@ -872,7 +872,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 0;
 					i.score = 5;
-					i.speed = 15;
+					i.speed = 22;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
 					i.buildable = false;
@@ -896,7 +896,7 @@ namespace Wc3o {
 					i.minutes = 120;
 					i.range = 0;
 					i.score = 3;
-					i.speed = 12;
+					i.speed = 18;
 					i.trainedAt = BuildingType.AncientOfWind;
 					i.requirements = new BuildingType[0];
 					i.flies = true;
@@ -920,7 +920,7 @@ namespace Wc3o {
 					i.minutes = 66;
 					i.range = 60;
 					i.score = 4;
-					i.speed = 15;
+					i.speed = 22;
 					i.trainedAt = BuildingType.AncientOfWind;
 					i.requirements = new BuildingType[0];
 					break;
@@ -943,7 +943,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 60;
 					i.score = 4;
-					i.speed = 15;
+					i.speed = 22;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
 					i.buildable = false;
@@ -968,7 +968,7 @@ namespace Wc3o {
 					i.minutes = 75;
 					i.range = 30;
 					i.score = 4;
-					i.speed = 7;
+					i.speed = 15;
 					i.trainedAt = BuildingType.AncientOfWind;
 					i.requirements = new BuildingType[1];
 					i.requirements[0] = BuildingType.AncientOfWonders;
@@ -992,9 +992,9 @@ namespace Wc3o {
 					i.attackTypeGround = AttackType.Pierce;
 					i.cooldown = 1.1;
 					i.minutes = 0;
-					i.range = 40 / 60;
+					i.range = 40;
 					i.score = 5;
-					i.speed = 7;
+					i.speed = 15;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
 					i.buildable = false;
@@ -1017,9 +1017,9 @@ namespace Wc3o {
 					i.attackTypeGround = AttackType.Magic;
 					i.cooldown = 2.5;
 					i.minutes = 195;
-					i.range = 45 / 85;
+					i.range = 45;
 					i.score = 8;
-					i.speed = 16;
+					i.speed = 24;
 					i.trainedAt = BuildingType.ChimaeraRoost;
 					i.requirements = new BuildingType[0];
 					i.flies = true;
@@ -1043,7 +1043,7 @@ namespace Wc3o {
 					i.minutes = 45;
 					i.range = 0;
 					i.score = 1;
-					i.speed = 20;
+					i.speed = 30;
 					i.trainedAt = BuildingType.Necropolis;
 					i.requirements = new BuildingType[0];
 					i.forGold = true;
@@ -1067,7 +1067,7 @@ namespace Wc3o {
 					i.minutes = 54;
 					i.range = 0;
 					i.score = 2;
-					i.speed = 15;
+					i.speed = 22;
 					i.trainedAt = BuildingType.Crypt;
 					i.requirements = new BuildingType[0];
 					i.forLumber = true;
@@ -1091,7 +1091,7 @@ namespace Wc3o {
 					i.minutes = 90;
 					i.range = 55;
 					i.score = 3;
-					i.speed = 15;
+					i.speed = 22;
 					i.trainedAt = BuildingType.Crypt;
 					i.requirements = new BuildingType[1];
 					i.requirements[0] = BuildingType.Graveyard;
@@ -1115,7 +1115,7 @@ namespace Wc3o {
 					i.minutes = 105;
 					i.range = 30;
 					i.score = 3;
-					i.speed = 7;
+					i.speed = 15;
 					i.trainedAt = BuildingType.Crypt;
 					i.requirements = new BuildingType[2];
 					i.requirements[0] = BuildingType.Graveyard;
@@ -1141,7 +1141,7 @@ namespace Wc3o {
 					i.minutes = 135;
 					i.range = 0;
 					i.score = 6;
-					i.speed = 15;
+					i.speed = 22;
 					i.trainedAt = BuildingType.Slaughterhouse;
 					i.requirements = new BuildingType[1];
 					i.requirements[0] = BuildingType.BlackCitadel;
@@ -1163,9 +1163,9 @@ namespace Wc3o {
 					i.attackTypeGround = AttackType.Siege;
 					i.cooldown = 4;
 					i.minutes = 135;
-					i.range = 25 / 115;
+					i.range = 25;
 					i.score = 3;
-					i.speed = 20;
+					i.speed = 30;
 					i.trainedAt = BuildingType.Slaughterhouse;
 					i.requirements = new BuildingType[0];
 					break;
@@ -1188,7 +1188,7 @@ namespace Wc3o {
 					i.minutes = 72;
 					i.range = 60;
 					i.score = 3;
-					i.speed = 15;
+					i.speed = 22;
 					i.trainedAt = BuildingType.TempleOfTheDamned;
 					i.requirements = new BuildingType[0];
 					i.bonusAuraHitpoints = 1.1;
@@ -1213,7 +1213,7 @@ namespace Wc3o {
 					i.minutes = 84;
 					i.range = 60;
 					i.score = 3;
-					i.speed = 15;
+					i.speed = 22;
 					i.trainedAt = BuildingType.TempleOfTheDamned;
 					i.requirements = new BuildingType[0];
 					i.bonusAuraAttackGround = 1.1;
@@ -1238,10 +1238,11 @@ namespace Wc3o {
 					i.minutes = 195;
 					i.range = 30;
 					i.score = 9;
-					i.speed = 15;
+					i.speed = 22;
 					i.trainedAt = BuildingType.Boneyard;
 					i.requirements = new BuildingType[0];
 					i.flies = true;
+					i.malusAuraCooldown = 0.98;
 					break;
 				case UnitType.Shade:
 					i.fraction = Fraction.Undead;
@@ -1262,7 +1263,7 @@ namespace Wc3o {
 					i.minutes = 135;
 					i.range = 0;
 					i.score = 1;
-					i.speed = 7;
+					i.speed = 15;
 					i.visibility = Visibility.Never;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
@@ -1287,7 +1288,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 0;
 					i.score = 1;
-					i.speed = 15;
+					i.speed = 22;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
 					i.buildable = false;
@@ -1311,7 +1312,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 50;
 					i.score = 1;
-					i.speed = 15;
+					i.speed = 22;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
 					i.buildable = false;
@@ -1335,7 +1336,7 @@ namespace Wc3o {
 					i.minutes = 135;
 					i.range = 57;
 					i.score = 3;
-					i.speed = 15;
+					i.speed = 22;
 					i.trainedAt = BuildingType.Slaughterhouse;
 					i.requirements = new BuildingType[1];
 					i.requirements[0] = BuildingType.TombOfRelics;
@@ -1362,7 +1363,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 45;
 					i.score = 5;
-					i.speed = 15;
+					i.speed = 22;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
 					i.buildable = false;
@@ -1387,7 +1388,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 50;
 					i.score = 2;
-					i.speed = 15;
+					i.speed = 22;
 					i.buildable = false;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
@@ -1411,7 +1412,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 50;
 					i.score = 3;
-					i.speed = 12;
+					i.speed = 18;
 					i.buildable = false;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
@@ -1435,7 +1436,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 60;
 					i.score = 3;
-					i.speed = 15;
+					i.speed = 22;
 					i.buildable = false;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
@@ -1460,7 +1461,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 0;
 					i.score = 4;
-					i.speed = 12;
+					i.speed = 18;
 					i.buildable = false;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
@@ -1484,7 +1485,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 60;
 					i.score = 4;
-					i.speed = 15;
+					i.speed = 22;
 					i.buildable = false;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
@@ -1509,7 +1510,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 0;
 					i.score = 5;
-					i.speed = 15;
+					i.speed = 22;
 					i.buildable = false;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
@@ -1533,7 +1534,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 0;
 					i.score = 6;
-					i.speed = 15;
+					i.speed = 22;
 					i.buildable = false;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
@@ -1557,7 +1558,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 50;
 					i.score = 10;
-					i.speed = 12;
+					i.speed = 18;
 					i.buildable = false;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
@@ -1582,7 +1583,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 50;
 					i.score = 5;
-					i.speed = 15;
+					i.speed = 22;
 					i.buildable = false;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
@@ -1606,7 +1607,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 0;
 					i.score = 2;
-					i.speed = 15;
+					i.speed = 22;
 					i.buildable = false;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
@@ -1630,7 +1631,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 0;
 					i.score = 2;
-					i.speed = 15;
+					i.speed = 22;
 					i.buildable = false;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
@@ -1654,7 +1655,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 0;
 					i.score = 3;
-					i.speed = 15;
+					i.speed = 22;
 					i.buildable = false;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
@@ -1678,7 +1679,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 0;
 					i.score = 3;
-					i.speed = 15;
+					i.speed = 22;
 					i.buildable = false;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
@@ -1702,7 +1703,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 0;
 					i.score = 4;
-					i.speed = 15;
+					i.speed = 22;
 					i.buildable = false;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
@@ -1727,7 +1728,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 0;
 					i.score = 3;
-					i.speed = 15;
+					i.speed = 22;
 					i.buildable = false;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
@@ -1751,7 +1752,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 60;
 					i.score = 3;
-					i.speed = 15;
+					i.speed = 22;
 					i.buildable = false;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
@@ -1775,7 +1776,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 0;
 					i.score = 8;
-					i.speed = 15;
+					i.speed = 22;
 					i.buildable = false;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
@@ -1799,7 +1800,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 0;
 					i.score = 2;
-					i.speed = 7;
+					i.speed = 15;
 					i.buildable = false;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
@@ -1823,7 +1824,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 0;
 					i.score = 2;
-					i.speed = 7;
+					i.speed = 15;
 					i.buildable = false;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
@@ -1847,7 +1848,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 0;
 					i.score = 2;
-					i.speed = 7;
+					i.speed = 15;
 					i.buildable = false;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
@@ -1871,7 +1872,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 0;
 					i.score = 2;
-					i.speed = 7;
+					i.speed = 15;
 					i.buildable = false;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
@@ -1895,7 +1896,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 50;
 					i.score = 2;
-					i.speed = 7;
+					i.speed = 15;
 					i.buildable = false;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
@@ -1919,7 +1920,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 60;
 					i.score = 5;
-					i.speed = 15;
+					i.speed = 22;
 					i.buildable = false;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
@@ -1944,7 +1945,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 50;
 					i.score = 3;
-					i.speed = 7;
+					i.speed = 15;
 					i.buildable = false;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
@@ -1969,7 +1970,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 60;
 					i.score = 4;
-					i.speed = 7;
+					i.speed = 15;
 					i.buildable = false;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
@@ -1994,7 +1995,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 50;
 					i.score = 8;
-					i.speed = 7;
+					i.speed = 15;
 					i.buildable = false;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
@@ -2021,7 +2022,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 0;
 					i.score = 6;
-					i.speed = 12;
+					i.speed = 18;
 					i.buildable = false;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
@@ -2045,7 +2046,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 50;
 					i.score = 2;
-					i.speed = 15;
+					i.speed = 22;
 					i.buildable = false;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
@@ -2069,7 +2070,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 0;
 					i.score = 2;
-					i.speed = 15;
+					i.speed = 22;
 					i.buildable = false;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
@@ -2093,7 +2094,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 0;
 					i.score = 5;
-					i.speed = 15;
+					i.speed = 22;
 					i.buildable = false;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
@@ -2118,7 +2119,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 50;
 					i.score = 3;
-					i.speed = 15;
+					i.speed = 22;
 					i.buildable = false;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
@@ -2142,7 +2143,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 0;
 					i.score = 3;
-					i.speed = 15;
+					i.speed = 22;
 					i.buildable = false;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
@@ -2166,7 +2167,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 50;
 					i.score = 3;
-					i.speed = 15;
+					i.speed = 22;
 					i.buildable = false;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
@@ -2190,7 +2191,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 0;
 					i.score = 8;
-					i.speed = 15;
+					i.speed = 22;
 					i.buildable = false;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
@@ -2215,7 +2216,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 40;
 					i.score = 3;
-					i.speed = 15;
+					i.speed = 22;
 					i.buildable = false;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
@@ -2239,7 +2240,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 0;
 					i.score = 7;
-					i.speed = 15;
+					i.speed = 22;
 					i.buildable = false;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
@@ -2263,7 +2264,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 0;
 					i.score = 5;
-					i.speed = 15;
+					i.speed = 22;
 					i.buildable = false;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
@@ -2287,7 +2288,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 50;
 					i.score = 2;
-					i.speed = 15;
+					i.speed = 22;
 					i.buildable = false;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
@@ -2311,7 +2312,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 60;
 					i.score = 3;
-					i.speed = 15;
+					i.speed = 22;
 					i.buildable = false;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
@@ -2336,7 +2337,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 50;
 					i.score = 2;
-					i.speed = 15;
+					i.speed = 22;
 					i.buildable = false;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
@@ -2360,7 +2361,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 50;
 					i.score = 3;
-					i.speed = 15;
+					i.speed = 22;
 					i.buildable = false;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
@@ -2384,7 +2385,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 60;
 					i.score = 3;
-					i.speed = 15;
+					i.speed = 22;
 					i.buildable = false;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
@@ -2409,7 +2410,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 0;
 					i.score = 3;
-					i.speed = 15;
+					i.speed = 22;
 					i.buildable = false;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
@@ -2433,7 +2434,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 60;
 					i.score = 4;
-					i.speed = 15;
+					i.speed = 22;
 					i.buildable = false;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
@@ -2455,9 +2456,9 @@ namespace Wc3o {
 					i.attackTypeGround = AttackType.Normal;
 					i.cooldown = 1.35;
 					i.minutes = 0;
-					i.range = 0 / 50;
+					i.range = 0;
 					i.score = 5;
-					i.speed = 15;
+					i.speed = 22;
 					i.buildable = false;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
@@ -2505,7 +2506,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 60;
 					i.score = 5;
-					i.speed = 15;
+					i.speed = 22;
 					i.buildable = false;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
@@ -2529,7 +2530,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 30;
 					i.score = 5;
-					i.speed = 20;
+					i.speed = 30;
 					i.buildable = false;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
@@ -2553,7 +2554,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 0;
 					i.score = 3;
-					i.speed = 15;
+					i.speed = 22;
 					i.buildable = false;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
@@ -2577,7 +2578,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 60;
 					i.score = 8;
-					i.speed = 15;
+					i.speed = 22;
 					i.buildable = false;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
@@ -2601,7 +2602,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 0;
 					i.score = 6;
-					i.speed = 7;
+					i.speed = 15;
 					i.buildable = false;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
@@ -2625,7 +2626,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 0;
 					i.score = 4;
-					i.speed = 15;
+					i.speed = 22;
 					i.buildable = false;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
@@ -2649,7 +2650,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 50;
 					i.score = 5;
-					i.speed = 15;
+					i.speed = 22;
 					i.buildable = false;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
@@ -2673,7 +2674,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 0;
 					i.score = 5;
-					i.speed = 12;
+					i.speed = 18;
 					i.buildable = false;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
@@ -2697,7 +2698,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 0;
 					i.score = 6;
-					i.speed = 12;
+					i.speed = 18;
 					i.buildable = false;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
@@ -2721,7 +2722,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 50;
 					i.score = 2;
-					i.speed = 15;
+					i.speed = 22;
 					i.buildable = false;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
@@ -2745,7 +2746,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 60;
 					i.score = 3;
-					i.speed = 15;
+					i.speed = 22;
 					i.buildable = false;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
@@ -2770,7 +2771,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 0;
 					i.score = 5;
-					i.speed = 12;
+					i.speed = 18;
 					i.buildable = false;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
@@ -2794,7 +2795,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 25;
 					i.score = 4;
-					i.speed = 15;
+					i.speed = 22;
 					i.buildable = false;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
@@ -2818,7 +2819,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 25;
 					i.score = 9;
-					i.speed = 15;
+					i.speed = 22;
 					i.buildable = false;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
@@ -2843,7 +2844,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 25;
 					i.score = 6;
-					i.speed = 15;
+					i.speed = 22;
 					i.buildable = false;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
@@ -2867,7 +2868,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 0;
 					i.score = 4;
-					i.speed = 12;
+					i.speed = 18;
 					i.buildable = false;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
@@ -2891,7 +2892,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 0;
 					i.score = 5;
-					i.speed = 12;
+					i.speed = 18;
 					i.buildable = false;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
@@ -2915,7 +2916,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 60;
 					i.score = 5;
-					i.speed = 15;
+					i.speed = 22;
 					i.buildable = false;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
@@ -2940,7 +2941,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 0;
 					i.score = 6;
-					i.speed = 15;
+					i.speed = 22;
 					i.buildable = false;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
@@ -2964,7 +2965,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 0;
 					i.score = 7;
-					i.speed = 15;
+					i.speed = 22;
 					i.buildable = false;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
@@ -2988,7 +2989,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 0;
 					i.score = 5;
-					i.speed = 12;
+					i.speed = 18;
 					i.buildable = false;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
@@ -3012,7 +3013,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 0;
 					i.score = 5;
-					i.speed = 12;
+					i.speed = 18;
 					i.buildable = false;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
@@ -3036,7 +3037,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 0;
 					i.score = 7;
-					i.speed = 12;
+					i.speed = 18;
 					i.buildable = false;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
@@ -3060,7 +3061,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 0;
 					i.score = 2;
-					i.speed = 15;
+					i.speed = 22;
 					i.buildable = false;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
@@ -3084,7 +3085,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 50;
 					i.score = 3;
-					i.speed = 15;
+					i.speed = 22;
 					i.buildable = false;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
@@ -3108,7 +3109,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 0;
 					i.score = 5;
-					i.speed = 15;
+					i.speed = 22;
 					i.buildable = false;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
@@ -3132,7 +3133,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 0;
 					i.score = 4;
-					i.speed = 15;
+					i.speed = 22;
 					i.buildable = false;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
@@ -3156,7 +3157,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 0;
 					i.score = 5;
-					i.speed = 15;
+					i.speed = 22;
 					i.buildable = false;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
@@ -3181,7 +3182,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 0;
 					i.score = 8;
-					i.speed = 15;
+					i.speed = 22;
 					i.buildable = false;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
@@ -3206,7 +3207,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 0;
 					i.score = 4;
-					i.speed = 12;
+					i.speed = 18;
 					i.buildable = false;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
@@ -3230,7 +3231,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 0;
 					i.score = 5;
-					i.speed = 15;
+					i.speed = 22;
 					i.buildable = false;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
@@ -3254,7 +3255,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 0;
 					i.score = 6;
-					i.speed = 15;
+					i.speed = 22;
 					i.buildable = false;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
@@ -3279,7 +3280,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 0;
 					i.score = 5;
-					i.speed = 15;
+					i.speed = 22;
 					i.buildable = false;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
@@ -3303,7 +3304,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 60;
 					i.score = 6;
-					i.speed = 15;
+					i.speed = 22;
 					i.buildable = false;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
@@ -3328,7 +3329,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 0;
 					i.score = 5;
-					i.speed = 15;
+					i.speed = 22;
 					i.buildable = false;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
@@ -3376,7 +3377,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 60;
 					i.score = 8;
-					i.speed = 7;
+					i.speed = 15;
 					i.buildable = false;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
@@ -3401,7 +3402,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 0;
 					i.score = 10;
-					i.speed = 15;
+					i.speed = 22;
 					i.buildable = false;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
@@ -3428,7 +3429,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 45;
 					i.score = 6;
-					i.speed = 15;
+					i.speed = 22;
 					i.buildable = false;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
@@ -3452,7 +3453,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 50;
 					i.score = 8;
-					i.speed = 15;
+					i.speed = 22;
 					i.buildable = false;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
@@ -3476,7 +3477,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 0;
 					i.score = 8;
-					i.speed = 15;
+					i.speed = 22;
 					i.buildable = false;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
@@ -3500,7 +3501,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 0;
 					i.score = 5;
-					i.speed = 15;
+					i.speed = 22;
 					i.buildable = false;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
@@ -3524,7 +3525,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 0;
 					i.score = 2;
-					i.speed = 15;
+					i.speed = 22;
 					i.buildable = false;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
@@ -3548,7 +3549,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 50;
 					i.score = 5;
-					i.speed = 20;
+					i.speed = 30;
 					i.buildable = false;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
@@ -3572,7 +3573,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 0;
 					i.score = 7;
-					i.speed = 18;
+					i.speed = 27;
 					i.buildable = false;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
@@ -3596,7 +3597,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 0;
 					i.score = 4;
-					i.speed = 15;
+					i.speed = 22;
 					i.buildable = false;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
@@ -3620,7 +3621,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 0;
 					i.score = 9;
-					i.speed = 15;
+					i.speed = 22;
 					i.buildable = false;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
@@ -3644,7 +3645,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 0;
 					i.score = 5;
-					i.speed = 15;
+					i.speed = 22;
 					i.buildable = false;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
@@ -3668,7 +3669,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 0;
 					i.score = 5;
-					i.speed = 15;
+					i.speed = 22;
 					i.buildable = false;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
@@ -3692,7 +3693,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 60;
 					i.score = 7;
-					i.speed = 15;
+					i.speed = 22;
 					i.buildable = false;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
@@ -3717,7 +3718,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 0;
 					i.score = 7;
-					i.speed = 15;
+					i.speed = 22;
 					i.buildable = false;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
@@ -3741,7 +3742,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 0;
 					i.score = 6;
-					i.speed = 15;
+					i.speed = 22;
 					i.buildable = false;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];
@@ -3765,7 +3766,7 @@ namespace Wc3o {
 					i.minutes = 0;
 					i.range = 60;
 					i.score = 6;
-					i.speed = 15;
+					i.speed = 22;
 					i.buildable = false;
 					i.trainedAt = BuildingType.None;
 					i.requirements = new BuildingType[0];

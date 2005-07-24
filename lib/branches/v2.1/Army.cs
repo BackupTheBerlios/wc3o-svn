@@ -26,6 +26,15 @@ namespace Wc3o {
 
 		public void CalculateArmy(Army a) {
 			foreach (Entity e in entities) {
+				//restore the default values for the entities
+				e.AttackAir = e.Info.AttackAir;
+				e.AttackGround = e.Info.AttackGround;
+				e.Cooldown = e.Info.Cooldown;
+				e.Range = e.Info.Range;
+				e.Armor = e.Info.Armor;
+				
+				e.HitpointsBeforeAura = e.Hitpoints; //save the old hitpoints without the auras before battle
+				
 				e.Hitpoints = Convert.ToInt32(e.Hitpoints * bonusAuraHitpoints * a.MalusAuraHitpoints);
 				e.AttackAir = Convert.ToInt32(e.Info.AttackAir * bonusAuraAttackAir * a.MalusAuraAttackAir);
 				e.AttackGround = Convert.ToInt32(e.Info.AttackGround * bonusAuraAttackGround * a.MalusAuraAttackGround);
@@ -51,6 +60,9 @@ namespace Wc3o {
 				malusAuraHitpoints = Malus(malusAuraHitpoints, e.Info.MalusAuraHitpoints, e.Number);
 				malusAuraCooldown = Malus(malusAuraCooldown, e.Info.MalusAuraCooldown, e.Number);
 			}
+
+			bonusAuraCooldown = 1 - (bonusAuraCooldown - 1);
+			malusAuraCooldown = 1 + (1 - malusAuraCooldown);
 		}
 
 		double Bonus(double total, double bonus, int count) {
@@ -112,7 +124,7 @@ namespace Wc3o {
 		double malusAuraRange;
 		public double MalusAuraRange {
 			get {
-				return bonusAuraRange;
+				return malusAuraRange;
 			}
 		}
 
@@ -126,7 +138,7 @@ namespace Wc3o {
 		double malusAuraHitpoints;
 		public double MalusAuraHitpoints {
 			get {
-				return bonusAuraHitpoints;
+				return malusAuraHitpoints;
 			}
 		}
 
@@ -140,7 +152,7 @@ namespace Wc3o {
 		double malusAuraAttackGround;
 		public double MalusAuraAttackGround {
 			get {
-				return bonusAuraAttackGround;
+				return malusAuraAttackGround;
 			}
 		}
 
@@ -154,7 +166,7 @@ namespace Wc3o {
 		double malusAuraAttackAir;
 		public double MalusAuraAttackAir {
 			get {
-				return bonusAuraAttackAir;
+				return malusAuraAttackAir;
 			}
 		}
 
@@ -168,7 +180,7 @@ namespace Wc3o {
 		double malusAuraCooldown;
 		public double MalusAuraCooldown {
 			get {
-				return bonusAuraCooldown;
+				return malusAuraCooldown;
 			}
 		}
 		#endregion
