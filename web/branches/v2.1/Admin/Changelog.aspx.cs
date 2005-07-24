@@ -9,16 +9,22 @@ namespace Wc3o.Pages.Admin {
 				txtCreator.Text = User.Identity.Name;
 				txtDate.Text = DateTime.Now.ToString();
 
-				foreach (Changelog c in Game.PortalData.Changelog) {
-					drpEdit.Items.Add(new System.Web.UI.WebControls.ListItem(c.Text, c.GetHashCode().ToString()));
+				FillDropdown();
+
+				foreach (Changelog c in Game.PortalData.Changelog)
 					if (Request.QueryString["Edit"] != null && Request.QueryString["Edit"] == c.GetHashCode().ToString()) {
 						txtCreator.Text = c.Name;
 						txtDate.Text = c.Date.ToString();
 						txtText.Text = c.Text;
 					}
-				}
 
 			}
+		}
+
+		void FillDropdown() {
+			drpEdit.Items.Clear();
+			foreach (Changelog c in Game.PortalData.Changelog)
+				drpEdit.Items.Add(new System.Web.UI.WebControls.ListItem(c.Text, c.GetHashCode().ToString()));
 		}
 
 
@@ -39,7 +45,10 @@ namespace Wc3o.Pages.Admin {
 
 			Game.PortalData.Changelog.Sort(new Changelog.ChangelogComparer());
 
-			Response.Redirect("Changelog.aspx");
+			txtText.Text = "";
+			txtDate.Text = DateTime.Now.ToString();
+
+			FillDropdown();
 		}
 
 		protected void btnNow_Click(object sender, EventArgs e) {

@@ -80,7 +80,7 @@ namespace Wc3o.Pages.Game {
 
 				foreach (Player p in l)
 					if (p == player)
-						lblPlayer.Text += "<div class='Player'><a href=\"javascript:LoadSector('" + sector.Coordinate + "','')\"><b>Your units and buildings</b></a><br /><div id='u_' name='u_'></div><div id='b_' name='b_'></div></div>";
+						lblPlayer.Text += "<div class='Player'><a href=\"javascript:LoadUnits('" + sector.Coordinate + "','')\"><b>Your units</b></a><br /><div id='u_' name='u_'></div></div>";
 					else if (p.IsAlly(player))
 						lblOthers.Text += "<div class='Ally'><a href=\"javascript:LoadSector('" + sector.Coordinate + "','" + p.Name + "')\"><b>" + p.FullName + "</b></a><br /><div id='u_" + p.Name + "' name='u_" + p.Name + "'></div><div id='b_" + p.Name + "' name='b_" + p.Name + "'></div></div><br />";
 					else if (hasView && player.CanAttack(p))
@@ -92,6 +92,7 @@ namespace Wc3o.Pages.Game {
 					lblOthers.Text += "<div class='Neutral'><a href=\"javascript:LoadSector('" + sector.Coordinate + "','-')\"><b>Creeps</b></a><br /><br /><div id='u_-' name='u_-'></div><div id='b_-' name='b_-'></div></div><br />";
 
 				if (sector.Owner == player) {
+					lblPlayer.Text += "<br /><div class='Player'><a href=\"javascript:LoadBuildings('" + sector.Coordinate + "','')\"><b>Your buildings</b></a><br /><div id='b_' name='b_'></div></div>";
 					lblPlayer.Text += "<br /><div class='Player'><a href=\"javascript:LoadTraining('" + sector.Coordinate + "')\"><b>Train units</b></a><br /><div id='training' name='training'></div></div>";
 					lblPlayer.Text += "<br /><div class='Player'><a href=\"javascript:LoadConstructing('" + sector.Coordinate + "')\"><b>Construct buildings</b></a><br /><div id='constructing' name='constructing'></div></div>";
 				}
@@ -105,8 +106,11 @@ namespace Wc3o.Pages.Game {
 			#region " Refresh "
 			if (Request.QueryString["Refresh"] != null)
 				switch (Request.QueryString["Refresh"]) {
-					case "Player":
-						lblOpen.Text = "<script language='javascript'>Refresh('1','" + sector.Coordinate + "')</script>";
+					case "Units":
+						lblOpen.Text = "<script language='javascript'>Refresh('6','" + sector.Coordinate + "')</script>";
+						break;
+					case "Buildings":
+						lblOpen.Text = "<script language='javascript'>Refresh('7','" + sector.Coordinate + "')</script>";
 						break;
 					case "Constructing":
 						lblOpen.Text = "<script language='javascript'>Refresh('2','" + sector.Coordinate + "')</script>";

@@ -5,6 +5,8 @@ namespace Wc3o.Pages.Admin {
 	public partial class Ticks_aspx : System.Web.UI.Page {
 
 		protected void Page_Load(object sender, EventArgs e) {
+			Response.Write("Time at server: "+DateTime.Now.ToString());
+
 			if (!IsPostBack) {
 				txtRanking.Text = Game.GameData.Ticks.RankingTick.ToString();
 				txtRessource.Text = Game.GameData.Ticks.RessourceTick.ToString();

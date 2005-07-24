@@ -138,6 +138,10 @@ namespace Wc3o.Pages.Game {
 							new Message(recipient, user, subject + Server.HtmlEncode(txtSubject.Text), Server.HtmlEncode(txtText.Text).Replace("\n", "<br />"));
 							if (recipient.IsAlly(user))
 								numberOfRecipients++;
+
+							if (txtSubject.Text.Length <= 0)
+								txtSubject.Text = "no subject";
+
 							Wc3o.Game.Message(Master, "Your message was sent to '" + match.Value + "'.", MessageType.Acknowledgement);
 						}
 						else

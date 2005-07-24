@@ -89,6 +89,8 @@ namespace Wc3o.Pages.Game {
 		protected void btnAccept_Click(object sender, EventArgs e) {
 			if (drpWaiting.SelectedIndex > 0) {
 				Player p = Wc3o.Game.GameData.Players[drpWaiting.SelectedValue];
+				if (p == null)
+					return;
 				p.IsAccepted = true;
 				new Message(p, null, "Your appliance for " + player.Alliance.FullName + " has been accepted.", "");
 			}
@@ -98,10 +100,12 @@ namespace Wc3o.Pages.Game {
 
 		protected void btnKick_Click(object sender, EventArgs e) {
 			if (drpKick.SelectedIndex > 0) {
-				Player p = Wc3o.Game.GameData.Players[drpWaiting.SelectedValue];
+				Player p = Wc3o.Game.GameData.Players[drpKick.SelectedValue];
+				if (p == null)
+					return;
+				new Message(p, null, "The leader of " + player.Alliance.FullName + " has kicked you out.", "");
 				player.Alliance = null;
 				player.IsAccepted = false;
-				new Message(p, null, "Your appliance for " + player.Alliance.FullName + " has been accepted.", "");
 			}
 			Response.Redirect("Alliance.aspx");
 		}

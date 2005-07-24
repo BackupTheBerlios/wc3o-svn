@@ -8,7 +8,6 @@ namespace Wc3o.Pages.Portal {
 			#region " Intro "
 			imgIntroLeft.ImageUrl = Game.Gfx + "/Portal/IntroLeft.jpg";
 			imgIntroRight.ImageUrl = Game.Gfx + "/Portal/IntroRight.jpg";
-
 			#endregion
 
 			#region " News "

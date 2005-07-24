@@ -159,7 +159,7 @@ namespace Wc3o.Pages.Game {
 						Wc3o.Game.Message(this, "You started upgrading to " + i.Name + " of " + Wc3o.Game.Format(c) + " buildings.", MessageType.Acknowledgement);
 					}
 
-					Refresh(1, b.Sector.Coordinate.ToString());
+					Refresh(7, b.Sector.Coordinate.ToString());
 					Refresh(5, "");
 					CloseWindow(3000);
 				}
@@ -185,7 +185,7 @@ namespace Wc3o.Pages.Game {
 
 					u.Action = UnitAction.WorkForGold;
 					Wc3o.Game.Message(this, Wc3o.Game.Format(u.Number) + " " + u.Info.Name + " started to mine gold.", MessageType.Acknowledgement);
-					Refresh(1, u.Sector.Coordinate.ToString());
+					Refresh(6, u.Sector.Coordinate.ToString());
 					CloseWindow(3000);
 				}
 				#endregion
@@ -198,7 +198,7 @@ namespace Wc3o.Pages.Game {
 					}
 					u.Action = UnitAction.WorkForLumber;
 					Wc3o.Game.Message(this, Wc3o.Game.Format(u.Number) + " " + u.Info.Name + " started to cut lumber.", MessageType.Acknowledgement);
-					Refresh(1, u.Sector.Coordinate.ToString());
+					Refresh(6, u.Sector.Coordinate.ToString());
 					CloseWindow(3000);
 				}
 				#endregion
@@ -211,7 +211,7 @@ namespace Wc3o.Pages.Game {
 					}
 					u.Action = UnitAction.None;
 					Wc3o.Game.Message(this, Wc3o.Game.Format(u.Number) + " " + u.Info.Name + " stopped working.", MessageType.Acknowledgement);
-					Refresh(1, u.Sector.Coordinate.ToString());
+					Refresh(6, u.Sector.Coordinate.ToString());
 					CloseWindow(3000);
 				}
 				#endregion
@@ -226,7 +226,7 @@ namespace Wc3o.Pages.Game {
 								l.Add(u);
 						Wc3o.Game.Merge(l);
 						Wc3o.Game.Message(this, "You merged all your units.", MessageType.Acknowledgement);
-						Refresh(1, s.Coordinate.ToString());
+						Refresh(6, s.Coordinate.ToString());
 						CloseWindow(3000);
 					}
 					else {
@@ -237,7 +237,7 @@ namespace Wc3o.Pages.Game {
 								l.Add(u);
 						Wc3o.Game.Merge(l);
 						Wc3o.Game.Message(this, "You merged your " + unit.Info.Name + ".", MessageType.Acknowledgement);
-						Refresh(1, unit.Sector.Coordinate.ToString());
+						Refresh(6, unit.Sector.Coordinate.ToString());
 						CloseWindow(3000);
 					}
 				}
@@ -253,7 +253,7 @@ namespace Wc3o.Pages.Game {
 								l.Add(b);
 						Wc3o.Game.Merge(l);
 						Wc3o.Game.Message(this, "You merged all your buildings.", MessageType.Acknowledgement);
-						Refresh(1, s.Coordinate.ToString());
+						Refresh(7, s.Coordinate.ToString());
 						CloseWindow(3000);
 					}
 					else {
@@ -264,7 +264,7 @@ namespace Wc3o.Pages.Game {
 								l.Add(b);
 						Wc3o.Game.Merge(l);
 						Wc3o.Game.Message(this, "You merged your " + building.Info.Name + ".", MessageType.Acknowledgement);
-						Refresh(1, building.Sector.Coordinate.ToString());
+						Refresh(7, building.Sector.Coordinate.ToString());
 						CloseWindow(3000);
 					}
 				}
@@ -343,7 +343,7 @@ namespace Wc3o.Pages.Game {
 							Return(u);
 
 						Wc3o.Game.Message(this, "Your units return.", MessageType.Acknowledgement);
-						RefreshPage(s.Coordinate.ToString(), "Player");
+						RefreshPage(s.Coordinate.ToString(), "Units");
 						CloseWindow(3000);
 					}
 					else {
@@ -354,7 +354,7 @@ namespace Wc3o.Pages.Game {
 						}
 						Return(u);
 						Wc3o.Game.Message(this, "Your " + u.Info.Name + " return.", MessageType.Acknowledgement);
-						RefreshPage(u.Sector.Coordinate.ToString(), "Player");
+						RefreshPage(u.Sector.Coordinate.ToString(), "Units");
 						CloseWindow(3000);
 					}
 				}
@@ -363,7 +363,9 @@ namespace Wc3o.Pages.Game {
 				else if (Request.QueryString["Action"] == "MorphUnits") {
 					Unit u = player.GetUnitByHashcode(int.Parse(Request.QueryString["Unit"]));
 
-					double factor = u.Hitpoints / u.Info.Hitpoints;
+					double factor = (double)u.Hitpoints / (double)u.Info.Hitpoints;
+
+					Response.Write(factor.ToString());
 					int c = 0;
 					switch (u.Type) {
 						case UnitType.DruidOfTheClawBearForm:
@@ -438,13 +440,13 @@ namespace Wc3o.Pages.Game {
 							break;
 					}
 
-					u.Hitpoints = (int)(u.Hitpoints * factor);
+					u.Hitpoints = (int)(u.Info.Hitpoints * factor);
 
 					if (c > 0)
 						Wc3o.Game.Message(this, "You morphed " + Wc3o.Game.Format(c) + " units.", MessageType.Acknowledgement);
 					else
 						Wc3o.Game.Message(this, "You cannot morph.", MessageType.Error);
-					Refresh(1, u.Sector.Coordinate.ToString());
+					Refresh(6, u.Sector.Coordinate.ToString());
 					CloseWindow(3000);
 				}
 				#endregion
@@ -456,11 +458,11 @@ namespace Wc3o.Pages.Game {
 			lblScript.Text += "<script language='JavaScript'>setTimeout('close()'," + timeout + ");</script>";
 		}
 		void Refresh(int type, string sector) {
-			//1=Player,2=Training,3=Constructing,4=Overview,5=Navigation
+			//1=UNUSED,2=Training,3=Constructing,4=Overview,5=Navigation,6=Player Units, 7=Player Buildings
 			lblScript.Text += "<script language='JavaScript'>RefreshParent(" + type + ",'" + sector + "');</script>";
 		}
 		void RefreshPage(string sector, string refresh) {
-			//refresh = Player || Constructing || Training
+			//refresh = Units || Buildings || Constructing || Training
 			lblScript.Text += "<script language='JavaScript'>window.opener.document.location=\"Sector.aspx?Sector=" + sector + "&Refresh=" + refresh + "\";</script>";
 		}
 		#endregion
@@ -500,7 +502,7 @@ namespace Wc3o.Pages.Game {
 					s = u.Sector;
 					DestroyUnit(u);
 				}
-				RefreshPage(s.Coordinate.ToString(), "Player");
+				RefreshPage(s.Coordinate.ToString(), "Units");
 				CloseWindow(0);
 				return;
 			}
@@ -524,7 +526,7 @@ namespace Wc3o.Pages.Game {
 				}
 				else if (i == -2) {
 					if (sector.Owner != player) {
-						RefreshPage(s.Coordinate.ToString(), "Player");
+						RefreshPage(s.Coordinate.ToString(), "Buildings");
 						CloseWindow(0);
 						return;
 					}
@@ -551,7 +553,7 @@ namespace Wc3o.Pages.Game {
 					else
 						DestroyBuilding(b);
 				}
-				RefreshPage(s.Coordinate.ToString(), "Player");
+				RefreshPage(s.Coordinate.ToString(), "Buildings");
 				CloseWindow(0);
 				return;
 			}
@@ -639,7 +641,7 @@ namespace Wc3o.Pages.Game {
 				s = b.Sector;
 			}
 			#endregion
-			Refresh(1, s.Coordinate.ToString());
+			Refresh(7, s.Coordinate.ToString());
 			CloseWindow(0);
 		}
 
@@ -695,7 +697,7 @@ namespace Wc3o.Pages.Game {
 					u.Sector = s;
 					u.Action = UnitAction.Moving;
 				}
-				RefreshPage(s.Coordinate.ToString(), "Player");
+				RefreshPage(s.Coordinate.ToString(), "Units");
 				CloseWindow(0);
 			}
 			else {
@@ -705,7 +707,7 @@ namespace Wc3o.Pages.Game {
 				u.SourceDate = DateTime.Now;
 				u.Sector = s;
 				u.Action = UnitAction.Moving;
-				RefreshPage(s.Coordinate.ToString(), "Player");
+				RefreshPage(s.Coordinate.ToString(), "Units");
 				CloseWindow(0);
 			}
 		}

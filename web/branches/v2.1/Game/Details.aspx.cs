@@ -31,7 +31,9 @@ namespace Wc3o.Pages.Game {
 				if (!player.IsAlly(p))
 					isUnitOwnerAlly = "";
 				if (player.CanAttack(p))
-					canAttack = "1";
+					foreach (Unit u in sector.Units)
+						if (u.Owner == p && (u.IsAvailable || u.IsWorking))
+							canAttack = "1";
 			}
 
 			string sectorOwner = "";
@@ -71,7 +73,10 @@ namespace Wc3o.Pages.Game {
 					if (u.SourceSector != null)
 						source = u.SourceSector.FullName;
 
-					int damage = 100 - (int)(100 / ((double)u.UnitInfo.Hitpoints) * ((double)u.Hitpoints));
+
+					int damage = 0;
+					if (u.Hitpoints != u.Info.Hitpoints)
+						damage = 100 - (int)(100 / ((double)u.Info.Hitpoints) * ((double)u.Hitpoints));
 
 					string gold = "";
 					if (u.UnitInfo.ForGold)
