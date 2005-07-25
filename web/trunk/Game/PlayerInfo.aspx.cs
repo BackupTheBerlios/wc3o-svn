@@ -27,9 +27,9 @@ namespace Wc3o.Pages.Game {
 			lblName.Text = player.FullName;
 			lblLogonDate.Text = Wc3o.Game.Format(player.Online, true);
 			lblRegistrationDate.Text = Wc3o.Game.Format(player.Registration, true);
-			lblRank.Text = Wc3o.Game.Format(player.Rank);
+			lblRank.Text = Wc3o.Game.Format(player.LeagueRank);
 			lblLeague.Text = Wc3o.Game.Format(player.League);
-			lblBestRank.Text = Wc3o.Game.Format((int) player.Statistics["BestRank"]);
+			lblBestRank.Text = Wc3o.Game.Format(player.BestLeagueRank);
 			lblBestLeague.Text = Wc3o.Game.Format(player.BestLeague);
 			hplMessage.NavigateUrl = "Mail.aspx?Recipient=" + player.Name;
 			lblDescription.Text = player.Description;
