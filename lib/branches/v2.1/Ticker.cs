@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Wc3o.Tick {
+namespace Wc3o {
 	public class Ticker {
 
 		#region " Constructor "
@@ -22,10 +22,10 @@ namespace Wc3o.Tick {
 
 		#region " Save Tick "
 		private void SaveTick(Object sender, System.Timers.ElapsedEventArgs args) {
-			Game.Logger.Log("Save Tick ... ", Log.LogType.System);
+			Game.Logger.Log("Save Tick ... ");
 			saveTimer.Interval = Configuration.Seconds_For_Save_Tick * 1000;
 			GameData.Save(Game.GameData);
-			Game.Logger.Log("Save Tick done.", Log.LogType.System);
+			Game.Logger.Log("Save Tick done.");
 		}
 		#endregion
 
@@ -35,13 +35,13 @@ namespace Wc3o.Tick {
 			int count = -(int)(difference / Configuration.Seconds_For_Ranking_Tick);
 
 			if (count > 0) {
-				Game.Logger.Log("Doing " + count + " Ranking Ticks ...", Log.LogType.System);
+				Game.Logger.Log("Doing " + count + " Ranking Ticks ...");
 
 				for (int i = count; i > 0; i--) {
 					try {
-						new Ranking().CalculateRanking();
+						new Ranking().Calculate();
 					} catch (Exception ex) {
-						Game.Logger.Log("Ranking Tick Exception: " + ex.Message, Log.LogType.System);
+						Game.Logger.Log("Ranking Tick Exception: " + ex.Message);
 					}
 				}
 
@@ -58,12 +58,12 @@ namespace Wc3o.Tick {
 
 				foreach (Player p in l) {
 					p.Destroy();
-					Game.Logger.Log("Removed player '" + p.FullName + "'.", Log.LogType.System);
+					Game.Logger.Log("Removed player '" + p.FullName + "'.");
 				}
 				#endregion
 
 				Game.GameData.Ticks.RankingTick = Game.GameData.Ticks.RankingTick.AddSeconds(Configuration.Seconds_For_Ranking_Tick * (count + 1));
-				Game.Logger.Log(" ... Ranking Ticks done.", Log.LogType.System);
+				Game.Logger.Log(" ... Ranking Ticks done.");
 			}
 
 			rankingTimer.Interval = GetInterval(Game.GameData.Ticks.RessourceTick);
@@ -76,25 +76,30 @@ namespace Wc3o.Tick {
 			int count = -(int)(difference / Configuration.Seconds_For_Ressource_Tick);
 
 			if (count > 0) {
-				Game.Logger.Log("Doing " + count + " Ressource Ticks ...", Log.LogType.System);
+				Game.Logger.Log("Doing " + count + " Ressource Ticks ...");
 
 				for (int i = count; i > 0; i--) {
 					foreach (Player p in Game.GameData.Players.Values) {
-						p.Gold += p.GoldPerTick;
-						p.Lumber += p.LumberPerTick;
+						int gold, lumber;
+						p.GetRessourcesPerTick(out gold, out lumber);
+						p.Gold += gold;
+						p.Lumber += lumber;
 
 						#region " Healing Of Units "
 						foreach (Unit u in p.Units) {
-							if (!u.IsInTraining) {
+							if (u.Sector is HealingSector && (u.IsAvailable || u.IsWorking) && (u.Sector.Owner == null || p.IsAlly(u.Sector.Owner))) {
+								u.Hitpoints += (int)(Configuration.Healing_Sector_Healing_Rate * (u.Sector as HealingSector).HealingEfficiency);
+							}
+							else if (!u.IsInTraining) {
 								if (p.Fraction == Fraction.Humans || p.Fraction == Fraction.Orcs)
 									u.Hitpoints += Configuration.Healing_Orc_Humans;
 								else if (p.Fraction == Fraction.NightElves && Game.IsNight)
 									u.Hitpoints += Configuration.Healing_NightElves;
 								else if (p.Fraction == Fraction.Undead && u.Sector.Owner != null && u.Sector.Owner.Fraction == Fraction.Undead && (u.IsAvailable || u.IsWorking || (u.IsMoving && u.Action == UnitAction.Returning)))
 									u.Hitpoints += Configuration.Healing_Undead;
-								if (u.Hitpoints > u.Info.Hitpoints)
-									u.Hitpoints = u.Info.Hitpoints;
 							}
+							if (u.Hitpoints > u.Info.Hitpoints)
+								u.Hitpoints = u.Info.Hitpoints;
 						}
 
 						#endregion
@@ -102,7 +107,7 @@ namespace Wc3o.Tick {
 				}
 
 				Game.GameData.Ticks.RessourceTick = Game.GameData.Ticks.RessourceTick.AddSeconds(Configuration.Seconds_For_Ressource_Tick * (count + 1));
-				Game.Logger.Log(" ... Ressource Ticks done.", Log.LogType.System);
+				Game.Logger.Log(" ... Ressource Ticks done.");
 			}
 
 			rankingTimer.Interval = GetInterval(Game.GameData.Ticks.RessourceTick);

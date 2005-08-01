@@ -12,9 +12,6 @@ namespace Wc3o {
         #endregion
 
         #region " Constructor "
-		public Sector() {
-		}
-
         public Sector(Coordinate c) {
             this.coordinate = c;
             this.buildings = new List<Building>();
@@ -24,13 +21,7 @@ namespace Wc3o {
         #endregion
 
         #region " Properties "
-		public string FullName {
-			get {
-				return Name + " [" + Coordinate.X + ":" + Coordinate.Y + "]";
-			}
-		}
-
-		Player owner;
+		protected Player owner;
         public Player Owner {
             get {
                 return owner;
@@ -49,7 +40,7 @@ namespace Wc3o {
             }
         }
 
-        string name;
+        protected string name;
         public string Name {
             get {
                 return name;
@@ -59,77 +50,32 @@ namespace Wc3o {
 			}
 		}
 
-        Coordinate coordinate;
+        protected Coordinate coordinate;
         public Coordinate Coordinate {
             get {
                 return coordinate;
             }
         }
 
-        List<Unit> units;
+
+        protected List<Unit> units;
         public List<Unit> Units {
             get {
                 return units;
             }
         }
 
-        List<Building> buildings;
+
+        protected List<Building> buildings;
         public List<Building> Buildings {
             get {
                 return buildings;
             }
         }
 
-		bool hasArtifacts;
-		public bool HasArtifacts {
-			get {
-				return hasArtifacts;
-			}
-			set {
-				hasArtifacts = value;
-			}
-		}
 
-		bool hasMercenaries;
-		public bool HasMercenaries {
-			get {
-				return hasMercenaries;
-			}
-			set {
-				hasMercenaries = value;
-			}
-		}
-
-		int gold;
-		public int Gold {
-			get {
-				return gold;
-			}
-			set {
-				gold = value;
-			}
-		}
-
-		public int GoldPerTick {
-			get {
-				return Configuration.Gold_Per_Ressource_Tick * Gold / 100;
-			}
-		}
-
-		int lumber;
-		public int Lumber {
-			get {
-				return lumber;
-			}
-			set {
-				lumber = value;
-			}
-		}
-
-		public int LumberPerTick {
-			get {
-				return Configuration.Lumber_Per_Ressource_Tick * Lumber / 100;
-			}
+		public override string ToString() {
+			return name + " [" + Coordinate.X + ":" + Coordinate.Y + "]";
 		}
         #endregion
 
@@ -189,67 +135,5 @@ namespace Wc3o {
 			return false;
 		}
 		#endregion
-
-		#region " ToString "
-		public override string ToString() {
-			return Name + "[" + Coordinate.X + ":" + Coordinate.Y + "]";
-		}
-		#endregion
-
 	}
-
-    #region " Coordinate "
-    [Serializable]
-    public struct Coordinate : IComparable {
-
-        #region " Constructor "
-        public Coordinate(int x, int y) {
-            this.x = x;
-            this.y = y;
-        }
-
-		public Coordinate(string s) {
-			this.x = int.Parse(s.Substring(0, s.IndexOf("_")));
-			this.y = int.Parse(s.Substring(s.IndexOf("_") + 1, s.Length - s.IndexOf("_") - 1));
-		}
-        #endregion
-
-        #region " Properties "
-        int x;
-        public int X {
-            get {
-                return x;
-            }
-        }
-
-        int y;
-        public int Y {
-            get {
-                return y;
-            }
-        }
-        #endregion
-
-		#region " CompareTo, ToString, Equals, GetHashCode "
-		public int CompareTo(object o) {
-			return ToString().CompareTo(o.ToString());
-		}
-
-		public override string ToString() {
-			return X.ToString() + "_" + Y.ToString();
-		}
-
-		public override bool Equals(object o) {
-			Coordinate c = (Coordinate)o;
-			return c.X == X && c.Y == y;
-		}
-
-		public override int GetHashCode() {
-			return this.GetHashCode();
-		}
-		#endregion
-
-	}
-    #endregion
-
 }

@@ -23,28 +23,28 @@ namespace Wc3o {
 		#region " Load/Save (Serialization) "
 		public static void Save(GameData d) {
 			try {
-				Game.Logger.Log("Saving Game Data ...", Log.LogType.System);
+				Game.Logger.Log("Saving Game Data ...");
 				DateTime date = Game.GetCorrectedDate();
 				new System.IO.FileInfo(Configuration.Physical_Application_Path + "\\App_Data\\Game.dat").CopyTo(Configuration.Physical_Application_Path + "\\App_Data\\Backup\\Game_" + date.Day.ToString() + "." + date.Month.ToString() + "." + date.Year.ToString() + ", " + date.Hour.ToString() + "-" + date.Minute.ToString() + "-" + date.Second.ToString() + ".dat");
 				FileStream f = new FileStream(Configuration.Physical_Application_Path + "\\App_Data\\Game.dat", FileMode.OpenOrCreate);
 				new BinaryFormatter().Serialize(f, d);
 				f.Close();
-				Game.Logger.Log("Saving of Game Data done.", Log.LogType.System);
+				Game.Logger.Log("Saving of Game Data done.");
 			} catch (Exception e) {
-				Game.Logger.Log("Exception while saving Game Data: "+e.Message, Log.LogType.System);
+				Game.Logger.Log("Exception while saving Game Data: "+e.Message);
 			}
 		}
 
 		public static GameData Load() {
 			try {
-				Game.Logger.Log("Loading Game Data ...", Log.LogType.System);
+				Game.Logger.Log("Loading Game Data ...");
 				FileStream f = new FileStream(Configuration.Physical_Application_Path + "\\App_Data\\Game.dat", FileMode.Open);
 				GameData d = (GameData)new BinaryFormatter().UnsafeDeserialize(f,null);
 				f.Close();
-				Game.Logger.Log("Loading of Game Data done.", Log.LogType.System);
+				Game.Logger.Log("Loading of Game Data done.");
 				return d;
 			} catch (Exception e) {
-				Game.Logger.Log("Exception while loading Game Data: " + e.Message, Log.LogType.System);
+				Game.Logger.Log("Exception while loading Game Data: " + e.Message);
 				return new GameData();
 			}
 		}

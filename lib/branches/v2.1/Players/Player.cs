@@ -16,9 +16,7 @@ namespace Wc3o {
             this.units = new List<Unit>();
             this.buildings = new List<Building>();
 			this.sectors = new List<Sector>();
-			this.statistics = new Dictionary<string, object>();
-			statistics["BestRank"] = 0;
-			statistics["BestScore"] = 0;
+			this.allianceRank = Wc3o.AllianceRank.Level0;
 			Game.GameData.Players.Add(name,this);
         }
         #endregion
@@ -41,14 +39,8 @@ namespace Wc3o {
 			List<Sector> sectors = new List<Sector>();
 			foreach (Sector s in Sectors)
 				sectors.Add(s);
-			foreach (Sector s in sectors) {
+			foreach (Sector s in sectors)
 				s.Owner = null;
-				if (s.Gold > 0 && s.Lumber > 0) {
-					s.Gold = 100;
-					s.Lumber = 100;
-				}
-			}
-
 			
 			foreach (Player p in Game.GameData.Players.Values)
 				if (p.Vote == this)
@@ -60,14 +52,27 @@ namespace Wc3o {
 
         #region " Properties "
 
-		#region " Ressources "
-		void GetRessourcesPerTick(out int gold, out int lumber) {
+		public void GetRessourcesPerTick(out int gold, out int lumber) {
 			gold = 0;
 			lumber = 0;
 
 			foreach (Sector s in Sectors) {
+				int goldPerTick = 0;
+				int lumberPerTick = 0;
 				int workerForGold = 0;
 				int workerForLumber = 0;
+				if (s is GoldSector) //here is only gold
+					goldPerTick = (s as GoldSector).GoldPerTick;
+				else if (s is LumberSector) //here is only lumber
+					lumberPerTick = (s as LumberSector).LumberPerTick;
+				else if (s is GoldAndLumberSector) { //here is gold and lumber
+					GoldAndLumberSector goldAndLumberSector = s as GoldAndLumberSector;
+					goldPerTick = goldAndLumberSector.GoldPerTick;
+					lumberPerTick = goldAndLumberSector.LumberPerTick;
+				}
+				else //no ressources are here, move to the next sector
+					continue;
+
 				foreach (Unit u in s.Units)
 					if (u.Owner == this && u.Action == UnitAction.WorkForGold)
 						workerForGold += u.Number;
@@ -78,62 +83,46 @@ namespace Wc3o {
 				if (Fraction == Wc3o.Fraction.Humans) {
 					bool hasMainBuilding = s.HasAvailableBuilding(BuildingType.TownHall) || s.HasBuilding(BuildingType.Keep) || s.HasBuilding(BuildingType.Castle);
 					if (hasMainBuilding)
-						gold += workerForGold * s.GoldPerTick;
+						gold += workerForGold * goldPerTick;
 					if (hasMainBuilding || s.HasAvailableBuilding(BuildingType.LumberMill))
-						lumber += workerForLumber * s.LumberPerTick;
+						lumber += workerForLumber * lumberPerTick;
 				}
 				else if (Fraction == Wc3o.Fraction.Orcs) {
 					bool hasMainBuilding = s.HasAvailableBuilding(BuildingType.GreatHall) || s.HasBuilding(BuildingType.Stronghold) || s.HasBuilding(BuildingType.Fortress);
 					if (hasMainBuilding)
-						gold += workerForGold * s.GoldPerTick;
+						gold += workerForGold * goldPerTick;
 					if (hasMainBuilding || s.HasAvailableBuilding(BuildingType.WarMill))
-						lumber += workerForLumber * s.LumberPerTick;
+						lumber += workerForLumber * lumberPerTick;
 				}
 				else if (Fraction == Wc3o.Fraction.NightElves) {
 					bool hasMainBuilding = s.HasAvailableBuilding(BuildingType.TreeOfLife) || s.HasBuilding(BuildingType.TreeOfAges) || s.HasBuilding(BuildingType.TreeOfEternity);
 					if (hasMainBuilding)
-						gold += workerForGold * s.GoldPerTick;
-					lumber += workerForLumber * s.LumberPerTick;
+						gold += workerForGold * goldPerTick;
+					lumber += workerForLumber * lumberPerTick;
 				}
 				else if (Fraction == Wc3o.Fraction.Undead) {
 					bool hasMainBuilding = s.HasAvailableBuilding(BuildingType.Necropolis) || s.HasBuilding(BuildingType.HallsOfTheDead) || s.HasBuilding(BuildingType.BlackCitadel);
 					if (s.HasBuilding(BuildingType.HauntedGoldMine))
-						gold += workerForGold * s.GoldPerTick;
+						gold += workerForGold * goldPerTick;
 					if (hasMainBuilding || s.HasAvailableBuilding(BuildingType.Graveyard))
-						lumber += workerForLumber * s.LumberPerTick;
+						lumber += workerForLumber * lumberPerTick;
 				}
 			}
+
+			gold += Configuration.Min_Gold_Income;
+			lumber += Configuration.Min_Lumber_Income;
 
 			int upkeep = Upkeep;
 			if (upkeep >= Configuration.Upkeep_Level2)
 				gold = (int)(gold * Configuration.Upkeep_Level2_Factor);
 			else if (upkeep >= Configuration.Upkeep_Level1)
 				gold = (int)(gold * Configuration.Upkeep_Level1_Factor);
-
-			gold = Game.Max(gold, Configuration.Min_Gold_Income);
-			lumber = Game.Max(lumber, Configuration.Min_Lumber_Income);
 		}
 
-		public int GoldPerTick {
-			get {
-				int gold,lumber;
-				GetRessourcesPerTick(out gold,out lumber);
-				return gold;
-			}
-		}
-
-		public int LumberPerTick {
-			get {
-				int gold,lumber;
-				GetRessourcesPerTick(out gold,out lumber);
-				return lumber;
-			}
-		}
-		#endregion
-
+		//remove (it should be in the GUI)
 		public string MailLink {
 			get {
-				return "<a href='Mail.aspx?Recipient=" + name + "'>" + FullName + "</a>";
+				return "<a href='Mail.aspx?Recipient=" + name + "'>" + RankedName + "</a>";
 			}
 		}
 
@@ -155,6 +144,17 @@ namespace Wc3o {
 				return i;
 			}
 		}
+
+
+		public int EstimatedUpkeep {
+			get {
+				int i = 0;
+				foreach (Unit u in Units)
+					i += u.Info.Food * u.Number;
+				return i;
+			}
+		}
+
 
 		public int Food {
 			get {
@@ -197,6 +197,7 @@ namespace Wc3o {
 				}
 				alliance = value;
 				if (alliance != null) {
+					allianceRank = Wc3o.AllianceRank.Level0;
 					alliance.Members.Add(this);
 					Vote = this;
 				}
@@ -348,6 +349,16 @@ namespace Wc3o {
             }
         }
 
+		int league;
+		public int League {
+			get {
+				return league;
+			}
+			set {
+				league = value;
+			}
+		}
+
         DateTime online;
         public DateTime Online {
             get {
@@ -388,40 +399,49 @@ namespace Wc3o {
             }
         }
 
-		Dictionary<string, object> statistics;
-		public Dictionary<string, object> Statistics {
-			get {
-				return statistics;
-			}
-		}
-
-		public int League {
-			get {
-				return Game.GetLeague(Rank);
-			}
-		}
-
+		int bestLeague;
 		public int BestLeague {
 			get {
-				return Game.GetLeague((int)statistics["BestRank"]);
+				return bestLeague;
+			}
+			set {
+				bestLeague = value;
 			}
 		}
 
-		public int LeagueRank {
+		int bestRank;
+		public int BestRank {
 			get {
-				return rank - (League - 1) * Configuration.Player_Per_League;
+				return bestRank;
+			}
+			set {
+				bestRank = value;
 			}
 		}
 
-		public int BestLeagueRank {
+		int bestScore;
+		public int BestScore {
 			get {
-				return (int)statistics["BestRank"] - (BestLeague - 1) * Configuration.Player_Per_League;
+				return bestScore;
+			}
+			set {
+				bestScore = value;
+			}
+		}
+
+		AllianceRank allianceRank;
+		public AllianceRank AllianceRank {
+			get {
+				return allianceRank;
+			}
+			set {
+				allianceRank = value;
 			}
 		}
 
 		public string RankLeague {
 			get {
-				return LeagueRank + " / " + League;
+				return Rank + " / " + League;
 			}
 		}
 
@@ -436,9 +456,29 @@ namespace Wc3o {
 				return "<img src='" + Gfx + FractionInfo.SmallEmblem + "' />";
 			}
 		}
+
+		public string RankedName {
+			get {
+				string rank = Game.Format(allianceRank,fraction);
+				if (rank != "")
+					return rank + " " + name;
+				else
+					return name;
+			}
+		}
         #endregion
 
 		#region " Methods "
+		public bool HasAHigherAllianceRank(Player p) {
+			if (p.AllianceRank == AllianceRank.Level2 && allianceRank == AllianceRank.Level3)
+				return true;
+			if (p.AllianceRank == AllianceRank.Level1 && (allianceRank == AllianceRank.Level3 || allianceRank == AllianceRank.Level2))
+				return true;
+			if (p.AllianceRank == AllianceRank.Level0 && (allianceRank == AllianceRank.Level3 || allianceRank == AllianceRank.Level2 || allianceRank == AllianceRank.Level1))
+				return true;
+			return false;
+		}
+
 		public Unit GetUnitByHashcode(int hash) {
 			foreach (Unit u in Units)
 				if (u.GetHashCode() == hash)
@@ -535,83 +575,4 @@ namespace Wc3o {
 		#endregion
 	}
 
-    #region " FractionInfo "
-    public class FractionInfo {
-        #region " Get "
-        static SortedDictionary<Fraction, FractionInfo> infos;
-        public static FractionInfo Get(Fraction f) {
-			if (infos == null)
-				infos = new SortedDictionary<Fraction, FractionInfo>();
-			if (!infos.ContainsKey(f))
-                Create(f);
-            return infos[f];
-        }
-        #endregion
-
-        #region " Create "
-        static void Create(Fraction f) {
-            FractionInfo i = new FractionInfo();
-            switch (f) {
-                case Fraction.Humans:
-                    i.name="Human Alliance";
-					i.emblem = "/Humans/Emblem.gif";
-					i.smallEmblem = "/Humans/SmallEmblem.gif";
-					break;
-                case Fraction.Orcs:
-                    i.name = "Horde";
-					i.emblem = "/Orcs/Emblem.gif";
-					i.smallEmblem = "/Orcs/SmallEmblem.gif";
-                    break;
-                case Fraction.NightElves:
-                    i.name = "Night Elves";
-					i.emblem = "/NightElves/Emblem.gif";
-					i.smallEmblem = "/NightElves/SmallEmblem.gif";
-                    break;
-                case Fraction.Undead:
-                    i.name = "Undead Scourge";
-					i.emblem = "/Undead/Emblem.gif";
-					i.smallEmblem = "/Undead/SmallEmblem.gif";
-                    break;
-                case Fraction.Neutrals:
-                    i.name = "Creeps";
-					i.emblem = "";
-					i.smallEmblem = "";
-                    break;
-            }
-            infos[f] = i;
-        }
-        #endregion
-
-        #region " Properties "
-        string name;
-        public string Name {
-            get {
-                return name;
-            }
-        }
-
-		string emblem;
-		public string Emblem {
-			get {
-				return emblem;
-			}
-		}
-
-		string smallEmblem;
-		public string SmallEmblem {
-			get {
-				return smallEmblem;
-			}
-		}
-        #endregion
-
-		#region " Methods "
-		public override string ToString() {
-			return this.Name;
-		}
-		#endregion
-	}
-    #endregion
-
-	public enum Fraction { Humans, Orcs, Undead, NightElves, Neutrals }
 }

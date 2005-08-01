@@ -7,7 +7,6 @@ namespace Wc3o {
 		Army attacker, defender;
 		System.IO.StreamWriter writer;
 		BattleResult result;
-		Random random;
 		Sector sector;
 
 		bool attackBuildings = false;
@@ -18,7 +17,6 @@ namespace Wc3o {
 			this.defender = defender;
 			this.sector = sector;
 
-			random = new Random();
 			result = new BattleResult();
 
 			string defenderName = "-";
@@ -45,7 +43,7 @@ namespace Wc3o {
 			string defenderName = "some Creeps";
 			if (defender.Owner != null)
 				defenderName = defender.Owner.FullName;
-			BattleLog("The epic battle between " + attacker.Owner.FullName + " and " + defenderName + " at " + sector.FullName + " starts. The battle will last " + rounds + " rounds and buildings will first be attacked in the " + attackBuildingsRound + " round.");
+			BattleLog("The epic battle between " + attacker.Owner.FullName + " and " + defenderName + " at " + sector.ToString() + " starts. The battle will last " + rounds + " rounds and buildings will first be attacked in the " + attackBuildingsRound + " round.");
 
 			attacker.CalculateAuras();
 			defender.CalculateAuras();
@@ -125,7 +123,7 @@ namespace Wc3o {
 									i--;
 									l.Remove(b);
 									defender.Entities.Remove(b.Entity);
-									result.HostileLosses.Add(b.Entity);
+									result.DefendersLosses.Add(b.Entity);
 									b.Entity.Destroy();
 								}
 							}
@@ -145,7 +143,7 @@ namespace Wc3o {
 			}
 
 			result.PlayerLosses = Wc3o.Game.Merge(result.PlayerLosses, true);
-			result.HostileLosses = Wc3o.Game.Merge(result.HostileLosses, true);
+			result.DefendersLosses = Wc3o.Game.Merge(result.DefendersLosses, true);
 			attacker.Entities = Wc3o.Game.Merge(attacker.Entities);
 			defender.Entities = Wc3o.Game.Merge(defender.Entities);
 
@@ -357,19 +355,19 @@ namespace Wc3o {
 		}
 
 		private int GetWon(int total, int min, int max) {
-			return Convert.ToInt32(total * Convert.ToDouble(random.Next(min, max)) / 100);
+			return Convert.ToInt32(total * Convert.ToDouble(Game.Random.Next(min, max)) / 100);
 		}
 
 		private int Random(int max) {
 			if (max == 0)
 				return 0;
 			else
-				return random.Next(max);
+				return Game.Random.Next(max);
 		}
 
 		int GetKilledScoreFromDefender() {
 			int i = 0;
-			foreach (Entity e in result.HostileLosses)
+			foreach (Entity e in result.DefendersLosses)
 				i += e.Info.Score * e.Number;
 			return i;
 		}
@@ -379,23 +377,23 @@ namespace Wc3o {
 	#region " BattleResult "
 	public class BattleResult {
 
-		List<Entity> playerLosses;
+		List<Entity> attackersLosses;
 		public List<Entity> PlayerLosses {
 			get {
-				return playerLosses;
+				return attackersLosses;
 			}
 			set {
-				playerLosses = value;
+				attackersLosses = value;
 			}
 		}
 
-		List<Entity> hostileLosses;
-		public List<Entity> HostileLosses {
+		List<Entity> defendersLosses;
+		public List<Entity> DefendersLosses {
 			get {
-				return hostileLosses;
+				return defendersLosses;
 			}
 			set {
-				hostileLosses = value;
+				defendersLosses = value;
 			}
 		}
 
@@ -440,8 +438,8 @@ namespace Wc3o {
 		}
 
 		public BattleResult() {
-			playerLosses = new List<Entity>();
-			hostileLosses = new List<Entity>();
+			attackersLosses = new List<Entity>();
+			defendersLosses = new List<Entity>();
 		}
 	}
 

@@ -23,26 +23,26 @@ namespace Wc3o {
 		#region " Load/Save (Serialization) "
 		public static void Save(PortalData d) {
 			try {
-				Game.Logger.Log("Saving Portal Data.....", Log.LogType.System);
+				Game.Logger.Log("Saving Portal Data.....");
 				FileStream f = new FileStream(Configuration.Physical_Application_Path + "\\App_Data\\Portal.dat", FileMode.OpenOrCreate);
 				new BinaryFormatter().Serialize(f, d);
 				f.Close();
-				Game.Logger.Log("Saving of Portal Data done.", Log.LogType.System);
+				Game.Logger.Log("Saving of Portal Data done.");
 			} catch (Exception e) {
-				Game.Logger.Log("Exception while saving Portal Data: " + e.InnerException, Log.LogType.System);
+				Game.Logger.Log("Exception while saving Portal Data: " + e.InnerException);
 			}
 		}
 
 		public static PortalData Load() {
 			try {
-				Game.Logger.Log("Loading Portal Data.....", Log.LogType.System);
+				Game.Logger.Log("Loading Portal Data.....");
 				FileStream f = new FileStream(Configuration.Physical_Application_Path + "\\App_Data\\Portal.dat", FileMode.Open);
 				PortalData d = (PortalData)new BinaryFormatter().Deserialize(f);
 				f.Close();
-				Game.Logger.Log("Loading of Portal Data done.", Log.LogType.System);
+				Game.Logger.Log("Loading of Portal Data done.");
 				return d;
 			} catch (Exception e) {
-				Game.Logger.Log("Exception while loading Portal Data: " + e.InnerException, Log.LogType.System);
+				Game.Logger.Log("Exception while loading Portal Data: " + e.InnerException);
 				return new PortalData();
 			}
 		}

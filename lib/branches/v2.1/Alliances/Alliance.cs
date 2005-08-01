@@ -126,4 +126,8 @@ namespace Wc3o {
 		#endregion
 
 	}
+
+	public enum AllianceRank {
+		Level0, Level1, Level2, Level3
+	}
 }

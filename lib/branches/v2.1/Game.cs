@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 
 namespace Wc3o {
-    public static class Game {
+	public static class Game {
 
 		#region " Game Data "
 		static GameData gameData;
@@ -29,6 +29,13 @@ namespace Wc3o {
 		#endregion
 
 		#region " Properties "
+		static Random random = new Random();
+		public static Random Random {
+			get {
+				return Game.random;
+			}
+		}
+
 		public static string Gfx {
 			get {
 				if (System.Web.HttpContext.Current.User.Identity.IsAuthenticated) {
@@ -42,20 +49,20 @@ namespace Wc3o {
 		#endregion
 
 		#region " Logger "
-		static Log.Logger logger;
-        public static Log.Logger Logger {
-            get {
-                return logger;
-            }
-            set {
-                logger = value;
-            }
-        }
-        #endregion
+		static Logger logger;
+		public static Logger Logger {
+			get {
+				return logger;
+			}
+			set {
+				logger = value;
+			}
+		}
+		#endregion
 
 		#region " Ticker "
-		static Tick.Ticker ticker;
-		public static Tick.Ticker Ticker {
+		static Ticker ticker;
+		public static Ticker Ticker {
 			get {
 				return ticker;
 			}
@@ -82,7 +89,7 @@ namespace Wc3o {
 			try {
 				smtp.Send(mail);
 			} catch {
-				Game.Logger.Log("An error occured while sending an email to '" + recipient + "'.", Log.LogType.System);
+				Game.Logger.Log("An error occured while sending an email to '" + recipient + "'.");
 			}
 
 		}
@@ -116,7 +123,7 @@ namespace Wc3o {
 				try {
 					return Game.GameData.Players[System.Web.HttpContext.Current.User.Identity.Name];
 				} catch {
-					System.Web.Security.FormsAuthentication.SignOut();					
+					System.Web.Security.FormsAuthentication.SignOut();
 				}
 				return null;
 			}
@@ -201,7 +208,7 @@ namespace Wc3o {
 
 
 		public static bool IsAvailable(Player p, Sector s, UnitInfo i) {
-			if (i.Type==UnitType.None || !i.Buildable || p.Gold < i.Gold || p.Lumber < i.Lumber)
+			if (i.Type == UnitType.None || !i.Buildable || p.Gold < i.Gold || p.Lumber < i.Lumber)
 				return false;
 
 			if (!s.HasBuildingForRequirement(i.TrainedAt))
@@ -270,9 +277,9 @@ namespace Wc3o {
 				return rank / Configuration.Player_Per_League + 1;
 		}
 
-		public static void RemoveRange<T>(ICollection<T> from,IEnumerable<T> remove) {
-            foreach (T t in remove)
-                from.Remove(t);
+		public static void RemoveRange<T>(ICollection<T> from, IEnumerable<T> remove) {
+			foreach (T t in remove)
+				from.Remove(t);
 		}
 
 		public static bool TrainedInSameBuilding(UnitInfo a, UnitInfo b) {
@@ -328,24 +335,24 @@ namespace Wc3o {
 
 		public static void Message(System.Web.UI.Control parent, string message) {
 			Game.Message(parent, message, MessageType.Normal);
-		}	
+		}
 		#endregion
 
-        #region " Format Methods "
-        public static string Format(int number) {
-            if (number == 0)
-                return "0";
-            else
-                return number.ToString("N").Substring(0, number.ToString("N").Length - 3).Replace(",", ".");
-        }
+		#region " Format Methods "
+		public static string Format(int number) {
+			if (number == 0)
+				return "0";
+			else
+				return number.ToString("N").Substring(0, number.ToString("N").Length - 3).Replace(",", ".");
+		}
 
-        public static string Format(double number) {
-            if (number == 0)
-                return "0";
-            else {
-                return number.ToString("N").Replace(".", "_").Replace(",", ".").Replace("_", ",");
-            }
-        }
+		public static string Format(double number) {
+			if (number == 0)
+				return "0";
+			else {
+				return number.ToString("N").Replace(".", "_").Replace(",", ".").Replace("_", ",");
+			}
+		}
 
 
 		public static string Format(DateTime input, bool WriteSeconds) {
@@ -440,42 +447,42 @@ namespace Wc3o {
 				return weekday + month + " " + input.Day;
 		}
 
-        public static string TimeSpan(DateTime d) {
-            TimeSpan t;
+		public static string TimeSpan(DateTime d) {
+			TimeSpan t;
 
-            if (d > DateTime.Now)
-                t = d - DateTime.Now;
-            else
-                t = DateTime.Now - d;
+			if (d > DateTime.Now)
+				t = d - DateTime.Now;
+			else
+				t = DateTime.Now - d;
 
-            int hour = t.Hours + t.Days * 24;
-            string hours, minutes, seconds;
-            if (hour > 9)
-                hours = hour.ToString();
-            else
-                hours = "0" + hour.ToString();
-            if (t.Minutes > 9)
-                minutes = t.Minutes.ToString();
-            else
-                minutes = "0" + t.Minutes.ToString();
-            if (t.Seconds > 9)
-                seconds = t.Seconds.ToString();
-            else
-                seconds = "0" + t.Seconds.ToString();
+			int hour = t.Hours + t.Days * 24;
+			string hours, minutes, seconds;
+			if (hour > 9)
+				hours = hour.ToString();
+			else
+				hours = "0" + hour.ToString();
+			if (t.Minutes > 9)
+				minutes = t.Minutes.ToString();
+			else
+				minutes = "0" + t.Minutes.ToString();
+			if (t.Seconds > 9)
+				seconds = t.Seconds.ToString();
+			else
+				seconds = "0" + t.Seconds.ToString();
 
-            if (hour > 0)
-                return hours + ":" + minutes + ":" + seconds;
-            else
-                return minutes + ":" + seconds;
-        }
+			if (hour > 0)
+				return hours + ":" + minutes + ":" + seconds;
+			else
+				return minutes + ":" + seconds;
+		}
 
-        public static DateTime GetCorrectedDate(DateTime d) {
-            return d.AddHours(Configuration.Hour_Correction);
-        }
+		public static DateTime GetCorrectedDate(DateTime d) {
+			return d.AddHours(Configuration.Hour_Correction);
+		}
 
-        public static DateTime GetCorrectedDate() {
-            return GetCorrectedDate(DateTime.Now);
-        }
+		public static DateTime GetCorrectedDate() {
+			return GetCorrectedDate(DateTime.Now);
+		}
 
 		public static string Format(AttackType type) {
 			switch (type) {
@@ -530,10 +537,47 @@ namespace Wc3o {
 			}
 			return null;
 		}
-        #endregion
 
-    }
+		public static string Format(AllianceRank rank, Fraction fraction) {
+			if (fraction == Fraction.Humans) {
+				if (rank == AllianceRank.Level1)
+					return "Lieutnant";
+				else if (rank == AllianceRank.Level2)
+					return "Commisasr";
+				else if (rank == AllianceRank.Level3)
+					return "Marshal";
+			}
+			else if (fraction == Fraction.Orcs) {
+				if (rank == AllianceRank.Level1)
+					return "Raider";
+				else if (rank == AllianceRank.Level2)
+					return "Pack Leader";
+				else if (rank == AllianceRank.Level3)
+					return "War Chief";
+			}
+			else if (fraction == Fraction.Undead) {
+				if (rank == AllianceRank.Level1)
+					return "Evocator";
+				else if (rank == AllianceRank.Level2)
+					return "Necrolyte Master";
+				else if (rank == AllianceRank.Level3)
+					return "Wraithlord";
+			}
+			else if (fraction == Fraction.NightElves) {
+				if (rank == AllianceRank.Level1)
+					return "Shadow Guard";
+				else if (rank == AllianceRank.Level2)
+					return "Captain of the Guard";
+				else if (rank == AllianceRank.Level3)
+					return "Commandant";
+			}
+			return "";
+		}
+		#endregion
+
+	}
 
 	public enum MessageType { Error, Acknowledgement, Normal }
 
 }
+

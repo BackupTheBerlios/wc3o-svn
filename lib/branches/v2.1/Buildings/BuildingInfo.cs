@@ -690,7 +690,7 @@ namespace Wc3o {
 					i.score = 1;
 					i.number = 40;
 					i.numberPerSector = 40;
-					i.food = 5;
+					i.food = 6;
 					break;
 				case BuildingType.AltarOfKings:
 					i.fraction = Fraction.Humans;

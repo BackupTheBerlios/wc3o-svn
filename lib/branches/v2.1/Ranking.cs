@@ -4,90 +4,101 @@ using System.Collections.Generic;
 namespace Wc3o {
 	public class Ranking {
 
-		System.Collections.ArrayList users;
+		List<Player> players;
 
-		public void CalculateRanking() {
-			users = new System.Collections.ArrayList();
+		public void Calculate() {
+			int maxRessourceScore = 0;
+			int maxSectorScore = 0;
+			int maxUnitScore = 0;
+			int maxBuildingScore = 0;
 
-			foreach (Player p in Game.GameData.Players.Values)
-				users.Add(p);
+			players = new List<Player>();
+			foreach (Player player in Game.GameData.Players.Values)
+				players.Add(player);
 
-			int maxRessources = 0;
-			int maxSector = 0;
-			int maxUnits = 0;
-			int maxBuildings = 0;
+			//finds the maximum for each score category
+			foreach (Player player in players) {
+				int i;
 
-			foreach (Player user in users) {
-				int tmp;
+				i = GetRessourceScore(player);
+				if (i > maxRessourceScore)
+					maxRessourceScore = i;
 
-				tmp = GetRessourcesScore(user);
-				if (tmp > maxRessources)
-					maxRessources = tmp;
+				i = GetSectorScore(player);
+				if (i > maxSectorScore)
+					maxSectorScore = i;
 
-				tmp = GetSectorScore(user);
-				if (tmp > maxSector)
-					maxSector = tmp;
+				i = GetUnitScore(player);
+				if (i > maxUnitScore)
+					maxUnitScore = i;
 
-				tmp = GetUnitScore(user);
-				if (tmp > maxUnits)
-					maxUnits = tmp;
-
-				tmp = GetBuildingScore(user);
-				if (tmp > maxBuildings)
-					maxBuildings = tmp;
+				i = GetBuildingScore(player);
+				if (i > maxBuildingScore)
+					maxBuildingScore = i;
 			}
 
-			foreach (Player user in users)
-				user.Score = Convert.ToInt32(Convert.ToDouble(GetUnitScore(user)) / maxUnits * 400) + Convert.ToInt32(Convert.ToDouble(GetBuildingScore(user)) / maxBuildings * 200) + Convert.ToInt32(Convert.ToDouble(GetRessourcesScore(user)) / maxRessources * 100) + Convert.ToInt32(Convert.ToDouble(GetSectorScore(user)) / maxSector * 300);
+			//calculates the score for each player
+			foreach (Player player in players) {
+				player.Score = (int)((double)GetUnitScore(player) / maxUnitScore * 400 + (double)GetBuildingScore(player) / maxBuildingScore * 200 + (double)GetRessourceScore(player) / maxRessourceScore * 100 + (double)GetSectorScore(player) / maxSectorScore * 300);
+				if (player.Score > player.BestScore) //is it a new best score?
+					player.BestScore = player.Score;
+			}
 
-			users.Sort(new UserScoreComparer());
-			for (int i = 1; i <= users.Count; i++) {
-				Player u = (Player)users[i - 1];
-				u.Rank = i;
-				
-				int bestRank=(int)u.Statistics["BestRank"];
-				if (bestRank <= 0 || u.Rank < bestRank) {
-					u.Statistics["BestRank"] = u.Rank;
-					u.Statistics["BestScore"] = u.Score;
+			players.Sort(new PlayerScoreComparer());
+
+			int rank = 1;
+			int league = 1;
+			for (int i = 0; i <= players.Count; i++) {
+				Player player = players[i];
+				player.Rank = rank;
+				player.League = league;
+
+				//is it a new best rank?
+				if (player.BestRank <= 0 || player.BestLeague > league || (player.BestRank > rank && player.BestLeague >= league)) {
+					player.BestRank = rank;
+					player.League = league;
 				}
+
+				if (league >= Configuration.Player_Per_League) {
+					rank = 1;
+					league++;
+				}
+				else
+					rank++;
 			}
 		}
 
-		private int GetUnitScore(Player user) {
+		int GetUnitScore(Player player) {
 			int score = 1;
-			foreach (Unit unit in user.Units)
+			foreach (Unit unit in player.Units)
 				if (!unit.IsInTraining)
 					score += unit.UnitInfo.Score * unit.Number;
 			return score;
 		}
 
-		private int GetBuildingScore(Player user) {
+		int GetBuildingScore(Player player) {
 			int score = 1;
-			foreach (Building building in user.Buildings)
+			foreach (Building building in player.Buildings)
 				if (building.IsAvailable)
 					score += building.BuildingInfo.Score;
 			return score;
 		}
 
-		private int GetSectorScore(Player user) {
-			return user.Sectors.Count;
+		int GetSectorScore(Player player) {
+			return player.Sectors.Count;
 		}
 
-		private int GetRessourcesScore(Player user) {
-			return 1 + user.Gold + user.Lumber * 3;
+		int GetRessourceScore(Player player) {
+			return 1 + player.Gold + player.Lumber * 3;
 		}
 
 	}
 
-	public class UserScoreComparer : System.Collections.IComparer {
-		public int Compare(Object a, Object b) {
-			return ((Player)b).Score - ((Player)a).Score;
+
+	public class PlayerScoreComparer : IComparer<Player>{
+		public int Compare(Player x, Player y) {
+			return y.Score.CompareTo(x.Score);
 		}
 	}
 
-	public class UserRankComparer : System.Collections.IComparer {
-		public int Compare(Object a, Object b) {
-			return ((Player)a).Rank - ((Player)b).Rank;
-		}
-	}
 }

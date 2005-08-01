@@ -5,8 +5,8 @@ namespace Wc3o {
 
 		#region " Configuration Settings "
 
-		public const string Physical_Application_Path = "c:\\hosting\\webhost4life\\member\\sachsenhofer\\wc3o\\";
-		//public const string Physical_Application_Path = "E:\\My Webs\\Wc3o";
+		//public const string Physical_Application_Path = "c:\\hosting\\webhost4life\\member\\sachsenhofer\\wc3o\\";
+		public const string Physical_Application_Path = "E:\\My Webs\\Wc3o-2.1";
 
 		public const double Return_Factor_After_Attack = 1.7;
 		public const double Return_Factor_After_Defend = 0.5;
@@ -30,7 +30,7 @@ namespace Wc3o {
 		public const int Number_Of_Changelogs = 5;
 
 		public const int Map_Size = 20;
-		public const int Sectors_To_Show_On_Map = 10;
+		public const int Sectors_To_Show_On_Map = 7;
 		public const string Color_Player = "#6699cc";
 		public const string Color_Ally = "#66ff99";
 		public const string Color_Enemy = "#ff6600";
@@ -60,8 +60,11 @@ namespace Wc3o {
 
 		public const int Healing_Orc_Humans = 3;
 		public const int Healing_NightElves = 6;
-		public const int Healing_Undead = 7;	
+		public const int Healing_Undead = 7;
 
+
+		public const int Max_Mercenaries_Per_Slot = 3;
+		public const int Healing_Sector_Healing_Rate = 50;
 		#endregion
 
 	}

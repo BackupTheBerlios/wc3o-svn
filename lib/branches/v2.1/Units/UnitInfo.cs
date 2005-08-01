@@ -1372,8 +1372,8 @@ namespace Wc3o {
 				case UnitType.DarkTroll:
 					i.fraction = Fraction.Neutrals;
 					i.name = "DarkTroll";
-					i.gold = 0;
-					i.lumber = 0;
+					i.gold = 140;
+					i.lumber = 10;
 					i.food = 2;
 					i.image = "/Neutrals/DarkTroll.gif";
 					i.createImage = "/Neutrals/DarkTroll.gif";
@@ -1385,7 +1385,7 @@ namespace Wc3o {
 					i.attackTypeAir = AttackType.Pierce;
 					i.attackTypeGround = AttackType.Pierce;
 					i.cooldown = 1.6;
-					i.minutes = 0;
+					i.minutes = 300;
 					i.range = 50;
 					i.score = 2;
 					i.speed = 22;
@@ -1396,8 +1396,8 @@ namespace Wc3o {
 				case UnitType.DarkTrollTrapper:
 					i.fraction = Fraction.Neutrals;
 					i.name = "Dark Troll Trapper";
-					i.gold = 0;
-					i.lumber = 0;
+					i.gold = 200;
+					i.lumber = 40;
 					i.food = 2;
 					i.image = "/Neutrals/DarkTrollTrapper.gif";
 					i.createImage = "/Neutrals/DarkTrollTrapper.gif";
@@ -1409,7 +1409,7 @@ namespace Wc3o {
 					i.attackTypeAir = AttackType.Pierce;
 					i.attackTypeGround = AttackType.Pierce;
 					i.cooldown = 1.6;
-					i.minutes = 0;
+					i.minutes = 400;
 					i.range = 50;
 					i.score = 3;
 					i.speed = 18;
@@ -1420,8 +1420,8 @@ namespace Wc3o {
 				case UnitType.DarkTrollPriest:
 					i.fraction = Fraction.Neutrals;
 					i.name = "Dark Troll Priest";
-					i.gold = 0;
-					i.lumber = 0;
+					i.gold = 150;
+					i.lumber = 50;
 					i.food = 2;
 					i.image = "/Neutrals/DarkTrollPriest.gif";
 					i.createImage = "/Neutrals/DarkTrollPriest.gif";
@@ -1433,7 +1433,7 @@ namespace Wc3o {
 					i.attackTypeAir = AttackType.Magic;
 					i.attackTypeGround = AttackType.Magic;
 					i.cooldown = 1.8;
-					i.minutes = 0;
+					i.minutes = 350;
 					i.range = 60;
 					i.score = 3;
 					i.speed = 22;
@@ -1445,8 +1445,8 @@ namespace Wc3o {
 				case UnitType.Furbolg:
 					i.fraction = Fraction.Neutrals;
 					i.name = "Furbolg";
-					i.gold = 0;
-					i.lumber = 0;
+					i.gold = 200;
+					i.lumber = 100;
 					i.food = 3;
 					i.image = "/Neutrals/Furbolg.gif";
 					i.createImage = "/Neutrals/Furbolg.gif";
@@ -1458,7 +1458,7 @@ namespace Wc3o {
 					i.attackTypeAir = AttackType.None;
 					i.attackTypeGround = AttackType.Normal;
 					i.cooldown = 1.35;
-					i.minutes = 0;
+					i.minutes = 400;
 					i.range = 0;
 					i.score = 4;
 					i.speed = 18;
@@ -1469,8 +1469,8 @@ namespace Wc3o {
 				case UnitType.FurbolgShaman:
 					i.fraction = Fraction.Neutrals;
 					i.name = "Furbolg Shaman";
-					i.gold = 0;
-					i.lumber = 0;
+					i.gold = 350;
+					i.lumber = 50;
 					i.food = 3;
 					i.image = "/Neutrals/FurbolgShaman.gif";
 					i.createImage = "/Neutrals/FurbolgShaman.gif";
@@ -1482,7 +1482,7 @@ namespace Wc3o {
 					i.attackTypeAir = AttackType.Pierce;
 					i.attackTypeGround = AttackType.Pierce;
 					i.cooldown = 1.8;
-					i.minutes = 0;
+					i.minutes = 400;
 					i.range = 60;
 					i.score = 4;
 					i.speed = 22;
@@ -1494,8 +1494,8 @@ namespace Wc3o {
 				case UnitType.FurbolgTracker:
 					i.fraction = Fraction.Neutrals;
 					i.name = "Furbolg Tracker";
-					i.gold = 0;
-					i.lumber = 0;
+					i.gold = 400;
+					i.lumber = 200;
 					i.food = 5;
 					i.image = "/Neutrals/FurbolgTracker.gif";
 					i.createImage = "/Neutrals/FurbolgTracker.gif";
@@ -1507,7 +1507,7 @@ namespace Wc3o {
 					i.attackTypeAir = AttackType.None;
 					i.attackTypeGround = AttackType.Normal;
 					i.cooldown = 1.35;
-					i.minutes = 0;
+					i.minutes = 500;
 					i.range = 0;
 					i.score = 5;
 					i.speed = 22;
@@ -1518,8 +1518,8 @@ namespace Wc3o {
 				case UnitType.FurbolgUrsaWarrior:
 					i.fraction = Fraction.Neutrals;
 					i.name = "Furbolg Ursa Warrior";
-					i.gold = 0;
-					i.lumber = 0;
+					i.gold = 500;
+					i.lumber = 200;
 					i.food = 6;
 					i.image = "/Neutrals/FurbolgUrsaWarrior.gif";
 					i.createImage = "/Neutrals/FurbolgUrsaWarrior.gif";
@@ -1531,7 +1531,7 @@ namespace Wc3o {
 					i.attackTypeAir = AttackType.None;
 					i.attackTypeGround = AttackType.Chaos;
 					i.cooldown = 1.35;
-					i.minutes = 0;
+					i.minutes = 550;
 					i.range = 0;
 					i.score = 6;
 					i.speed = 22;
@@ -1542,8 +1542,8 @@ namespace Wc3o {
 				case UnitType.Dragon:
 					i.fraction = Fraction.Neutrals;
 					i.name = "Dragon";
-					i.gold = 0;
-					i.lumber = 0;
+					i.gold = 700;
+					i.lumber = 250;
 					i.food = 8;
 					i.image = "/Neutrals/Dragon.gif";
 					i.createImage = "/Neutrals/Dragon.gif";
@@ -1555,7 +1555,7 @@ namespace Wc3o {
 					i.attackTypeAir = AttackType.Chaos;
 					i.attackTypeGround = AttackType.Chaos;
 					i.cooldown = 1.5;
-					i.minutes = 0;
+					i.minutes = 670;
 					i.range = 50;
 					i.score = 10;
 					i.speed = 18;
@@ -1567,8 +1567,8 @@ namespace Wc3o {
 				case UnitType.ThunderLizard:
 					i.fraction = Fraction.Neutrals;
 					i.name = "Thunder Lizard";
-					i.gold = 0;
-					i.lumber = 0;
+					i.gold = 250;
+					i.lumber = 50;
 					i.food = 6;
 					i.image = "/Neutrals/ThunderLizard.gif";
 					i.createImage = "/Neutrals/ThunderLizard.gif";
@@ -1580,7 +1580,7 @@ namespace Wc3o {
 					i.attackTypeAir = AttackType.Pierce;
 					i.attackTypeGround = AttackType.Pierce;
 					i.cooldown = 1.5;
-					i.minutes = 0;
+					i.minutes = 450;
 					i.range = 50;
 					i.score = 5;
 					i.speed = 22;
@@ -1591,7 +1591,7 @@ namespace Wc3o {
 				case UnitType.MurlocTiderunner:
 					i.fraction = Fraction.Neutrals;
 					i.name = "Murloc Tiderunner";
-					i.gold = 0;
+					i.gold = 100;
 					i.lumber = 0;
 					i.food = 1;
 					i.image = "/Neutrals/MurlocTiderunner.gif";
@@ -1604,7 +1604,7 @@ namespace Wc3o {
 					i.attackTypeAir = AttackType.None;
 					i.attackTypeGround = AttackType.Normal;
 					i.cooldown = 1.35;
-					i.minutes = 0;
+					i.minutes = 100;
 					i.range = 0;
 					i.score = 2;
 					i.speed = 22;
@@ -1615,7 +1615,7 @@ namespace Wc3o {
 				case UnitType.MurlocHuntsman:
 					i.fraction = Fraction.Neutrals;
 					i.name = "Murloc Huntsman";
-					i.gold = 0;
+					i.gold = 200;
 					i.lumber = 0;
 					i.food = 2;
 					i.image = "/Neutrals/MurlocHuntsman.gif";
@@ -1628,7 +1628,7 @@ namespace Wc3o {
 					i.attackTypeAir = AttackType.None;
 					i.attackTypeGround = AttackType.Normal;
 					i.cooldown = 1.35;
-					i.minutes = 0;
+					i.minutes = 200;
 					i.range = 0;
 					i.score = 2;
 					i.speed = 22;
@@ -1639,7 +1639,7 @@ namespace Wc3o {
 				case UnitType.MurlocFlesheater:
 					i.fraction = Fraction.Neutrals;
 					i.name = "Murloc Flesheater";
-					i.gold = 0;
+					i.gold = 250;
 					i.lumber = 0;
 					i.food = 2;
 					i.image = "/Neutrals/MurlocFlesheater.gif";
@@ -1652,7 +1652,7 @@ namespace Wc3o {
 					i.attackTypeAir = AttackType.None;
 					i.attackTypeGround = AttackType.Normal;
 					i.cooldown = 1.35;
-					i.minutes = 0;
+					i.minutes = 300;
 					i.range = 0;
 					i.score = 3;
 					i.speed = 22;
@@ -1663,8 +1663,8 @@ namespace Wc3o {
 				case UnitType.MurlocNightcrawler:
 					i.fraction = Fraction.Neutrals;
 					i.name = "Murloc Nightcrawler";
-					i.gold = 0;
-					i.lumber = 0;
+					i.gold = 250;
+					i.lumber = 10;
 					i.food = 2;
 					i.image = "/Neutrals/MurlocNightcrawler.gif";
 					i.createImage = "/Neutrals/MurlocNightcrawler.gif";
@@ -1676,7 +1676,7 @@ namespace Wc3o {
 					i.attackTypeAir = AttackType.None;
 					i.attackTypeGround = AttackType.Normal;
 					i.cooldown = 1.35;
-					i.minutes = 0;
+					i.minutes = 350;
 					i.range = 0;
 					i.score = 3;
 					i.speed = 22;
@@ -1687,7 +1687,7 @@ namespace Wc3o {
 				case UnitType.MurlocMutant:
 					i.fraction = Fraction.Neutrals;
 					i.name = "Murloc Mutant";
-					i.gold = 0;
+					i.gold = 500;
 					i.lumber = 0;
 					i.food = 5;
 					i.image = "/Neutrals/MurlocMutant.gif";
@@ -1700,7 +1700,7 @@ namespace Wc3o {
 					i.attackTypeAir = AttackType.None;
 					i.attackTypeGround = AttackType.Normal;
 					i.cooldown = 1.35;
-					i.minutes = 0;
+					i.minutes = 350;
 					i.range = 0;
 					i.score = 4;
 					i.speed = 22;
@@ -1712,8 +1712,8 @@ namespace Wc3o {
 				case UnitType.Spider:
 					i.fraction = Fraction.Neutrals;
 					i.name = "Spider";
-					i.gold = 0;
-					i.lumber = 0;
+					i.gold = 200;
+					i.lumber = 10;
 					i.food = 1;
 					i.image = "/Neutrals/Spider.gif";
 					i.createImage = "/Neutrals/Spider.gif";
@@ -1725,7 +1725,7 @@ namespace Wc3o {
 					i.attackTypeAir = AttackType.None;
 					i.attackTypeGround = AttackType.Normal;
 					i.cooldown = 1.35;
-					i.minutes = 0;
+					i.minutes = 140;
 					i.range = 0;
 					i.score = 3;
 					i.speed = 22;
@@ -1736,8 +1736,8 @@ namespace Wc3o {
 				case UnitType.SpittingSpider:
 					i.fraction = Fraction.Neutrals;
 					i.name = "Spitting Spider";
-					i.gold = 0;
-					i.lumber = 0;
+					i.gold = 250;
+					i.lumber = 10;
 					i.food = 2;
 					i.image = "/Neutrals/SpittingSpider.gif";
 					i.createImage = "/Neutrals/SpittingSpider.gif";
@@ -1749,7 +1749,7 @@ namespace Wc3o {
 					i.attackTypeAir = AttackType.Pierce;
 					i.attackTypeGround = AttackType.Pierce;
 					i.cooldown = 1.8;
-					i.minutes = 0;
+					i.minutes = 170;
 					i.range = 60;
 					i.score = 3;
 					i.speed = 22;
@@ -1760,8 +1760,8 @@ namespace Wc3o {
 				case UnitType.BroodMother:
 					i.fraction = Fraction.Neutrals;
 					i.name = "Brood Mother";
-					i.gold = 0;
-					i.lumber = 0;
+					i.gold = 300;
+					i.lumber = 300;
 					i.food = 5;
 					i.image = "/Neutrals/BroodMother.gif";
 					i.createImage = "/Neutrals/BroodMother.gif";
@@ -1773,7 +1773,7 @@ namespace Wc3o {
 					i.attackTypeAir = AttackType.None;
 					i.attackTypeGround = AttackType.Normal;
 					i.cooldown = 1.35;
-					i.minutes = 0;
+					i.minutes = 300;
 					i.range = 0;
 					i.score = 8;
 					i.speed = 22;
@@ -1784,8 +1784,8 @@ namespace Wc3o {
 				case UnitType.FrostWolf:
 					i.fraction = Fraction.Neutrals;
 					i.name = "Frost Wolf";
-					i.gold = 0;
-					i.lumber = 0;
+					i.gold = 200;
+					i.lumber = 20;
 					i.food = 2;
 					i.image = "/Neutrals/FrostWolf.gif";
 					i.createImage = "/Neutrals/FrostWolf.gif";
@@ -1797,7 +1797,7 @@ namespace Wc3o {
 					i.attackTypeAir = AttackType.None;
 					i.attackTypeGround = AttackType.Normal;
 					i.cooldown = 1.35;
-					i.minutes = 0;
+					i.minutes = 50;
 					i.range = 0;
 					i.score = 2;
 					i.speed = 15;
@@ -1808,8 +1808,8 @@ namespace Wc3o {
 				case UnitType.TimberWolf:
 					i.fraction = Fraction.Neutrals;
 					i.name = "Timber Wolf";
-					i.gold = 0;
-					i.lumber = 0;
+					i.gold = 200;
+					i.lumber = 20;
 					i.food = 2;
 					i.image = "/Neutrals/TimberWolf.gif";
 					i.createImage = "/Neutrals/TimberWolf.gif";
@@ -1821,7 +1821,7 @@ namespace Wc3o {
 					i.attackTypeAir = AttackType.None;
 					i.attackTypeGround = AttackType.Normal;
 					i.cooldown = 1.35;
-					i.minutes = 0;
+					i.minutes = 50;
 					i.range = 0;
 					i.score = 2;
 					i.speed = 15;
@@ -1832,8 +1832,8 @@ namespace Wc3o {
 				case UnitType.DireWolf:
 					i.fraction = Fraction.Neutrals;
 					i.name = "Dire Wolf";
-					i.gold = 0;
-					i.lumber = 0;
+					i.gold = 400;
+					i.lumber = 200;
 					i.food = 5;
 					i.image = "/Neutrals/DireWolf.gif";
 					i.createImage = "/Neutrals/DireWolf.gif";
@@ -1845,7 +1845,7 @@ namespace Wc3o {
 					i.attackTypeAir = AttackType.None;
 					i.attackTypeGround = AttackType.Normal;
 					i.cooldown = 1.35;
-					i.minutes = 0;
+					i.minutes = 100;
 					i.range = 0;
 					i.score = 2;
 					i.speed = 15;
@@ -1856,8 +1856,8 @@ namespace Wc3o {
 				case UnitType.CentaurDrudge:
 					i.fraction = Fraction.Neutrals;
 					i.name = "Centaur Drudge";
-					i.gold = 0;
-					i.lumber = 0;
+					i.gold = 133;
+					i.lumber = 3;
 					i.food = 2;
 					i.image = "/Neutrals/CentaurDrudge.gif";
 					i.createImage = "/Neutrals/CentaurDrudge.gif";
@@ -1869,7 +1869,7 @@ namespace Wc3o {
 					i.attackTypeAir = AttackType.None;
 					i.attackTypeGround = AttackType.Normal;
 					i.cooldown = 1.35;
-					i.minutes = 0;
+					i.minutes = 133;
 					i.range = 0;
 					i.score = 2;
 					i.speed = 15;
@@ -1880,8 +1880,8 @@ namespace Wc3o {
 				case UnitType.CentaurArcher:
 					i.fraction = Fraction.Neutrals;
 					i.name = "Centaur Archer";
-					i.gold = 0;
-					i.lumber = 0;
+					i.gold = 144;
+					i.lumber = 44;
 					i.food = 2;
 					i.image = "/Neutrals/CentaurArcher.gif";
 					i.createImage = "/Neutrals/CentaurArcher.gif";
@@ -1893,7 +1893,7 @@ namespace Wc3o {
 					i.attackTypeAir = AttackType.Pierce;
 					i.attackTypeGround = AttackType.Pierce;
 					i.cooldown = 1.6;
-					i.minutes = 0;
+					i.minutes = 144;
 					i.range = 50;
 					i.score = 2;
 					i.speed = 15;
@@ -1904,8 +1904,8 @@ namespace Wc3o {
 				case UnitType.CentaurKhan:
 					i.fraction = Fraction.Neutrals;
 					i.name = "Centaur Khan";
-					i.gold = 0;
-					i.lumber = 0;
+					i.gold = 450;
+					i.lumber = 50;
 					i.food = 6;
 					i.image = "/Neutrals/CentaurKhan.gif";
 					i.createImage = "/Neutrals/CentaurKhan.gif";
@@ -1917,7 +1917,7 @@ namespace Wc3o {
 					i.attackTypeAir = AttackType.None;
 					i.attackTypeGround = AttackType.Chaos;
 					i.cooldown = 1.35;
-					i.minutes = 0;
+					i.minutes = 250;
 					i.range = 60;
 					i.score = 5;
 					i.speed = 22;
@@ -1929,7 +1929,7 @@ namespace Wc3o {
 				case UnitType.HarpyRogue:
 					i.fraction = Fraction.Neutrals;
 					i.name = "Harpy Rogue";
-					i.gold = 0;
+					i.gold = 260;
 					i.lumber = 0;
 					i.food = 2;
 					i.image = "/Neutrals/HarpyRogue.gif";
@@ -1942,7 +1942,7 @@ namespace Wc3o {
 					i.attackTypeAir = AttackType.Pierce;
 					i.attackTypeGround = AttackType.Pierce;
 					i.cooldown = 1.6;
-					i.minutes = 0;
+					i.minutes = 170;
 					i.range = 50;
 					i.score = 3;
 					i.speed = 15;
@@ -1954,8 +1954,8 @@ namespace Wc3o {
 				case UnitType.HarpyWindwitch:
 					i.fraction = Fraction.Neutrals;
 					i.name = "Harpy Windwitch";
-					i.gold = 0;
-					i.lumber = 0;
+					i.gold = 250;
+					i.lumber = 10;
 					i.food = 2;
 					i.image = "/Neutrals/HarpyWindwitch.gif";
 					i.createImage = "/Neutrals/HarpyWindwitch.gif";
@@ -1967,7 +1967,7 @@ namespace Wc3o {
 					i.attackTypeAir = AttackType.Pierce;
 					i.attackTypeGround = AttackType.Pierce;
 					i.cooldown = 1.35;
-					i.minutes = 0;
+					i.minutes = 250;
 					i.range = 60;
 					i.score = 4;
 					i.speed = 15;
@@ -1979,7 +1979,7 @@ namespace Wc3o {
 				case UnitType.HarpyQueen:
 					i.fraction = Fraction.Neutrals;
 					i.name = "Harpy Queen";
-					i.gold = 0;
+					i.gold = 500;
 					i.lumber = 0;
 					i.food = 5;
 					i.image = "/Neutrals/HarpyQueen.gif";
@@ -1992,7 +1992,7 @@ namespace Wc3o {
 					i.attackTypeAir = AttackType.Chaos;
 					i.attackTypeGround = AttackType.Chaos;
 					i.cooldown = 1.8;
-					i.minutes = 0;
+					i.minutes = 270;
 					i.range = 50;
 					i.score = 8;
 					i.speed = 15;
@@ -2006,8 +2006,8 @@ namespace Wc3o {
 				case UnitType.Wildkin:
 					i.fraction = Fraction.Neutrals;
 					i.name = "Wildkin";
-					i.gold = 0;
-					i.lumber = 0;
+					i.gold = 300;
+					i.lumber = 50;
 					i.food = 2;
 					i.image = "/Neutrals/Wildkin.gif";
 					i.createImage = "/Neutrals/Wildkin.gif";
@@ -2019,7 +2019,7 @@ namespace Wc3o {
 					i.attackTypeAir = AttackType.None;
 					i.attackTypeGround = AttackType.Normal;
 					i.cooldown = 1.35;
-					i.minutes = 0;
+					i.minutes = 150;
 					i.range = 0;
 					i.score = 6;
 					i.speed = 18;
@@ -2030,8 +2030,8 @@ namespace Wc3o {
 				case UnitType.Quillboar:
 					i.fraction = Fraction.Neutrals;
 					i.name = "Quillboar";
-					i.gold = 0;
-					i.lumber = 0;
+					i.gold = 100;
+					i.lumber = 1;
 					i.food = 1;
 					i.image = "/Neutrals/Quillboar.gif";
 					i.createImage = "/Neutrals/Quillboar.gif";
@@ -2043,7 +2043,7 @@ namespace Wc3o {
 					i.attackTypeAir = AttackType.Pierce;
 					i.attackTypeGround = AttackType.Pierce;
 					i.cooldown = 1.6;
-					i.minutes = 0;
+					i.minutes = 80;
 					i.range = 50;
 					i.score = 2;
 					i.speed = 22;
@@ -2054,8 +2054,8 @@ namespace Wc3o {
 				case UnitType.RazormaneScout:
 					i.fraction = Fraction.Neutrals;
 					i.name = "Razormane Scout";
-					i.gold = 0;
-					i.lumber = 0;
+					i.gold = 110;
+					i.lumber = 20;
 					i.food = 1;
 					i.image = "/Neutrals/RazormaneScout.gif";
 					i.createImage = "/Neutrals/RazormaneScout.gif";
@@ -2067,7 +2067,7 @@ namespace Wc3o {
 					i.attackTypeAir = AttackType.None;
 					i.attackTypeGround = AttackType.Normal;
 					i.cooldown = 1.35;
-					i.minutes = 0;
+					i.minutes = 70;
 					i.range = 0;
 					i.score = 2;
 					i.speed = 22;
@@ -2078,8 +2078,8 @@ namespace Wc3o {
 				case UnitType.RazormaneChieftain:
 					i.fraction = Fraction.Neutrals;
 					i.name = "Razormane Chieftain";
-					i.gold = 0;
-					i.lumber = 0;
+					i.gold = 300;
+					i.lumber = 60;
 					i.food = 6;
 					i.image = "/Neutrals/RazormaneChieftain.gif";
 					i.createImage = "/Neutrals/RazormaneChieftain.gif";
@@ -2091,7 +2091,7 @@ namespace Wc3o {
 					i.attackTypeAir = AttackType.None;
 					i.attackTypeGround = AttackType.Chaos;
 					i.cooldown = 1.35;
-					i.minutes = 0;
+					i.minutes = 200;
 					i.range = 0;
 					i.score = 5;
 					i.speed = 22;
@@ -2103,8 +2103,8 @@ namespace Wc3o {
 				case UnitType.Salamander:
 					i.fraction = Fraction.Neutrals;
 					i.name = "Salamander";
-					i.gold = 0;
-					i.lumber = 0;
+					i.gold = 300;
+					i.lumber = 70;
 					i.food = 4;
 					i.image = "/Neutrals/Salamander.gif";
 					i.createImage = "/Neutrals/Salamander.gif";
@@ -2116,7 +2116,7 @@ namespace Wc3o {
 					i.attackTypeAir = AttackType.Pierce;
 					i.attackTypeGround = AttackType.Pierce;
 					i.cooldown = 1.8;
-					i.minutes = 0;
+					i.minutes = 250;
 					i.range = 50;
 					i.score = 3;
 					i.speed = 22;
@@ -2127,8 +2127,8 @@ namespace Wc3o {
 				case UnitType.Bandit:
 					i.fraction = Fraction.Neutrals;
 					i.name = "Bandit";
-					i.gold = 0;
-					i.lumber = 0;
+					i.gold = 130;
+					i.lumber = 10;
 					i.food = 1;
 					i.image = "/Neutrals/Bandit.gif";
 					i.createImage = "/Neutrals/Bandit.gif";
@@ -2140,7 +2140,7 @@ namespace Wc3o {
 					i.attackTypeAir = AttackType.None;
 					i.attackTypeGround = AttackType.Normal;
 					i.cooldown = 1.35;
-					i.minutes = 0;
+					i.minutes = 120;
 					i.range = 0;
 					i.score = 3;
 					i.speed = 22;
@@ -2151,8 +2151,8 @@ namespace Wc3o {
 				case UnitType.Brigand:
 					i.fraction = Fraction.Neutrals;
 					i.name = "Brigand";
-					i.gold = 0;
-					i.lumber = 0;
+					i.gold = 200;
+					i.lumber = 10;
 					i.food = 2;
 					i.image = "/Neutrals/Brigand.gif";
 					i.createImage = "/Neutrals/Brigand.gif";
@@ -2164,7 +2164,7 @@ namespace Wc3o {
 					i.attackTypeAir = AttackType.Pierce;
 					i.attackTypeGround = AttackType.Pierce;
 					i.cooldown = 1.6;
-					i.minutes = 0;
+					i.minutes = 140;
 					i.range = 50;
 					i.score = 3;
 					i.speed = 22;
@@ -2175,8 +2175,8 @@ namespace Wc3o {
 				case UnitType.BanditLord:
 					i.fraction = Fraction.Neutrals;
 					i.name = "Bandit Lord";
-					i.gold = 0;
-					i.lumber = 0;
+					i.gold = 200;
+					i.lumber = 300;
 					i.food = 6;
 					i.image = "/Neutrals/BanditLord.gif";
 					i.createImage = "/Neutrals/BanditLord.gif";
@@ -2188,7 +2188,7 @@ namespace Wc3o {
 					i.attackTypeAir = AttackType.None;
 					i.attackTypeGround = AttackType.Chaos;
 					i.cooldown = 1.35;
-					i.minutes = 0;
+					i.minutes = 290;
 					i.range = 0;
 					i.score = 8;
 					i.speed = 22;
@@ -2200,8 +2200,8 @@ namespace Wc3o {
 				case UnitType.Ghost:
 					i.fraction = Fraction.Neutrals;
 					i.name = "Ghost";
-					i.gold = 0;
-					i.lumber = 0;
+					i.gold = 160;
+					i.lumber = 20;
 					i.food = 2;
 					i.image = "/Neutrals/Ghost.gif";
 					i.createImage = "/Neutrals/Ghost.gif";
@@ -2213,7 +2213,7 @@ namespace Wc3o {
 					i.attackTypeAir = AttackType.Pierce;
 					i.attackTypeGround = AttackType.Pierce;
 					i.cooldown = 1.8;
-					i.minutes = 0;
+					i.minutes = 340;
 					i.range = 40;
 					i.score = 3;
 					i.speed = 22;
@@ -2224,8 +2224,8 @@ namespace Wc3o {
 				case UnitType.FrostRevenant:
 					i.fraction = Fraction.Neutrals;
 					i.name = "Frost Revenant";
-					i.gold = 0;
-					i.lumber = 0;
+					i.gold = 300;
+					i.lumber = 70;
 					i.food = 3;
 					i.image = "/Neutrals/FrostRevenant.gif";
 					i.createImage = "/Neutrals/FrostRevenant.gif";
@@ -2237,7 +2237,7 @@ namespace Wc3o {
 					i.attackTypeAir = AttackType.None;
 					i.attackTypeGround = AttackType.Normal;
 					i.cooldown = 1.35;
-					i.minutes = 0;
+					i.minutes = 220;
 					i.range = 0;
 					i.score = 7;
 					i.speed = 22;
@@ -2248,8 +2248,8 @@ namespace Wc3o {
 				case UnitType.GiantSkeletonWarrior:
 					i.fraction = Fraction.Neutrals;
 					i.name = "Giant Skeleton Warrior";
-					i.gold = 0;
-					i.lumber = 0;
+					i.gold = 150;
+					i.lumber = 50;
 					i.food = 1;
 					i.image = "/Neutrals/GiantSkeletonWarrior.gif";
 					i.createImage = "/Neutrals/GiantSkeletonWarrior.gif";
@@ -2261,7 +2261,7 @@ namespace Wc3o {
 					i.attackTypeAir = AttackType.None;
 					i.attackTypeGround = AttackType.Normal;
 					i.cooldown = 2;
-					i.minutes = 0;
+					i.minutes = 130;
 					i.range = 0;
 					i.score = 5;
 					i.speed = 22;
@@ -2272,8 +2272,8 @@ namespace Wc3o {
 				case UnitType.SkeletonArcher:
 					i.fraction = Fraction.Neutrals;
 					i.name = "Skeleton Archer";
-					i.gold = 0;
-					i.lumber = 0;
+					i.gold = 100;
+					i.lumber = 100;
 					i.food = 1;
 					i.image = "/Neutrals/SkeletonArcher.gif";
 					i.createImage = "/Neutrals/SkeletonArcher.gif";
@@ -2285,7 +2285,7 @@ namespace Wc3o {
 					i.attackTypeAir = AttackType.Pierce;
 					i.attackTypeGround = AttackType.Pierce;
 					i.cooldown = 1.8;
-					i.minutes = 0;
+					i.minutes = 140;
 					i.range = 50;
 					i.score = 2;
 					i.speed = 22;
@@ -2296,8 +2296,8 @@ namespace Wc3o {
 				case UnitType.FallenPriest:
 					i.fraction = Fraction.Neutrals;
 					i.name = "Fallen Priest";
-					i.gold = 0;
-					i.lumber = 0;
+					i.gold = 130;
+					i.lumber = 30;
 					i.food = 1;
 					i.image = "/Neutrals/FallenPriest.gif";
 					i.createImage = "/Neutrals/FallenPriest.gif";
@@ -2309,7 +2309,7 @@ namespace Wc3o {
 					i.attackTypeAir = AttackType.Pierce;
 					i.attackTypeGround = AttackType.Pierce;
 					i.cooldown = 1.8;
-					i.minutes = 0;
+					i.minutes = 130;
 					i.range = 60;
 					i.score = 3;
 					i.speed = 22;
@@ -2321,8 +2321,8 @@ namespace Wc3o {
 				case UnitType.ForestTroll:
 					i.fraction = Fraction.Neutrals;
 					i.name = "Forest Troll";
-					i.gold = 0;
-					i.lumber = 0;
+					i.gold = 120;
+					i.lumber = 20;
 					i.food = 2;
 					i.image = "/Neutrals/ForestTroll.gif";
 					i.createImage = "/Neutrals/ForestTroll.gif";
@@ -2334,7 +2334,7 @@ namespace Wc3o {
 					i.attackTypeAir = AttackType.Pierce;
 					i.attackTypeGround = AttackType.Pierce;
 					i.cooldown = 1.6;
-					i.minutes = 0;
+					i.minutes = 120;
 					i.range = 50;
 					i.score = 2;
 					i.speed = 22;
@@ -2345,8 +2345,8 @@ namespace Wc3o {
 				case UnitType.ForestTrollTrapper:
 					i.fraction = Fraction.Neutrals;
 					i.name = "Forest Troll Trapper";
-					i.gold = 0;
-					i.lumber = 0;
+					i.gold = 250;
+					i.lumber = 40;
 					i.food = 2;
 					i.image = "/Neutrals/ForestTrollTrapper.gif";
 					i.createImage = "/Neutrals/ForestTrollTrapper.gif";
@@ -2358,7 +2358,7 @@ namespace Wc3o {
 					i.attackTypeAir = AttackType.Pierce;
 					i.attackTypeGround = AttackType.Pierce;
 					i.cooldown = 1.6;
-					i.minutes = 0;
+					i.minutes = 150;
 					i.range = 50;
 					i.score = 3;
 					i.speed = 22;
@@ -2369,8 +2369,8 @@ namespace Wc3o {
 				case UnitType.ForestTrollShadowPriest:
 					i.fraction = Fraction.Neutrals;
 					i.name = "Forest Troll Shadow Priest";
-					i.gold = 0;
-					i.lumber = 0;
+					i.gold = 220;
+					i.lumber = 50;
 					i.food = 2;
 					i.image = "/Neutrals/ForestTrollShadowPriest.gif";
 					i.createImage = "/Neutrals/ForestTrollShadowPriest.gif";
@@ -2382,7 +2382,7 @@ namespace Wc3o {
 					i.attackTypeAir = AttackType.Pierce;
 					i.attackTypeGround = AttackType.Pierce;
 					i.cooldown = 1.8;
-					i.minutes = 0;
+					i.minutes = 220;
 					i.range = 60;
 					i.score = 3;
 					i.speed = 22;
@@ -2394,8 +2394,8 @@ namespace Wc3o {
 				case UnitType.Kobold:
 					i.fraction = Fraction.Neutrals;
 					i.name = "Kobold";
-					i.gold = 0;
-					i.lumber = 0;
+					i.gold = 50;
+					i.lumber = 50;
 					i.food = 1;
 					i.image = "/Neutrals/Kobold.gif";
 					i.createImage = "/Neutrals/Kobold.gif";
@@ -2407,7 +2407,7 @@ namespace Wc3o {
 					i.attackTypeAir = AttackType.None;
 					i.attackTypeGround = AttackType.Normal;
 					i.cooldown = 1.35;
-					i.minutes = 0;
+					i.minutes = 50;
 					i.range = 0;
 					i.score = 3;
 					i.speed = 22;
@@ -2418,8 +2418,8 @@ namespace Wc3o {
 				case UnitType.KoboldGeomancer:
 					i.fraction = Fraction.Neutrals;
 					i.name = "Kobold Geomancer";
-					i.gold = 0;
-					i.lumber = 0;
+					i.gold = 150;
+					i.lumber = 150;
 					i.food = 3;
 					i.image = "/Neutrals/KoboldGeomancer.gif";
 					i.createImage = "/Neutrals/KoboldGeomancer.gif";
@@ -2431,7 +2431,7 @@ namespace Wc3o {
 					i.attackTypeAir = AttackType.Pierce;
 					i.attackTypeGround = AttackType.Pierce;
 					i.cooldown = 1.8;
-					i.minutes = 0;
+					i.minutes = 150;
 					i.range = 60;
 					i.score = 4;
 					i.speed = 22;
@@ -2442,8 +2442,8 @@ namespace Wc3o {
 				case UnitType.RockGolem:
 					i.fraction = Fraction.Neutrals;
 					i.name = "Rock Golem";
-					i.gold = 0;
-					i.lumber = 0;
+					i.gold = 400;
+					i.lumber = 100;
 					i.food = 5;
 					i.image = "/Neutrals/RockGolem.gif";
 					i.createImage = "/Neutrals/RockGolem.gif";
@@ -2455,7 +2455,7 @@ namespace Wc3o {
 					i.attackTypeAir = AttackType.Pierce;
 					i.attackTypeGround = AttackType.Normal;
 					i.cooldown = 1.35;
-					i.minutes = 0;
+					i.minutes = 180;
 					i.range = 0;
 					i.score = 5;
 					i.speed = 22;
@@ -2466,7 +2466,7 @@ namespace Wc3o {
 				case UnitType.BattleGolem:
 					i.fraction = Fraction.Neutrals;
 					i.name = "Battle Golem";
-					i.gold = 0;
+					i.gold = 200;
 					i.lumber = 0;
 					i.food = 2;
 					i.image = "/Neutrals/BattleGolem.gif";
@@ -2479,7 +2479,7 @@ namespace Wc3o {
 					i.attackTypeAir = AttackType.None;
 					i.attackTypeGround = AttackType.Normal;
 					i.cooldown = 1.35;
-					i.minutes = 0;
+					i.minutes = 600;
 					i.range = 0;
 					i.score = 6;
 					i.speed = 240;
@@ -2490,8 +2490,8 @@ namespace Wc3o {
 				case UnitType.RogueWizard:
 					i.fraction = Fraction.Neutrals;
 					i.name = "Rogue Wizard";
-					i.gold = 0;
-					i.lumber = 0;
+					i.gold = 150;
+					i.lumber = 50;
 					i.food = 2;
 					i.image = "/Neutrals/RogueWizard.gif";
 					i.createImage = "/Neutrals/RogueWizard.gif";
@@ -2503,7 +2503,7 @@ namespace Wc3o {
 					i.attackTypeAir = AttackType.Pierce;
 					i.attackTypeGround = AttackType.Pierce;
 					i.cooldown = 1.8;
-					i.minutes = 0;
+					i.minutes = 200;
 					i.range = 60;
 					i.score = 5;
 					i.speed = 22;
@@ -2514,8 +2514,8 @@ namespace Wc3o {
 				case UnitType.EnragedElemental:
 					i.fraction = Fraction.Neutrals;
 					i.name = "Enraged Elemental";
-					i.gold = 0;
-					i.lumber = 0;
+					i.gold = 300;
+					i.lumber = 100;
 					i.food = 3;
 					i.image = "/Neutrals/EnragedElemental.gif";
 					i.createImage = "/Neutrals/EnragedElemental.gif";
@@ -2527,7 +2527,7 @@ namespace Wc3o {
 					i.attackTypeAir = AttackType.Pierce;
 					i.attackTypeGround = AttackType.Pierce;
 					i.cooldown = 1.8;
-					i.minutes = 0;
+					i.minutes = 150;
 					i.range = 30;
 					i.score = 5;
 					i.speed = 30;
@@ -2539,7 +2539,7 @@ namespace Wc3o {
 					i.fraction = Fraction.Neutrals;
 					i.name = "Corrupted Treant";
 					i.gold = 0;
-					i.lumber = 0;
+					i.lumber = 100;
 					i.food = 1;
 					i.image = "/Neutrals/CorruptedTreant.gif";
 					i.createImage = "/Neutrals/CorruptedTreant.gif";
@@ -2551,7 +2551,7 @@ namespace Wc3o {
 					i.attackTypeAir = AttackType.None;
 					i.attackTypeGround = AttackType.Normal;
 					i.cooldown = 1.35;
-					i.minutes = 0;
+					i.minutes = 10;
 					i.range = 0;
 					i.score = 3;
 					i.speed = 22;
@@ -2562,8 +2562,8 @@ namespace Wc3o {
 				case UnitType.DoomGuard:
 					i.fraction = Fraction.Neutrals;
 					i.name = "Doom Guard";
-					i.gold = 0;
-					i.lumber = 0;
+					i.gold = 500;
+					i.lumber = 100;
 					i.food = 6;
 					i.image = "/Neutrals/DoomGuard.gif";
 					i.createImage = "/Neutrals/DoomGuard.gif";
@@ -2575,7 +2575,7 @@ namespace Wc3o {
 					i.attackTypeAir = AttackType.Chaos;
 					i.attackTypeGround = AttackType.Chaos;
 					i.cooldown = 1.8;
-					i.minutes = 0;
+					i.minutes = 500;
 					i.range = 60;
 					i.score = 8;
 					i.speed = 22;
@@ -2586,8 +2586,8 @@ namespace Wc3o {
 				case UnitType.FelBeast:
 					i.fraction = Fraction.Neutrals;
 					i.name = "Fel Beast";
-					i.gold = 0;
-					i.lumber = 0;
+					i.gold = 200;
+					i.lumber = 40;
 					i.food = 2;
 					i.image = "/Neutrals/FelBeast.gif";
 					i.createImage = "/Neutrals/FelBeast.gif";
@@ -2599,7 +2599,7 @@ namespace Wc3o {
 					i.attackTypeAir = AttackType.None;
 					i.attackTypeGround = AttackType.Chaos;
 					i.cooldown = 1.35;
-					i.minutes = 0;
+					i.minutes = 200;
 					i.range = 0;
 					i.score = 6;
 					i.speed = 15;
@@ -2610,9 +2610,9 @@ namespace Wc3o {
 				case UnitType.SludgeMinion:
 					i.fraction = Fraction.Neutrals;
 					i.name = "Sludge Minion";
-					i.gold = 0;
-					i.lumber = 0;
-					i.food = 0;
+					i.gold = 40;
+					i.lumber = 40;
+					i.food = 1;
 					i.image = "/Neutrals/SludgeMinion.gif";
 					i.createImage = "/Neutrals/SludgeMinion.gif";
 					i.hitpoints = 240;
@@ -2623,7 +2623,7 @@ namespace Wc3o {
 					i.attackTypeAir = AttackType.None;
 					i.attackTypeGround = AttackType.Normal;
 					i.cooldown = 1.35;
-					i.minutes = 0;
+					i.minutes = 2;
 					i.range = 0;
 					i.score = 4;
 					i.speed = 22;
@@ -2634,8 +2634,8 @@ namespace Wc3o {
 				case UnitType.Arachnathid:
 					i.fraction = Fraction.Neutrals;
 					i.name = "Arachnathid";
-					i.gold = 0;
-					i.lumber = 0;
+					i.gold = 300;
+					i.lumber = 40;
 					i.food = 3;
 					i.image = "/Neutrals/Arachnathid.gif";
 					i.createImage = "/Neutrals/Arachnathid.gif";
@@ -2647,7 +2647,7 @@ namespace Wc3o {
 					i.attackTypeAir = AttackType.Pierce;
 					i.attackTypeGround = AttackType.Pierce;
 					i.cooldown = 1.6;
-					i.minutes = 0;
+					i.minutes = 190;
 					i.range = 50;
 					i.score = 5;
 					i.speed = 22;
@@ -2658,8 +2658,8 @@ namespace Wc3o {
 				case UnitType.BlueDragonspawnMeddler:
 					i.fraction = Fraction.Neutrals;
 					i.name = "Blue Dragonspawn Meddler";
-					i.gold = 0;
-					i.lumber = 0;
+					i.gold = 230;
+					i.lumber = 50;
 					i.food = 2;
 					i.image = "/Neutrals/BlueDragonspawnMeddler.gif";
 					i.createImage = "/Neutrals/BlueDragonspawnMeddler.gif";
@@ -2671,7 +2671,7 @@ namespace Wc3o {
 					i.attackTypeAir = AttackType.None;
 					i.attackTypeGround = AttackType.Normal;
 					i.cooldown = 1.35;
-					i.minutes = 0;
+					i.minutes = 200;
 					i.range = 0;
 					i.score = 5;
 					i.speed = 18;
@@ -2682,8 +2682,8 @@ namespace Wc3o {
 				case UnitType.FacelessOneTrickster:
 					i.fraction = Fraction.Neutrals;
 					i.name = "Faceless One Trickster";
-					i.gold = 0;
-					i.lumber = 0;
+					i.gold = 300;
+					i.lumber = 100;
 					i.food = 5;
 					i.image = "/Neutrals/FacelessOneTrickster.gif";
 					i.createImage = "/Neutrals/FacelessOneTrickster.gif";
@@ -2695,7 +2695,7 @@ namespace Wc3o {
 					i.attackTypeAir = AttackType.None;
 					i.attackTypeGround = AttackType.Normal;
 					i.cooldown = 1.35;
-					i.minutes = 0;
+					i.minutes = 300;
 					i.range = 0;
 					i.score = 6;
 					i.speed = 18;
@@ -2706,8 +2706,8 @@ namespace Wc3o {
 				case UnitType.IceTroll:
 					i.fraction = Fraction.Neutrals;
 					i.name = "Ice Troll";
-					i.gold = 0;
-					i.lumber = 0;
+					i.gold = 120;
+					i.lumber = 20;
 					i.food = 2;
 					i.image = "/Neutrals/IceTroll.gif";
 					i.createImage = "/Neutrals/IceTroll.gif";
@@ -2719,7 +2719,7 @@ namespace Wc3o {
 					i.attackTypeAir = AttackType.Pierce;
 					i.attackTypeGround = AttackType.Pierce;
 					i.cooldown = 1.6;
-					i.minutes = 0;
+					i.minutes = 120;
 					i.range = 50;
 					i.score = 2;
 					i.speed = 22;
@@ -2730,8 +2730,8 @@ namespace Wc3o {
 				case UnitType.IceTrollPriest:
 					i.fraction = Fraction.Neutrals;
 					i.name = "Ice Troll Priest";
-					i.gold = 0;
-					i.lumber = 0;
+					i.gold = 140;
+					i.lumber = 20;
 					i.food = 2;
 					i.image = "/Neutrals/IceTrollPriest.gif";
 					i.createImage = "/Neutrals/IceTrollPriest.gif";
@@ -2743,7 +2743,7 @@ namespace Wc3o {
 					i.attackTypeAir = AttackType.Magic;
 					i.attackTypeGround = AttackType.Magic;
 					i.cooldown = 1.8;
-					i.minutes = 0;
+					i.minutes = 140;
 					i.range = 60;
 					i.score = 3;
 					i.speed = 22;
@@ -2755,8 +2755,8 @@ namespace Wc3o {
 				case UnitType.Mammoth:
 					i.fraction = Fraction.Neutrals;
 					i.name = "Mammoth";
-					i.gold = 0;
-					i.lumber = 0;
+					i.gold = 200;
+					i.lumber = 60;
 					i.food = 2;
 					i.image = "/Neutrals/Mammoth.gif";
 					i.createImage = "/Neutrals/Mammoth.gif";
@@ -2768,7 +2768,7 @@ namespace Wc3o {
 					i.attackTypeAir = AttackType.None;
 					i.attackTypeGround = AttackType.Normal;
 					i.cooldown = 1.35;
-					i.minutes = 0;
+					i.minutes = 150;
 					i.range = 0;
 					i.score = 5;
 					i.speed = 18;
@@ -2779,8 +2779,8 @@ namespace Wc3o {
 				case UnitType.NerubianWarrior:
 					i.fraction = Fraction.Neutrals;
 					i.name = "Nerubian Warrior";
-					i.gold = 0;
-					i.lumber = 0;
+					i.gold = 250;
+					i.lumber = 50;
 					i.food = 2;
 					i.image = "/Neutrals/NerubianWarrior.gif";
 					i.createImage = "/Neutrals/NerubianWarrior.gif";
@@ -2792,7 +2792,7 @@ namespace Wc3o {
 					i.attackTypeAir = AttackType.None;
 					i.attackTypeGround = AttackType.Pierce;
 					i.cooldown = 1.35;
-					i.minutes = 0;
+					i.minutes = 90;
 					i.range = 25;
 					i.score = 4;
 					i.speed = 22;
@@ -2803,8 +2803,8 @@ namespace Wc3o {
 				case UnitType.NerubianQueen:
 					i.fraction = Fraction.Neutrals;
 					i.name = "Nerubian Queen";
-					i.gold = 0;
-					i.lumber = 0;
+					i.gold = 600;
+					i.lumber = 10;
 					i.food = 6;
 					i.image = "/Neutrals/NerubianQueen.gif";
 					i.createImage = "/Neutrals/NerubianQueen.gif";
@@ -2816,7 +2816,7 @@ namespace Wc3o {
 					i.attackTypeAir = AttackType.None;
 					i.attackTypeGround = AttackType.Chaos;
 					i.cooldown = 1.6;
-					i.minutes = 0;
+					i.minutes = 200;
 					i.range = 25;
 					i.score = 9;
 					i.speed = 22;
@@ -2828,8 +2828,8 @@ namespace Wc3o {
 				case UnitType.NerubianWebspinner:
 					i.fraction = Fraction.Neutrals;
 					i.name = "Nerubian Webspinner";
-					i.gold = 0;
-					i.lumber = 0;
+					i.gold = 120;
+					i.lumber = 80;
 					i.food = 2;
 					i.image = "/Neutrals/NerubianWebspinner.gif";
 					i.createImage = "/Neutrals/NerubianWebspinner.gif";
@@ -2841,7 +2841,7 @@ namespace Wc3o {
 					i.attackTypeAir = AttackType.None;
 					i.attackTypeGround = AttackType.Pierce;
 					i.cooldown = 1.35;
-					i.minutes = 0;
+					i.minutes = 210;
 					i.range = 25;
 					i.score = 6;
 					i.speed = 22;
@@ -2852,8 +2852,8 @@ namespace Wc3o {
 				case UnitType.PolarBear:
 					i.fraction = Fraction.Neutrals;
 					i.name = "Polar Bear";
-					i.gold = 0;
-					i.lumber = 0;
+					i.gold = 240;
+					i.lumber = 60;
 					i.food = 3;
 					i.image = "/Neutrals/PolarBear.gif";
 					i.createImage = "/Neutrals/PolarBear.gif";
@@ -2865,7 +2865,7 @@ namespace Wc3o {
 					i.attackTypeAir = AttackType.None;
 					i.attackTypeGround = AttackType.Normal;
 					i.cooldown = 1.35;
-					i.minutes = 0;
+					i.minutes = 190;
 					i.range = 0;
 					i.score = 4;
 					i.speed = 18;
@@ -2876,8 +2876,8 @@ namespace Wc3o {
 				case UnitType.PolarFurbolg:
 					i.fraction = Fraction.Neutrals;
 					i.name = "Polar Furbolg";
-					i.gold = 0;
-					i.lumber = 0;
+					i.gold = 300;
+					i.lumber = 10;
 					i.food = 3;
 					i.image = "/Neutrals/PolarFurbolg.gif";
 					i.createImage = "/Neutrals/PolarFurbolg.gif";
@@ -2889,7 +2889,7 @@ namespace Wc3o {
 					i.attackTypeAir = AttackType.None;
 					i.attackTypeGround = AttackType.Normal;
 					i.cooldown = 1.35;
-					i.minutes = 0;
+					i.minutes = 190;
 					i.range = 0;
 					i.score = 5;
 					i.speed = 18;
@@ -2900,8 +2900,8 @@ namespace Wc3o {
 				case UnitType.PolarFurbolgShaman:
 					i.fraction = Fraction.Neutrals;
 					i.name = "Polar Furbolg Shaman";
-					i.gold = 0;
-					i.lumber = 0;
+					i.gold = 250;
+					i.lumber = 69;
 					i.food = 3;
 					i.image = "/Neutrals/PolarFurbolgShaman.gif";
 					i.createImage = "/Neutrals/PolarFurbolgShaman.gif";
@@ -2913,7 +2913,7 @@ namespace Wc3o {
 					i.attackTypeAir = AttackType.Pierce;
 					i.attackTypeGround = AttackType.Pierce;
 					i.cooldown = 1.8;
-					i.minutes = 0;
+					i.minutes = 145;
 					i.range = 60;
 					i.score = 5;
 					i.speed = 22;
@@ -2925,8 +2925,8 @@ namespace Wc3o {
 				case UnitType.PolarFurbolgTracker:
 					i.fraction = Fraction.Neutrals;
 					i.name = "Polar Furbolg Tracker";
-					i.gold = 0;
-					i.lumber = 0;
+					i.gold = 300;
+					i.lumber = 100;
 					i.food = 4;
 					i.image = "/Neutrals/PolarFurbolgTracker.gif";
 					i.createImage = "/Neutrals/PolarFurbolgTracker.gif";
@@ -2938,7 +2938,7 @@ namespace Wc3o {
 					i.attackTypeAir = AttackType.None;
 					i.attackTypeGround = AttackType.Normal;
 					i.cooldown = 1.35;
-					i.minutes = 0;
+					i.minutes = 160;
 					i.range = 0;
 					i.score = 6;
 					i.speed = 22;
@@ -2949,8 +2949,8 @@ namespace Wc3o {
 				case UnitType.PolarFurbolgUrsaWarrior:
 					i.fraction = Fraction.Neutrals;
 					i.name = "Polar Furbolg Ursa Warrior";
-					i.gold = 0;
-					i.lumber = 0;
+					i.gold = 400;
+					i.lumber = 200;
 					i.food = 6;
 					i.image = "/Neutrals/PolarFurbolgUrsaWarrior.gif";
 					i.createImage = "/Neutrals/PolarFurbolgUrsaWarrior.gif";
@@ -2962,7 +2962,7 @@ namespace Wc3o {
 					i.attackTypeAir = AttackType.None;
 					i.attackTypeGround = AttackType.Chaos;
 					i.cooldown = 1.35;
-					i.minutes = 0;
+					i.minutes = 200;
 					i.range = 0;
 					i.score = 7;
 					i.speed = 22;
@@ -2973,8 +2973,8 @@ namespace Wc3o {
 				case UnitType.MagnataurWarrior:
 					i.fraction = Fraction.Neutrals;
 					i.name = "Magnataur Warrior";
-					i.gold = 0;
-					i.lumber = 0;
+					i.gold = 200;
+					i.lumber = 300;
 					i.food = 4;
 					i.image = "/Neutrals/MagnataurWarrior.gif";
 					i.createImage = "/Neutrals/MagnataurWarrior.gif";
@@ -2986,7 +2986,7 @@ namespace Wc3o {
 					i.attackTypeAir = AttackType.None;
 					i.attackTypeGround = AttackType.Normal;
 					i.cooldown = 1.5;
-					i.minutes = 0;
+					i.minutes = 100;
 					i.range = 0;
 					i.score = 5;
 					i.speed = 18;
@@ -2997,8 +2997,8 @@ namespace Wc3o {
 				case UnitType.TuskarrFighter:
 					i.fraction = Fraction.Neutrals;
 					i.name = "Tuskarr Fighter";
-					i.gold = 0;
-					i.lumber = 0;
+					i.gold = 220;
+					i.lumber = 10;
 					i.food = 2;
 					i.image = "/Neutrals/TuskarrFighter.gif";
 					i.createImage = "/Neutrals/TuskarrFighter.gif";
@@ -3010,7 +3010,7 @@ namespace Wc3o {
 					i.attackTypeAir = AttackType.None;
 					i.attackTypeGround = AttackType.Normal;
 					i.cooldown = 1.35;
-					i.minutes = 0;
+					i.minutes = 140;
 					i.range = 0;
 					i.score = 5;
 					i.speed = 18;
@@ -3021,8 +3021,8 @@ namespace Wc3o {
 				case UnitType.UnbrokenDarkhunter:
 					i.fraction = Fraction.Neutrals;
 					i.name = "Unbroken Darkhunter";
-					i.gold = 0;
-					i.lumber = 0;
+					i.gold = 200;
+					i.lumber = 200;
 					i.food = 2;
 					i.image = "/Neutrals/UnbrokenDarkhunter.gif";
 					i.createImage = "/Neutrals/UnbrokenDarkhunter.gif";
@@ -3034,7 +3034,7 @@ namespace Wc3o {
 					i.attackTypeAir = AttackType.None;
 					i.attackTypeGround = AttackType.Normal;
 					i.cooldown = 1.35;
-					i.minutes = 0;
+					i.minutes = 200;
 					i.range = 0;
 					i.score = 7;
 					i.speed = 18;
@@ -3045,8 +3045,8 @@ namespace Wc3o {
 				case UnitType.Gnoll:
 					i.fraction = Fraction.Neutrals;
 					i.name = "Gnoll";
-					i.gold = 0;
-					i.lumber = 0;
+					i.gold = 50;
+					i.lumber = 100;
 					i.food = 1;
 					i.image = "/Neutrals/Gnoll.gif";
 					i.createImage = "/Neutrals/Gnoll.gif";
@@ -3058,7 +3058,7 @@ namespace Wc3o {
 					i.attackTypeAir = AttackType.None;
 					i.attackTypeGround = AttackType.Normal;
 					i.cooldown = 1.35;
-					i.minutes = 0;
+					i.minutes = 20;
 					i.range = 0;
 					i.score = 2;
 					i.speed = 22;
@@ -3069,8 +3069,8 @@ namespace Wc3o {
 				case UnitType.GnollWarden:
 					i.fraction = Fraction.Neutrals;
 					i.name = "Gnoll Warden";
-					i.gold = 0;
-					i.lumber = 0;
+					i.gold = 70;
+					i.lumber = 120;
 					i.food = 2;
 					i.image = "/Neutrals/GnollWarden.gif";
 					i.createImage = "/Neutrals/GnollWarden.gif";
@@ -3082,7 +3082,7 @@ namespace Wc3o {
 					i.attackTypeAir = AttackType.Pierce;
 					i.attackTypeGround = AttackType.Pierce;
 					i.cooldown = 1.6;
-					i.minutes = 0;
+					i.minutes = 30;
 					i.range = 50;
 					i.score = 3;
 					i.speed = 22;
@@ -3093,8 +3093,8 @@ namespace Wc3o {
 				case UnitType.GnollOverseer:
 					i.fraction = Fraction.Neutrals;
 					i.name = "Gnoll Overseer";
-					i.gold = 0;
-					i.lumber = 0;
+					i.gold = 100;
+					i.lumber = 200;
 					i.food = 4;
 					i.image = "/Neutrals/GnollOverseer.gif";
 					i.createImage = "/Neutrals/GnollOverseer.gif";
@@ -3106,7 +3106,7 @@ namespace Wc3o {
 					i.attackTypeAir = AttackType.None;
 					i.attackTypeGround = AttackType.Normal;
 					i.cooldown = 1.35;
-					i.minutes = 0;
+					i.minutes = 90;
 					i.range = 0;
 					i.score = 5;
 					i.speed = 22;
@@ -3117,8 +3117,8 @@ namespace Wc3o {
 				case UnitType.OgreWarrior:
 					i.fraction = Fraction.Neutrals;
 					i.name = "Ogre Warrior";
-					i.gold = 0;
-					i.lumber = 0;
+					i.gold = 210;
+					i.lumber = 20;
 					i.food = 2;
 					i.image = "/Neutrals/OgreWarrior.gif";
 					i.createImage = "/Neutrals/OgreWarrior.gif";
@@ -3130,7 +3130,7 @@ namespace Wc3o {
 					i.attackTypeAir = AttackType.None;
 					i.attackTypeGround = AttackType.Normal;
 					i.cooldown = 1.35;
-					i.minutes = 0;
+					i.minutes = 180;
 					i.range = 0;
 					i.score = 4;
 					i.speed = 22;
@@ -3141,8 +3141,8 @@ namespace Wc3o {
 				case UnitType.OgreMagi:
 					i.fraction = Fraction.Neutrals;
 					i.name = "Ogre Magi";
-					i.gold = 0;
-					i.lumber = 0;
+					i.gold = 190;
+					i.lumber = 90;
 					i.food = 4;
 					i.image = "/Neutrals/OgreMagi.gif";
 					i.createImage = "/Neutrals/OgreMagi.gif";
@@ -3154,7 +3154,7 @@ namespace Wc3o {
 					i.attackTypeAir = AttackType.None;
 					i.attackTypeGround = AttackType.Normal;
 					i.cooldown = 1.35;
-					i.minutes = 0;
+					i.minutes = 145;
 					i.range = 0;
 					i.score = 5;
 					i.speed = 22;
@@ -3166,8 +3166,8 @@ namespace Wc3o {
 				case UnitType.OgreLord:
 					i.fraction = Fraction.Neutrals;
 					i.name = "Ogre Lord";
-					i.gold = 0;
-					i.lumber = 0;
+					i.gold = 500;
+					i.lumber = 100;
 					i.food = 6;
 					i.image = "/Neutrals/OgreLord.gif";
 					i.createImage = "/Neutrals/OgreLord.gif";
@@ -3179,7 +3179,7 @@ namespace Wc3o {
 					i.attackTypeAir = AttackType.None;
 					i.attackTypeGround = AttackType.Chaos;
 					i.cooldown = 1.35;
-					i.minutes = 0;
+					i.minutes = 160;
 					i.range = 0;
 					i.score = 8;
 					i.speed = 22;
@@ -3191,8 +3191,8 @@ namespace Wc3o {
 				case UnitType.Pandaren:
 					i.fraction = Fraction.Neutrals;
 					i.name = "Pandaren";
-					i.gold = 0;
-					i.lumber = 0;
+					i.gold = 300;
+					i.lumber = 100;
 					i.food = 3;
 					i.image = "/Neutrals/Pandaren.gif";
 					i.createImage = "/Neutrals/Pandaren.gif";
@@ -3204,7 +3204,7 @@ namespace Wc3o {
 					i.attackTypeAir = AttackType.None;
 					i.attackTypeGround = AttackType.Normal;
 					i.cooldown = 1.35;
-					i.minutes = 0;
+					i.minutes = 175;
 					i.range = 0;
 					i.score = 4;
 					i.speed = 18;
@@ -3215,8 +3215,8 @@ namespace Wc3o {
 				case UnitType.Wendigo:
 					i.fraction = Fraction.Neutrals;
 					i.name = "Wendigo";
-					i.gold = 0;
-					i.lumber = 0;
+					i.gold = 275;
+					i.lumber = 125;
 					i.food = 3;
 					i.image = "/Neutrals/Wendigo.gif";
 					i.createImage = "/Neutrals/Wendigo.gif";
@@ -3228,7 +3228,7 @@ namespace Wc3o {
 					i.attackTypeAir = AttackType.None;
 					i.attackTypeGround = AttackType.Normal;
 					i.cooldown = 1.35;
-					i.minutes = 0;
+					i.minutes = 155;
 					i.range = 0;
 					i.score = 5;
 					i.speed = 22;
@@ -3239,8 +3239,8 @@ namespace Wc3o {
 				case UnitType.WendigoShaman:
 					i.fraction = Fraction.Neutrals;
 					i.name = "Wendigo Shaman";
-					i.gold = 0;
-					i.lumber = 0;
+					i.gold = 235;
+					i.lumber = 75;
 					i.food = 6;
 					i.image = "/Neutrals/WendigoShaman.gif";
 					i.createImage = "/Neutrals/WendigoShaman.gif";
@@ -3252,7 +3252,7 @@ namespace Wc3o {
 					i.attackTypeAir = AttackType.None;
 					i.attackTypeGround = AttackType.Chaos;
 					i.cooldown = 1.35;
-					i.minutes = 0;
+					i.minutes = 185;
 					i.range = 0;
 					i.score = 6;
 					i.speed = 22;
@@ -3264,7 +3264,7 @@ namespace Wc3o {
 				case UnitType.DraeneiGuardian:
 					i.fraction = Fraction.Neutrals;
 					i.name = "Draenei Guardian";
-					i.gold = 0;
+					i.gold = 200;
 					i.lumber = 0;
 					i.food = 2;
 					i.image = "/Neutrals/DraeneiGuardian.gif";
@@ -3277,7 +3277,7 @@ namespace Wc3o {
 					i.attackTypeAir = AttackType.None;
 					i.attackTypeGround = AttackType.Normal;
 					i.cooldown = 1.35;
-					i.minutes = 0;
+					i.minutes = 300;
 					i.range = 0;
 					i.score = 5;
 					i.speed = 22;
@@ -3288,8 +3288,8 @@ namespace Wc3o {
 				case UnitType.EredarSorceror:
 					i.fraction = Fraction.Neutrals;
 					i.name = "Eredar Sorceror";
-					i.gold = 0;
-					i.lumber = 0;
+					i.gold = 140;
+					i.lumber = 10;
 					i.food = 1;
 					i.image = "/Neutrals/EredarSorceror.gif";
 					i.createImage = "/Neutrals/EredarSorceror.gif";
@@ -3301,7 +3301,7 @@ namespace Wc3o {
 					i.attackTypeAir = AttackType.Chaos;
 					i.attackTypeGround = AttackType.Chaos;
 					i.cooldown = 1.8;
-					i.minutes = 0;
+					i.minutes = 45;
 					i.range = 60;
 					i.score = 6;
 					i.speed = 22;
@@ -3313,8 +3313,8 @@ namespace Wc3o {
 				case UnitType.Felguard:
 					i.fraction = Fraction.Neutrals;
 					i.name = "Felguard";
-					i.gold = 0;
-					i.lumber = 0;
+					i.gold = 175;
+					i.lumber = 45;
 					i.food = 2;
 					i.image = "/Neutrals/Felguard.gif";
 					i.createImage = "/Neutrals/Felguard.gif";
@@ -3326,7 +3326,7 @@ namespace Wc3o {
 					i.attackTypeAir = AttackType.None;
 					i.attackTypeGround = AttackType.Chaos;
 					i.cooldown = 1.35;
-					i.minutes = 0;
+					i.minutes = 145;
 					i.range = 0;
 					i.score = 5;
 					i.speed = 22;
@@ -3338,7 +3338,7 @@ namespace Wc3o {
 					i.fraction = Fraction.Neutrals;
 					i.name = "Infernal Juggernaut";
 					i.gold = 0;
-					i.lumber = 0;
+					i.lumber = 400;
 					i.food = 4;
 					i.image = "/Neutrals/InfernalJuggernaut.gif";
 					i.createImage = "/Neutrals/InfernalJuggernaut.gif";
@@ -3350,7 +3350,7 @@ namespace Wc3o {
 					i.attackTypeAir = AttackType.Chaos;
 					i.attackTypeGround = AttackType.Chaos;
 					i.cooldown = 1.6;
-					i.minutes = 0;
+					i.minutes = 140;
 					i.range = 60;
 					i.score = 9;
 					i.speed = 180;
@@ -3361,8 +3361,8 @@ namespace Wc3o {
 				case UnitType.NetherDrake:
 					i.fraction = Fraction.Neutrals;
 					i.name = "Nether Drake";
-					i.gold = 0;
-					i.lumber = 0;
+					i.gold = 400;
+					i.lumber = 155;
 					i.food = 5;
 					i.image = "/Neutrals/NetherDrake.gif";
 					i.createImage = "/Neutrals/NetherDrake.gif";
@@ -3374,7 +3374,7 @@ namespace Wc3o {
 					i.attackTypeAir = AttackType.Pierce;
 					i.attackTypeGround = AttackType.Pierce;
 					i.cooldown = 1.8;
-					i.minutes = 0;
+					i.minutes = 155;
 					i.range = 60;
 					i.score = 8;
 					i.speed = 15;
@@ -3386,8 +3386,8 @@ namespace Wc3o {
 				case UnitType.QueenOfSuffering:
 					i.fraction = Fraction.Neutrals;
 					i.name = "Queen Of Suffering";
-					i.gold = 0;
-					i.lumber = 0;
+					i.gold = 400;
+					i.lumber = 150;
 					i.food = 3;
 					i.image = "/Neutrals/QueenOfSuffering.gif";
 					i.createImage = "/Neutrals/QueenOfSuffering.gif";
@@ -3399,7 +3399,7 @@ namespace Wc3o {
 					i.attackTypeAir = AttackType.None;
 					i.attackTypeGround = AttackType.Chaos;
 					i.cooldown = 1.35;
-					i.minutes = 0;
+					i.minutes = 140;
 					i.range = 0;
 					i.score = 10;
 					i.speed = 22;
@@ -3413,8 +3413,8 @@ namespace Wc3o {
 				case UnitType.Voidwalker:
 					i.fraction = Fraction.Neutrals;
 					i.name = "Voidwalker";
-					i.gold = 0;
-					i.lumber = 0;
+					i.gold = 190;
+					i.lumber = 20;
 					i.food = 2;
 					i.image = "/Neutrals/Voidwalker.gif";
 					i.createImage = "/Neutrals/Voidwalker.gif";
@@ -3426,7 +3426,7 @@ namespace Wc3o {
 					i.attackTypeAir = AttackType.Pierce;
 					i.attackTypeGround = AttackType.Pierce;
 					i.cooldown = 1.6;
-					i.minutes = 0;
+					i.minutes = 165;
 					i.range = 45;
 					i.score = 6;
 					i.speed = 22;
@@ -3437,8 +3437,8 @@ namespace Wc3o {
 				case UnitType.Hydra:
 					i.fraction = Fraction.Neutrals;
 					i.name = "Hydra";
-					i.gold = 0;
-					i.lumber = 0;
+					i.gold = 300;
+					i.lumber = 300;
 					i.food = 5;
 					i.image = "/Neutrals/Hydra.gif";
 					i.createImage = "/Neutrals/Hydra.gif";
@@ -3450,7 +3450,7 @@ namespace Wc3o {
 					i.attackTypeAir = AttackType.Pierce;
 					i.attackTypeGround = AttackType.Pierce;
 					i.cooldown = 1.6;
-					i.minutes = 0;
+					i.minutes = 40;
 					i.range = 50;
 					i.score = 8;
 					i.speed = 22;
@@ -3461,8 +3461,8 @@ namespace Wc3o {
 				case UnitType.ElderJungleStalker:
 					i.fraction = Fraction.Neutrals;
 					i.name = "Elder Jungle Stalker";
-					i.gold = 0;
-					i.lumber = 0;
+					i.gold = 350;
+					i.lumber = 100;
 					i.food = 5;
 					i.image = "/Neutrals/ElderJungleStalker.gif";
 					i.createImage = "/Neutrals/ElderJungleStalker.gif";
@@ -3474,7 +3474,7 @@ namespace Wc3o {
 					i.attackTypeAir = AttackType.None;
 					i.attackTypeGround = AttackType.Normal;
 					i.cooldown = 1.35;
-					i.minutes = 0;
+					i.minutes = 300;
 					i.range = 0;
 					i.score = 8;
 					i.speed = 22;
@@ -3485,8 +3485,8 @@ namespace Wc3o {
 				case UnitType.MakruraPooldweller:
 					i.fraction = Fraction.Neutrals;
 					i.name = "Makrura Pooldweller";
-					i.gold = 0;
-					i.lumber = 0;
+					i.gold = 160;
+					i.lumber = 60;
 					i.food = 2;
 					i.image = "/Neutrals/MakruraPooldweller.gif";
 					i.createImage = "/Neutrals/MakruraPooldweller.gif";
@@ -3498,7 +3498,7 @@ namespace Wc3o {
 					i.attackTypeAir = AttackType.None;
 					i.attackTypeGround = AttackType.Normal;
 					i.cooldown = 1.35;
-					i.minutes = 0;
+					i.minutes = 120;
 					i.range = 0;
 					i.score = 5;
 					i.speed = 22;
@@ -3509,8 +3509,8 @@ namespace Wc3o {
 				case UnitType.MurgulCliffrunner:
 					i.fraction = Fraction.Neutrals;
 					i.name = "Murgul Cliffrunner";
-					i.gold = 0;
-					i.lumber = 0;
+					i.gold = 60;
+					i.lumber = 60;
 					i.food = 1;
 					i.image = "/Neutrals/MurgulCliffrunner.gif";
 					i.createImage = "/Neutrals/MurgulCliffrunner.gif";
@@ -3522,7 +3522,7 @@ namespace Wc3o {
 					i.attackTypeAir = AttackType.None;
 					i.attackTypeGround = AttackType.Normal;
 					i.cooldown = 1.35;
-					i.minutes = 0;
+					i.minutes = 60;
 					i.range = 0;
 					i.score = 2;
 					i.speed = 22;
@@ -3533,8 +3533,8 @@ namespace Wc3o {
 				case UnitType.SeaElemental:
 					i.fraction = Fraction.Neutrals;
 					i.name = "Sea Elemental";
-					i.gold = 0;
-					i.lumber = 0;
+					i.gold = 240;
+					i.lumber = 50;
 					i.food = 4;
 					i.image = "/Neutrals/SeaElemental.gif";
 					i.createImage = "/Neutrals/SeaElemental.gif";
@@ -3546,7 +3546,7 @@ namespace Wc3o {
 					i.attackTypeAir = AttackType.Pierce;
 					i.attackTypeGround = AttackType.Pierce;
 					i.cooldown = 1.8;
-					i.minutes = 0;
+					i.minutes = 250;
 					i.range = 50;
 					i.score = 5;
 					i.speed = 30;
@@ -3557,8 +3557,8 @@ namespace Wc3o {
 				case UnitType.SeaGiant:
 					i.fraction = Fraction.Neutrals;
 					i.name = "Sea Giant";
-					i.gold = 0;
-					i.lumber = 0;
+					i.gold = 220;
+					i.lumber = 125;
 					i.food = 2;
 					i.image = "/Neutrals/SeaGiant.gif";
 					i.createImage = "/Neutrals/SeaGiant.gif";
@@ -3570,7 +3570,7 @@ namespace Wc3o {
 					i.attackTypeAir = AttackType.None;
 					i.attackTypeGround = AttackType.Normal;
 					i.cooldown = 1.5;
-					i.minutes = 0;
+					i.minutes = 140;
 					i.range = 0;
 					i.score = 7;
 					i.speed = 27;
@@ -3581,8 +3581,8 @@ namespace Wc3o {
 				case UnitType.SeaTurtle:
 					i.fraction = Fraction.Neutrals;
 					i.name = "Sea Turtle";
-					i.gold = 0;
-					i.lumber = 0;
+					i.gold = 195;
+					i.lumber = 30;
 					i.food = 2;
 					i.image = "/Neutrals/SeaTurtle.gif";
 					i.createImage = "/Neutrals/SeaTurtle.gif";
@@ -3594,7 +3594,7 @@ namespace Wc3o {
 					i.attackTypeAir = AttackType.None;
 					i.attackTypeGround = AttackType.Normal;
 					i.cooldown = 1.35;
-					i.minutes = 0;
+					i.minutes = 155;
 					i.range = 0;
 					i.score = 4;
 					i.speed = 22;
@@ -3605,8 +3605,8 @@ namespace Wc3o {
 				case UnitType.DeeplordRevenant:
 					i.fraction = Fraction.Neutrals;
 					i.name = "Deeplord Revenant";
-					i.gold = 0;
-					i.lumber = 0;
+					i.gold = 700;
+					i.lumber = 200;
 					i.food = 8;
 					i.image = "/Neutrals/DeeplordRevenant.gif";
 					i.createImage = "/Neutrals/DeeplordRevenant.gif";
@@ -3618,7 +3618,7 @@ namespace Wc3o {
 					i.attackTypeAir = AttackType.None;
 					i.attackTypeGround = AttackType.Chaos;
 					i.cooldown = 1.35;
-					i.minutes = 0;
+					i.minutes = 250;
 					i.range = 0;
 					i.score = 9;
 					i.speed = 22;
@@ -3629,8 +3629,8 @@ namespace Wc3o {
 				case UnitType.SkeletalOrcGrunt:
 					i.fraction = Fraction.Neutrals;
 					i.name = "Skeletal Orc Grunt";
-					i.gold = 0;
-					i.lumber = 0;
+					i.gold = 300;
+					i.lumber = 150;
 					i.food = 4;
 					i.image = "/Neutrals/SkeletalOrcGrunt.gif";
 					i.createImage = "/Neutrals/SkeletalOrcGrunt.gif";
@@ -3642,7 +3642,7 @@ namespace Wc3o {
 					i.attackTypeAir = AttackType.None;
 					i.attackTypeGround = AttackType.Normal;
 					i.cooldown = 1.35;
-					i.minutes = 0;
+					i.minutes = 150;
 					i.range = 0;
 					i.score = 5;
 					i.speed = 22;
@@ -3653,8 +3653,8 @@ namespace Wc3o {
 				case UnitType.SpiderCrabBehemoth:
 					i.fraction = Fraction.Neutrals;
 					i.name = "Spider Crab Behemoth";
-					i.gold = 0;
-					i.lumber = 0;
+					i.gold = 250;
+					i.lumber = 50;
 					i.food = 3;
 					i.image = "/Neutrals/SpiderCrabBehemoth.gif";
 					i.createImage = "/Neutrals/SpiderCrabBehemoth.gif";
@@ -3666,7 +3666,7 @@ namespace Wc3o {
 					i.attackTypeAir = AttackType.None;
 					i.attackTypeGround = AttackType.Normal;
 					i.cooldown = 1.35;
-					i.minutes = 0;
+					i.minutes = 145;
 					i.range = 0;
 					i.score = 5;
 					i.speed = 22;
@@ -3677,7 +3677,7 @@ namespace Wc3o {
 				case UnitType.StormreaverWarlock:
 					i.fraction = Fraction.Neutrals;
 					i.name = "Stormreaver Warlock";
-					i.gold = 0;
+					i.gold = 1000;
 					i.lumber = 0;
 					i.food = 8;
 					i.image = "/Neutrals/StormreaverWarlock.gif";
@@ -3690,7 +3690,7 @@ namespace Wc3o {
 					i.attackTypeAir = AttackType.Chaos;
 					i.attackTypeGround = AttackType.Chaos;
 					i.cooldown = 1.8;
-					i.minutes = 0;
+					i.minutes = 100;
 					i.range = 60;
 					i.score = 7;
 					i.speed = 22;
@@ -3702,8 +3702,8 @@ namespace Wc3o {
 				case UnitType.Sasquatch:
 					i.fraction = Fraction.Neutrals;
 					i.name = "Sasquatch";
-					i.gold = 0;
-					i.lumber = 0;
+					i.gold = 350;
+					i.lumber = 50;
 					i.food = 4;
 					i.image = "/Neutrals/Sasquatch.gif";
 					i.createImage = "/Neutrals/Sasquatch.gif";
@@ -3715,7 +3715,7 @@ namespace Wc3o {
 					i.attackTypeAir = AttackType.None;
 					i.attackTypeGround = AttackType.Normal;
 					i.cooldown = 1.35;
-					i.minutes = 0;
+					i.minutes = 155;
 					i.range = 0;
 					i.score = 7;
 					i.speed = 22;
@@ -3726,8 +3726,8 @@ namespace Wc3o {
 				case UnitType.Satyr:
 					i.fraction = Fraction.Neutrals;
 					i.name = "Satyr";
-					i.gold = 0;
-					i.lumber = 0;
+					i.gold = 20;
+					i.lumber = 90;
 					i.food = 1;
 					i.image = "/Neutrals/Satyr.gif";
 					i.createImage = "/Neutrals/Satyr.gif";
@@ -3739,7 +3739,7 @@ namespace Wc3o {
 					i.attackTypeAir = AttackType.None;
 					i.attackTypeGround = AttackType.Normal;
 					i.cooldown = 1.35;
-					i.minutes = 0;
+					i.minutes = 90;
 					i.range = 0;
 					i.score = 6;
 					i.speed = 22;
@@ -3750,8 +3750,8 @@ namespace Wc3o {
 				case UnitType.SatyrTrickster:
 					i.fraction = Fraction.Neutrals;
 					i.name = "Satyr Trickster";
-					i.gold = 0;
-					i.lumber = 0;
+					i.gold = 30;
+					i.lumber = 100;
 					i.food = 1;
 					i.image = "/Neutrals/SatyrTrickster.gif";
 					i.createImage = "/Neutrals/SatyrTrickster.gif";
@@ -3763,7 +3763,7 @@ namespace Wc3o {
 					i.attackTypeAir = AttackType.Pierce;
 					i.attackTypeGround = AttackType.Pierce;
 					i.cooldown = 1.8;
-					i.minutes = 0;
+					i.minutes = 100;
 					i.range = 60;
 					i.score = 6;
 					i.speed = 22;
