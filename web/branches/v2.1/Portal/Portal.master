@@ -83,7 +83,7 @@
                 <div class="Box-Header">
                     Statistics</div>
                 <br />
-                <table style="width: 45%" cellspacing="2">
+                <table style="width: 45%" cellspacing="2" align="center">
                     <tr>
                         <th>
                             Player:</th>
@@ -138,7 +138,7 @@
             </div>
         </div>
         <div id="Footer">
-            Warcraft 3 online v2.0 - Wallenstein - : Concept, Design &amp; Code © <a href="mailto:hannes@sachsenhofer.com">
+            Warcraft 3 online v2.1 - Scipio - Beta : Concept, Design &amp; Code © <a href="mailto:hannes@sachsenhofer.com">
                 Hannes Sachsenhofer</a><br />
             Warcraft 3 online is free to play, and comes with absolutely no warranty.<br />
             <br />

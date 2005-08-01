@@ -16,7 +16,7 @@ namespace Wc3o.Pages.Game {
 			sector = Wc3o.Game.CurrentSector;
 
 			if (!IsPostBack) {
-				hplSector.Text = sector.FullName;
+				hplSector.Text = sector.ToString();
 				hplSector.NavigateUrl = "Map.aspx?Sector=" + sector.Coordinate.ToString();
 				if (sector.Owner == null)
 					hplSector.ForeColor = System.Drawing.Color.FromName(Configuration.Color_Neutral);
@@ -36,20 +36,30 @@ namespace Wc3o.Pages.Game {
 				else
 					hplOwner.Text = "<i>this sector has no owner.</i>";
 
-				lblGold.Text = Wc3o.Game.Format(sector.Gold);
-				imgGold.ImageUrl = player.Gfx + "/Game/Gold.gif";
-				lblLumber.Text = Wc3o.Game.Format(sector.Lumber);
-				imgLumber.ImageUrl = player.Gfx + "/Game/Lumber.gif";
+
+				if (sector is GoldAndLumberSector) {
+					GoldAndLumberSector goldAndLumberSector = sector as GoldAndLumberSector;
+					lblSectorInfo.Text = "<br />This sector has <img src='" + player.Gfx + "/Game/Gold.gif' /> (" + ((int)goldAndLumberSector.GoldEfficiency * 100) + " %) and <img src='" + player.Gfx + "/Game/Lumber.gif' /> (" + ((int)goldAndLumberSector.LumberEfficiency * 100) + " %)";
+				}
+				else if (sector is GoldSector)
+					lblSectorInfo.Text = "<br />This sector has <img src='" + player.Gfx + "/Game/Gold.gif' /> (" + ((int)(sector as GoldSector).GoldEfficiency * 100) + " %)";
+				else if (sector is LumberSector)
+					lblSectorInfo.Text = "<br />This sector has <img src='" + player.Gfx + "/Game/Lumber.gif' /> (" + ((int)(sector as LumberSector).LumberEfficiency * 100) + " %)";
+				else if (sector is HealingSector)
+					lblSectorInfo.Text = "<br />This sector heals your units (" + ((int)(sector as HealingSector).HealingEfficiency * 100) + " %)";
+				else if (sector is MercenarySector)
+					lblSectorInfo.Text = "<br />This sector has mercenaries (" + (sector as MercenarySector).Mercenaries.Length + ")";
+
 
 				foreach (Sector s in player.Sectors)
-					drpSectors.Items.Add(new System.Web.UI.WebControls.ListItem(s.FullName, s.Coordinate.ToString()));
+					drpSectors.Items.Add(new System.Web.UI.WebControls.ListItem(s.ToString(), s.Coordinate.ToString()));
 
 				foreach (Unit u in player.Units)
 					if (drpSectors.Items.FindByValue(u.Sector.Coordinate.ToString()) == null)
-						drpSectors.Items.Add(new System.Web.UI.WebControls.ListItem("< " + u.Sector.FullName + " >", u.Sector.Coordinate.ToString()));
+						drpSectors.Items.Add(new System.Web.UI.WebControls.ListItem("< " + u.Sector.ToString() + " >", u.Sector.Coordinate.ToString()));
 
 				if (!Wc3o.Game.SelectByValue(drpSectors, sector.Coordinate.ToString()))
-					drpSectors.Items.Insert(0, new System.Web.UI.WebControls.ListItem("- " + sector.FullName + " -", sector.Coordinate.ToString()));
+					drpSectors.Items.Insert(0, new System.Web.UI.WebControls.ListItem("- " + sector.ToString() + " -", sector.Coordinate.ToString()));
 
 				bool canAnnect = false;
 				bool creepsOnSector = false;
@@ -91,11 +101,15 @@ namespace Wc3o.Pages.Game {
 				if (hasView && (creepsOnSector || creepBuildingsOnSector)) //creeps are represented as "-"
 					lblOthers.Text += "<div class='Neutral'><a href=\"javascript:LoadSector('" + sector.Coordinate + "','-')\"><b>Creeps</b></a><br /><br /><div id='u_-' name='u_-'></div><div id='b_-' name='b_-'></div></div><br />";
 
+
 				if (sector.Owner == player) {
 					lblPlayer.Text += "<br /><div class='Player'><a href=\"javascript:LoadBuildings('" + sector.Coordinate + "','')\"><b>Your buildings</b></a><br /><div id='b_' name='b_'></div></div>";
 					lblPlayer.Text += "<br /><div class='Player'><a href=\"javascript:LoadTraining('" + sector.Coordinate + "')\"><b>Train units</b></a><br /><div id='training' name='training'></div></div>";
 					lblPlayer.Text += "<br /><div class='Player'><a href=\"javascript:LoadConstructing('" + sector.Coordinate + "')\"><b>Construct buildings</b></a><br /><div id='constructing' name='constructing'></div></div>";
 				}
+
+				if (sector is MercenarySector && player.IsAlly(sector.Owner))
+					lblPlayer.Text += "<br /><div class='Player'><a href=\"javascript:LoadMercenaries('" + sector.Coordinate + "')\"><b>Recruit mercenaries</b></a><br /><div id='divMercenaries' name='divMercenaries'></div></div>";
 
 				if (!hasView)
 					lblOthers.Text = "<i>You have no view on this sector.</i>";
@@ -117,6 +131,9 @@ namespace Wc3o.Pages.Game {
 						break;
 					case "Training":
 						lblOpen.Text = "<script language='javascript'>Refresh('3','" + sector.Coordinate + "')</script>";
+						break;
+					case "Mercenaries":
+						lblOpen.Text = "<script language='javascript'>LoadMercenaries('" + sector.Coordinate + "');</script>";
 						break;
 				}
 			#endregion

@@ -79,10 +79,10 @@ namespace Wc3o.Pages.Game {
 					ranking.Columns.Add("Image", typeof(String));
 
 					int league = int.Parse(Request.QueryString["League"]);
-					System.Collections.ArrayList users = new System.Collections.ArrayList();
+					List<Player> players = new List<Player>();
 					foreach (Player p in Wc3o.Game.GetPlayers(league))
-						users.Add(p);
-					users.Sort(new UserRankComparer());
+						players.Add(p);
+					players.Sort(new PlayerScoreComparer());
 
 					#region " Checks if the given league is valid "
 					int rankedPlayers = 0;
@@ -102,7 +102,7 @@ namespace Wc3o.Pages.Game {
 					lblLeague.Text = Wc3o.Game.Format(league);
 					#endregion
 
-					foreach (Player p in users) {
+					foreach (Player p in players) {
 						string rankFormat = "";
 						string userFormat = "";
 
@@ -115,19 +115,19 @@ namespace Wc3o.Pages.Game {
 						else
 							userFormat = "<div style='color:" + Configuration.Color_League + "'>";
 
-						if (p.LeagueRank == 1)
+						if (p.Rank == 1)
 							rankFormat = "<div style='font-size:19px;'>";
-						else if (p.LeagueRank == 2)
+						else if (p.Rank == 2)
 							rankFormat = "<div style='font-size:17px;'>";
-						else if (p.LeagueRank == 3)
+						else if (p.Rank == 3)
 							rankFormat = "<div style='font-size:15px;'>";
-						else if (p.LeagueRank < 11)
+						else if (p.Rank < 11)
 							rankFormat = "<div style='font-size:13px;'>";
 						else
 							rankFormat = "<div style='font-size:11px;'>";
 
 						DataRow row = ranking.NewRow();
-						row["Rank"] = rankFormat + userFormat + Wc3o.Game.Format(p.LeagueRank) + "</div></div>";
+						row["Rank"] = rankFormat + userFormat + Wc3o.Game.Format(p.Rank) + "</div></div>";
 						row["Name"] = rankFormat + userFormat + p.FullName + "</div></div>";
 						row["Score"] = rankFormat + userFormat + Wc3o.Game.Format(p.Score) + "</div></div>";
 						row["Image"] = "<a href='PlayerInfo.aspx?Player=" + p.Name + "'><img src='" + player.Gfx + "/" + p.FractionInfo.SmallEmblem + "' /></a>";

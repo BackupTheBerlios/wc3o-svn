@@ -25,11 +25,12 @@ namespace Wc3o.Pages.Game {
 					imgImage.ImageUrl = player.Alliance.Image;
 					lblDirective.Text = player.Alliance.Directive;
 					lblName.Text = player.Alliance.FullName;
+					hplMessage.NavigateUrl = "Mail.aspx?Alliance=" + player.Alliance.Name;
 
 					foreach (Player p in player.Alliance.AcceptedMembers)
-						drpVote.Items.Add(new System.Web.UI.WebControls.ListItem(p.FullName, p.Name));
+						drpVote.Items.Add(new System.Web.UI.WebControls.ListItem(p.RankedName, p.Name));
 
-					List<Player> l=new List<Player>();
+					List<Player> l = new List<Player>();
 					foreach (Player p in player.Alliance.Members)
 						if (p.IsAccepted)
 							l.Add(p);
@@ -43,11 +44,16 @@ namespace Wc3o.Pages.Game {
 						txtLongName.Text = player.Alliance.LongName;
 						txtImage.Text = player.Alliance.Image;
 
+						drpRank.Items.Add(new System.Web.UI.WebControls.ListItem("Level 0", "0"));
+						drpRank.Items.Add(new System.Web.UI.WebControls.ListItem("Level 1 (" + Wc3o.Game.Format(AllianceRank.Level1, Fraction.Humans) + " / " + Wc3o.Game.Format(AllianceRank.Level1, Fraction.Orcs) + " / " + Wc3o.Game.Format(AllianceRank.Level1, Fraction.Undead) + " / " + Wc3o.Game.Format(AllianceRank.Level1, Fraction.NightElves) + ")", "1"));
+						drpRank.Items.Add(new System.Web.UI.WebControls.ListItem("Level 2 (" + Wc3o.Game.Format(AllianceRank.Level2, Fraction.Humans) + " / " + Wc3o.Game.Format(AllianceRank.Level2, Fraction.Orcs) + " / " + Wc3o.Game.Format(AllianceRank.Level2, Fraction.Undead) + " / " + Wc3o.Game.Format(AllianceRank.Level2, Fraction.NightElves) + ")", "2"));
+						drpRank.Items.Add(new System.Web.UI.WebControls.ListItem("Level 3 (" + Wc3o.Game.Format(AllianceRank.Level3, Fraction.Humans) + " / " + Wc3o.Game.Format(AllianceRank.Level3, Fraction.Orcs) + " / " + Wc3o.Game.Format(AllianceRank.Level3, Fraction.Undead) + " / " + Wc3o.Game.Format(AllianceRank.Level3, Fraction.NightElves) + ")", "3"));
+
 						foreach (Player p in player.Alliance.Members)
 							if (!p.IsAccepted)
 								drpWaiting.Items.Add(new System.Web.UI.WebControls.ListItem(p.FullName, p.Name));
 							else if (p != player && p != player)
-								drpKick.Items.Add(new System.Web.UI.WebControls.ListItem(p.FullName, p.Name));
+								drpMembers.Items.Add(new System.Web.UI.WebControls.ListItem(p.RankedName, p.Name));
 					}
 				}
 				else if (player.Alliance != null && !player.IsAccepted) {
@@ -99,8 +105,8 @@ namespace Wc3o.Pages.Game {
 
 
 		protected void btnKick_Click(object sender, EventArgs e) {
-			if (drpKick.SelectedIndex > 0) {
-				Player p = Wc3o.Game.GameData.Players[drpKick.SelectedValue];
+			if (drpMembers.SelectedIndex > 0) {
+				Player p = Wc3o.Game.GameData.Players[drpMembers.SelectedValue];
 				if (p == null)
 					return;
 				new Message(p, null, "The leader of " + player.Alliance.FullName + " has kicked you out.", "");
@@ -162,5 +168,29 @@ namespace Wc3o.Pages.Game {
 			Response.Redirect("Alliance.aspx");
 		}
 
-	}
+		protected void btnRank_Click(object sender, EventArgs e) {
+			if (drpMembers.SelectedIndex > 0) {
+				Player p = Wc3o.Game.GameData.Players[drpMembers.SelectedValue];
+				if (p == null)
+					return;
+
+				AllianceRank rank = AllianceRank.Level0;
+				if (drpRank.SelectedValue == "1")
+					rank = AllianceRank.Level1;
+				else if (drpRank.SelectedValue == "2")
+					rank = AllianceRank.Level2;
+				else if (drpRank.SelectedValue == "3")
+					rank = AllianceRank.Level3;
+
+				if (p.AllianceRank != rank) {
+					p.AllianceRank = rank;
+					if (rank != AllianceRank.Level0)
+						new Message(p, null, "The leader of " + player.Alliance.FullName + " has promoted you. You are now " + p.RankedName + ".", "");
+					else
+						new Message(p, null, "The leader of " + player.Alliance.FullName + " has demotet you. You have no rank now.", "");
+				}
+			}
+			Response.Redirect("Alliance.aspx");
+		}
+}
 }

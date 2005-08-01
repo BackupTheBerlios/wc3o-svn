@@ -38,10 +38,16 @@ namespace Wc3o.Pages.Portal.Players {
 					return;
 				}
 
+				sector.Destroy();
+				string name = sector.Name;
+				sector= new GoldAndLumberSector(1,1,sector.Coordinate);
+				sector.Name = name;
+
+
 				Player player = new Player(txtName.Text);
 				player.Email = txtEmail.Text;
-				player.Password = Session.SessionID.Substring(0, 10);
-				//player.Password = "asdf";
+				//player.Password = Session.SessionID.Substring(0, 10);
+				player.Password = "asdf";
 
 				player.Gold = 500;
 				player.Lumber = 150;
@@ -49,8 +55,6 @@ namespace Wc3o.Pages.Portal.Players {
 				player.Registration = DateTime.Now;
 				player.Gfx = Configuration.Default_Gfx_Path;
 
-				sector.Gold = 100;
-				sector.Lumber = 100;
 				sector.Owner = player;
 
 				if (rdbOrcs.Checked) {
@@ -121,7 +125,7 @@ namespace Wc3o.Pages.Portal.Players {
 
 				sector = Game.GameData.Sectors[new Coordinate(x, y)];
 
-				if (sector.Owner != null || sector.Lumber > 0 || sector.Gold > 0 || sector.Units.Count > 0)
+				if (sector.Owner != null || sector.GetType() != typeof(Sector))
 					sector = null;
 
 				y++;
@@ -133,10 +137,6 @@ namespace Wc3o.Pages.Portal.Players {
 				if (x > Configuration.Map_Size)
 					x = 1;
 			}
-
-			foreach (Unit u in sector.Units)
-				if (u.Owner == null)
-					u.Destroy();
 
 			return sector;
 		}

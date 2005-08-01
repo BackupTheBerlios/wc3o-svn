@@ -41,7 +41,7 @@ namespace Wc3o.Pages.Game {
 						}
 				}
 
-				lblOverview.Text += "<div class='" + c + "'>" + hostileUnits + "<a href=\"javascript:LoadOverview('" + s.Coordinate + "')\"><b>" + s.FullName + "</b></a><br /><table style='width: 100%' cellspacing='5' cellpadding='0' border='0'><tr><td style='width: 50%;vertical-align:top;'><div id='u_" + s.Coordinate + "' name='u_" + s.Coordinate + "'></div></td><td style='vertical-align:top;'><div id='b_" + s.Coordinate + "' name='b_" + s.Coordinate + "'></div></td></tr></table></div><br />";
+				lblOverview.Text += "<div class='" + c + "'>" + hostileUnits + "<a href=\"javascript:LoadOverview('" + s.Coordinate + "')\"><b>" + s.ToString() + "</b></a><br /><table style='width: 100%' cellspacing='5' cellpadding='0' border='0'><tr><td style='width: 50%;vertical-align:top;'><div id='u_" + s.Coordinate + "' name='u_" + s.Coordinate + "'></div></td><td style='vertical-align:top;'><div id='b_" + s.Coordinate + "' name='b_" + s.Coordinate + "'></div></td></tr></table></div><br />";
 			}
 		}
 	}

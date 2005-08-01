@@ -113,7 +113,9 @@
                         </div>
                     </td>
                     <td valign="top" align="center">
-                        <asp:Button ID="btnLeave" Runat="server" Text="Leave this alliance ..." OnClick="btnLeave_Click" />
+                        <asp:Button ID="btnLeave" Runat="server" Text="Leave this alliance ..." OnClick="btnLeave_Click" /><br />
+                        <br />
+                        <asp:HyperLink ID="hplMessage" runat="server">Send a message to all members of this alliance</asp:HyperLink>
                     </td>
                 </tr>
             </table>
@@ -189,22 +191,33 @@
                             </tr>
                         </table>
                         <br />
+                        <br />
+                        <br />
                         <table style="width: 100%" cellspacing="0" cellpadding="1" border="0">
                             <tr>
-                                <td style="width: 50%" align="right">
-                                    Kick out a member:</td>
-                                <td align="left">
-                                    <asp:DropDownList ID="drpKick" Runat="server">
+                                <td align="center" colspan="2">
+                                    <asp:DropDownList ID="drpMembers" Runat="server">
                                         <asp:ListItem Value="0">- Choose a member -</asp:ListItem>
-                                    </asp:DropDownList>
+                                    </asp:DropDownList><br />
                                 </td>
                             </tr>
                             <tr>
                                 <td style="width: 50%" align="right">
+                                    Kick this ally out:<br />
                                 </td>
                                 <td align="left">
                                     <asp:Button ID="btnKick" Runat="server" CausesValidation="False" Text="Kick >>"
-                                        OnClick="btnKick_Click" /></td>
+                                        OnClick="btnKick_Click" /><br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="right" style="width: 50%; height: 48px">
+                                    Give this ally a new rank:</td>
+                                <td align="left" style="height: 48px">
+                                    <asp:DropDownList ID="drpRank" runat="server">
+                                    </asp:DropDownList>
+                                    <br />
+                                    <asp:Button ID="btnRank" runat="server" Text="Promote >>" OnClick="btnRank_Click" /></td>
                             </tr>
                         </table>
                     </td>

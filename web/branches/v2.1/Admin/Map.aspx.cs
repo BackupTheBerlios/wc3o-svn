@@ -20,39 +20,34 @@ namespace Wc3o.Pages.Admin {
 
 			for (int x = 1; x <= Configuration.Map_Size; x++) {
 				for (int y = 1; y <= Configuration.Map_Size; y++) {
-					Sector s = new Sector(new Coordinate(x, y));
+					Sector newSector;
+					Coordinate newCoordinate=new Coordinate(x,y);
 
-					s.Name = names[r.Next(names.Count - 1)];
-					names.Remove(s.Name);
+					int randomValue = r.Next(1, 40);
+					if (randomValue == 1)
+						newSector = new GoldAndLumberSector(r.NextDouble() * 10,r.NextDouble() * 10,newCoordinate);
+					else if (randomValue == 2 || randomValue == 3)
+						newSector = new MercenarySector(r.Next(3,7),newCoordinate);
+					else if (randomValue == 4 || randomValue == 5)
+						newSector = new HealingSector(r.NextDouble()*3,newCoordinate);
+					else if (randomValue == 6 || randomValue == 7 || randomValue==8)
+						newSector = new GoldSector(r.NextDouble()*3,newCoordinate);
+					else if (randomValue == 9 || randomValue == 10 || randomValue==11)
+						newSector = new LumberSector(r.NextDouble()*3,newCoordinate);
+					else
+						newSector=new Sector(newCoordinate);
 
-					s.Owner = null;
 
-					s.Gold = 0;
-					s.Lumber = 0;
-					s.HasArtifacts = false;
-					s.HasMercenaries = false;
-
-					int i = r.Next(1, 20);
-					if (i == 1 || i == 2) {
-						s.Gold = r.Next(250);
-					}
-					else if (i == 3 || i == 4) {
-						s.Lumber = r.Next(250);
-					}
-					else if (i == 20) {
-						s.HasMercenaries = true;
-					}
-					else if (i == 19) {
-						s.HasArtifacts = true;
-					}
+					newSector.Name = names[r.Next(names.Count - 1)];
+					names.Remove(newSector.Name);
 
 					int numberOfDifferentUnits = r.Next(5);
 					for (int j = 1; j < numberOfDifferentUnits; j++) {
-						Unit u = new Unit(GetNeutralUnit(), s, null, DateTime.Now);
+						Unit u = new Unit(GetNeutralUnit(), newSector, null, DateTime.Now);
 						u.Number = r.Next(1, 10);
 					}
 
-					Game.GameData.Sectors[s.Coordinate] = s;
+					Game.GameData.Sectors[newSector.Coordinate] = newSector;
 				}
 			}
 		}

@@ -1,9 +1,10 @@
-body {
-    font-family: Arial;
-    color: #3e9cdc;
-    font-size: 11px;
-    background-color: black;
-    margin: 0px;
+body
+{
+	font-family: Arial;
+	color: #3e9cdc;
+	font-size: 11px;
+	background-color: black;
+	margin: 0px;
 }
 
 a:link, a:visited, a:active {

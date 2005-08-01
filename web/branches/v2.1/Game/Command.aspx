@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head" runat="server">
     <title>Warcraft 3 online</title>
-    <script src="Scripts.js" type="text/javascript"></script>
+    <script src="Scripts/Refresh.js" type="text/javascript"></script>
 </head>
 <body>
     <form id="Form1" runat="server">

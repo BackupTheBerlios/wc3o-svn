@@ -29,14 +29,14 @@ namespace Wc3o.Pages.Game {
 			lblRegistrationDate.Text = Wc3o.Game.Format(player.Registration, true);
 			lblRank.Text = Wc3o.Game.Format(player.Rank);
 			lblLeague.Text = Wc3o.Game.Format(player.League);
-			lblBestRank.Text = Wc3o.Game.Format((int) player.Statistics["BestRank"]);
+			lblBestRank.Text = Wc3o.Game.Format(player.BestRank);
 			lblBestLeague.Text = Wc3o.Game.Format(player.BestLeague);
 			hplMessage.NavigateUrl = "Mail.aspx?Recipient=" + player.Name;
 			lblDescription.Text = player.Description;
 
 			lblSectors.Text = "<ul>";
 			foreach (Wc3o.Sector s in player.Sectors)
-				lblSectors.Text += "<li><a href='Sector.aspx?Sector=" + s.Coordinate.X + "_" + s.Coordinate.Y + "'>" + s.FullName + "</a></li>";
+				lblSectors.Text += "<li><a href='Sector.aspx?Sector=" + s.Coordinate.X + "_" + s.Coordinate.Y + "'>" + s.ToString() + "</a></li>";
 
 			lblSectors.Text += "</ul>";
 		}

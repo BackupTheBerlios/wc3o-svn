@@ -16,16 +16,18 @@ namespace Wc3o.Pages.Game {
 
 			lblPlayer.Text = player.FullName;
 			lblFraction.Text = player.FractionInfo.Name;
-			lblGold.Text = Wc3o.Game.Format(player.GoldPerTick);
+			int gold, lumber;
+			player.GetRessourcesPerTick(out gold, out lumber);
+			lblGold.Text = gold.ToString();
 			imgGold.ImageUrl = player.Gfx + "/Game/Gold.gif";
-			lblLumber.Text = Wc3o.Game.Format(player.LumberPerTick);
+			lblLumber.Text = lumber.ToString();
 			imgLumber.ImageUrl = player.Gfx + "/Game/Lumber.gif";
 			lblRegistration.Text = Wc3o.Game.Format(player.Registration, false);
 			if (player.IsProtected)
 				lblProtection.Text = "You are new on the battlefield, therefore you are protected for another " + Wc3o.Game.TimeSpan(player.Registration.AddHours(Configuration.Hours_To_Be_Protected)) + ". You cannot be attacked by other players, and you cannot attack them.";
 
 			lblScore.Text = Wc3o.Game.Format(player.Score);
-			lblRank.Text = Wc3o.Game.Format(player.LeagueRank);
+			lblRank.Text = Wc3o.Game.Format(player.Rank);
 			lblLeague.Text = Wc3o.Game.Format(player.League);
 
 			hplDelete.NavigateUrl = "~/Portal/Players/Delete.aspx";
@@ -34,7 +36,7 @@ namespace Wc3o.Pages.Game {
 
 			lblSectors.Text = "<ul>";
 			foreach (Sector s in player.Sectors)
-				lblSectors.Text += "<li><a href='Sector.aspx?Sector=" + s.Coordinate + "'>" + s.FullName + "</a></li>";
+				lblSectors.Text += "<li><a href='Sector.aspx?Sector=" + s.Coordinate + "'>" + s.ToString() + "</a></li>";
 			lblSectors.Text += "</ul>";
 
 		}

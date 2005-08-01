@@ -30,10 +30,20 @@ namespace Wc3o.Pages.Game {
 					unitOwner = p.Name;
 				if (!player.IsAlly(p))
 					isUnitOwnerAlly = "";
+
+				bool enemyUnits = false;
+				bool alliedUnits = false;
 				if (player.CanAttack(p))
 					foreach (Unit u in sector.Units)
-						if (u.Owner == p && (u.IsAvailable || u.IsWorking))
-							canAttack = "1";
+						if (u.IsAvailable || u.IsWorking)
+							if (u.Owner == p)
+								enemyUnits = true;
+							else if (u.Owner != player && player.IsAlly(u.Owner))
+								alliedUnits = true;
+				if (enemyUnits && alliedUnits)
+					canAttack = "2";
+				else if (enemyUnits)
+					canAttack = "1";
 			}
 
 			string sectorOwner = "";
@@ -71,7 +81,7 @@ namespace Wc3o.Pages.Game {
 
 					string source = "";
 					if (u.SourceSector != null)
-						source = u.SourceSector.FullName;
+						source = u.SourceSector.ToString();
 
 
 					int damage = 0;
@@ -152,10 +162,20 @@ namespace Wc3o.Pages.Game {
 			if (player.IsAlly(p))
 				isSectorOwnerAlly = "1";
 			string canAttack = "";
-			if (player.CanAttack(p))
-				canAttack = "1";
 
-			string result = div + "@" + s + "@" + isOverview + "@" + sectorOwner + "@" + isSectorOwnerAlly + "@" + canAttack + "@"+Wc3o.Game.Gfx+"@";
+			bool alliedUnits = false;
+			if (player.CanAttack(p))
+				foreach (Unit u in sector.Units)
+					if (u.IsAvailable || u.IsWorking && u.Owner != player && player.IsAlly(u.Owner))
+						alliedUnits = true;
+
+			if (player.CanAttack(p))
+				if (alliedUnits)
+					canAttack = "2";
+				else
+					canAttack = "1";
+
+			string result = div + "@" + s + "@" + isOverview + "@" + sectorOwner + "@" + isSectorOwnerAlly + "@" + canAttack + "@" + Wc3o.Game.Gfx + "@";
 
 			bool hasView = player.HasView(sector);
 

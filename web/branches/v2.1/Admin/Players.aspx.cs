@@ -25,5 +25,20 @@ namespace Wc3o.Pages.Admin {
 			Player p = Game.GameData.Players[drpPlayers.SelectedValue];
 			p.IsAdmin = chkAdmin.Checked;
 		}
-	}
+
+
+		protected void btnShowUnits_Click(object sender, EventArgs e) {
+			Player p = Game.GameData.Players[drpPlayers.SelectedValue];
+			foreach (Unit u in p.Units) {
+				Response.Write(u.Number + " " + u.Info.Name + " on " + u.Sector+"<br />");
+
+			}
+
+		}
+
+
+		protected void btnGiveSector_Click(object sender, EventArgs e) {
+			Game.GetSectorByName(txtGiveSector.Text).Owner = Game.GameData.Players[drpPlayers.SelectedValue];
+		}
+}
 }

@@ -16,36 +16,36 @@
                     How many rounds shall the battle last?</td>
                 <td>
                     <asp:DropDownList ID="drpRounds" runat="server">
-                        <asp:ListItem>1</asp:ListItem>
-                        <asp:ListItem>2</asp:ListItem>
-                        <asp:ListItem>3</asp:ListItem>
-                        <asp:ListItem>4</asp:ListItem>
-                        <asp:ListItem>5</asp:ListItem>
-                        <asp:ListItem>6</asp:ListItem>
-                        <asp:ListItem>7</asp:ListItem>
-                        <asp:ListItem>8</asp:ListItem>
-                        <asp:ListItem>9</asp:ListItem>
-                        <asp:ListItem>10</asp:ListItem>
-                        <asp:ListItem>11</asp:ListItem>
-                        <asp:ListItem>12</asp:ListItem>
-                        <asp:ListItem>13</asp:ListItem>
-                        <asp:ListItem>14</asp:ListItem>
-                        <asp:ListItem Selected="True">15</asp:ListItem>
-                        <asp:ListItem>16</asp:ListItem>
-                        <asp:ListItem>17</asp:ListItem>
-                        <asp:ListItem>18</asp:ListItem>
-                        <asp:ListItem>19</asp:ListItem>
-                        <asp:ListItem>20</asp:ListItem>
-                        <asp:ListItem>21</asp:ListItem>
-                        <asp:ListItem>22</asp:ListItem>
-                        <asp:ListItem>23</asp:ListItem>
-                        <asp:ListItem>24</asp:ListItem>
-                        <asp:ListItem>25</asp:ListItem>
-                        <asp:ListItem>26</asp:ListItem>
-                        <asp:ListItem>27</asp:ListItem>
-                        <asp:ListItem>28</asp:ListItem>
-                        <asp:ListItem>29</asp:ListItem>
-                        <asp:ListItem>30</asp:ListItem>
+                         <asp:ListItem Value="1">1</asp:ListItem>
+                        <asp:ListItem Value="2">2</asp:ListItem>
+                        <asp:ListItem Value="3">3</asp:ListItem>
+                        <asp:ListItem Value="4">4</asp:ListItem>
+                        <asp:ListItem Value="5">5</asp:ListItem>
+                        <asp:ListItem Value="6">6</asp:ListItem>
+                        <asp:ListItem Value="7">7</asp:ListItem>
+                        <asp:ListItem Value="8">8</asp:ListItem>
+                        <asp:ListItem Value="9">9</asp:ListItem>
+                        <asp:ListItem Value="10">10</asp:ListItem>
+                        <asp:ListItem Value="1">11</asp:ListItem>
+                        <asp:ListItem Value="12">12</asp:ListItem>
+                        <asp:ListItem Value="13">13</asp:ListItem>
+                        <asp:ListItem Value="14">14</asp:ListItem>
+                        <asp:ListItem Value="15" Selected="True">15</asp:ListItem>
+                        <asp:ListItem Value="16">16</asp:ListItem>
+                        <asp:ListItem Value="17">17</asp:ListItem>
+                        <asp:ListItem Value="18">18</asp:ListItem>
+                        <asp:ListItem Value="19">19</asp:ListItem>
+                        <asp:ListItem Value="20">20</asp:ListItem>
+                        <asp:ListItem Value="21">21</asp:ListItem>
+                        <asp:ListItem Value="22">22</asp:ListItem>
+                        <asp:ListItem Value="23">23</asp:ListItem>
+                        <asp:ListItem Value="24">24</asp:ListItem>
+                        <asp:ListItem Value="25">25</asp:ListItem>
+                        <asp:ListItem Value="26">26</asp:ListItem>
+                        <asp:ListItem Value="27">27</asp:ListItem>
+                        <asp:ListItem Value="28">28</asp:ListItem>
+                        <asp:ListItem Value="29">29</asp:ListItem>
+                        <asp:ListItem Value="30">30</asp:ListItem>
                     </asp:DropDownList></td>
             </tr>
             <tr>
@@ -53,36 +53,37 @@
                     As from what round on shall buildings be attacked?</td>
                 <td>
                     <asp:DropDownList ID="drpBuildingRounds" runat="server">
-                        <asp:ListItem>1</asp:ListItem>
-                        <asp:ListItem>2</asp:ListItem>
-                        <asp:ListItem>3</asp:ListItem>
-                        <asp:ListItem>4</asp:ListItem>
-                        <asp:ListItem>5</asp:ListItem>
-                        <asp:ListItem>6</asp:ListItem>
-                        <asp:ListItem>7</asp:ListItem>
-                        <asp:ListItem>8</asp:ListItem>
-                        <asp:ListItem>9</asp:ListItem>
-                        <asp:ListItem>10</asp:ListItem>
-                        <asp:ListItem>11</asp:ListItem>
-                        <asp:ListItem>12</asp:ListItem>
-                        <asp:ListItem>13</asp:ListItem>
-                        <asp:ListItem>14</asp:ListItem>
-                        <asp:ListItem Selected="True">15</asp:ListItem>
-                        <asp:ListItem>16</asp:ListItem>
-                        <asp:ListItem>17</asp:ListItem>
-                        <asp:ListItem>18</asp:ListItem>
-                        <asp:ListItem>19</asp:ListItem>
-                        <asp:ListItem>20</asp:ListItem>
-                        <asp:ListItem>21</asp:ListItem>
-                        <asp:ListItem>22</asp:ListItem>
-                        <asp:ListItem>23</asp:ListItem>
-                        <asp:ListItem>24</asp:ListItem>
-                        <asp:ListItem>25</asp:ListItem>
-                        <asp:ListItem>26</asp:ListItem>
-                        <asp:ListItem>27</asp:ListItem>
-                        <asp:ListItem>28</asp:ListItem>
-                        <asp:ListItem>29</asp:ListItem>
-                        <asp:ListItem>30</asp:ListItem>
+                        <asp:ListItem Value="1">1</asp:ListItem>
+                        <asp:ListItem Value="2">2</asp:ListItem>
+                        <asp:ListItem Value="3">3</asp:ListItem>
+                        <asp:ListItem Value="4">4</asp:ListItem>
+                        <asp:ListItem Value="5">5</asp:ListItem>
+                        <asp:ListItem Value="6">6</asp:ListItem>
+                        <asp:ListItem Value="7">7</asp:ListItem>
+                        <asp:ListItem Value="8">8</asp:ListItem>
+                        <asp:ListItem Value="9">9</asp:ListItem>
+                        <asp:ListItem Value="10">10</asp:ListItem>
+                        <asp:ListItem Value="1">11</asp:ListItem>
+                        <asp:ListItem Value="12">12</asp:ListItem>
+                        <asp:ListItem Value="13">13</asp:ListItem>
+                        <asp:ListItem Value="14">14</asp:ListItem>
+                        <asp:ListItem Value="15" Selected="True">15</asp:ListItem>
+                        <asp:ListItem Value="16">16</asp:ListItem>
+                        <asp:ListItem Value="17">17</asp:ListItem>
+                        <asp:ListItem Value="18">18</asp:ListItem>
+                        <asp:ListItem Value="19">19</asp:ListItem>
+                        <asp:ListItem Value="20">20</asp:ListItem>
+                        <asp:ListItem Value="21">21</asp:ListItem>
+                        <asp:ListItem Value="22">22</asp:ListItem>
+                        <asp:ListItem Value="23">23</asp:ListItem>
+                        <asp:ListItem Value="24">24</asp:ListItem>
+                        <asp:ListItem Value="25">25</asp:ListItem>
+                        <asp:ListItem Value="26">26</asp:ListItem>
+                        <asp:ListItem Value="27">27</asp:ListItem>
+                        <asp:ListItem Value="28">28</asp:ListItem>
+                        <asp:ListItem Value="29">29</asp:ListItem>
+                        <asp:ListItem Value="30">30</asp:ListItem>
+                        <asp:ListItem Value="31">Don't attack buildings</asp:ListItem>                        
                     </asp:DropDownList></td>
             </tr>
             <tr>
@@ -90,6 +91,12 @@
                     Make sure that the units stop resting together.</td>
                 <td>
                     <asp:CheckBox ID="chkArrival" runat="server" Checked="True" /></td>
+            </tr>
+            <tr>
+                <td style="text-align: right">
+                    Use allied allied units that are under your command.</td>
+                <td>
+                    <asp:CheckBox ID="chkAllied" runat="server" Checked="True" /></td>
             </tr>
         </table>
         <div style="text-align: center">
