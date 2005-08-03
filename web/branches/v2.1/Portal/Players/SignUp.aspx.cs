@@ -46,8 +46,8 @@ namespace Wc3o.Pages.Portal.Players {
 
 				Player player = new Player(txtName.Text);
 				player.Email = txtEmail.Text;
-				//player.Password = Session.SessionID.Substring(0, 10);
-				player.Password = "asdf";
+				player.Password = Session.SessionID.Substring(0, 10);
+				//player.Password = "asdf";
 
 				player.Gold = 500;
 				player.Lumber = 150;
