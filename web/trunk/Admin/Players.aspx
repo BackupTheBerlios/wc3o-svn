@@ -12,4 +12,6 @@
     <asp:CheckBox ID="chkAdmin" runat="server" Text="Make this user an admin" />
     <asp:Button ID="btnAdmin" runat="server" OnClick="btnAdmin_Click" Text="Set >>" /><br />
     <br />
-    <asp:Button ID="btnDelete" Runat="server" Text="Delete selected Player ..." OnClick="btnDelete_Click" /></asp:Content>
+    <asp:Button ID="btnDelete" Runat="server" Text="Delete selected Player ..." OnClick="btnDelete_Click" /><br />
+    <br />
+    <asp:Button ID="btnShowUnits" runat="server" OnClick="btnShowUnits_Click" Text="Show all units >>" /></asp:Content>
