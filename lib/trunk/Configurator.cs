@@ -5,8 +5,8 @@ namespace Wc3o {
 
 		#region " Configuration Settings "
 
-		public const string Physical_Application_Path = "c:\\hosting\\webhost4life\\member\\sachsenhofer\\wc3o\\";
-		//public const string Physical_Application_Path = "E:\\My Webs\\Wc3o";
+		//public const string Physical_Application_Path = "c:\\hosting\\webhost4life\\member\\sachsenhofer\\wc3o\\";
+		public const string Physical_Application_Path = "E:\\My Webs\\Wc3o";
 
 		public const double Return_Factor_After_Attack = 1.7;
 		public const double Return_Factor_After_Defend = 0.5;
